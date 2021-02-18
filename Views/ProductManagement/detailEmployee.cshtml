@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "detailEmployee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Employee>
+
+<section class="content-header">
+
+    <div class="box-body ">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Dökümana Atanan Kayıtlar
+
+                    </h2>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <h2> Personeller </h2>
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Personel Kodu</th>
+                                <th>Personel Adı Soyadı</th>
+                                <th>Personel Tipi</th>
+                                <th>Ünvanı</th>
+                                <th>Departman</th>
+                                <th>Arge Departmanı</th>
+                                <th>Yayın Yapabilir</th>
+                                <th>Arge Mühendisi Mi?</th>
+                                <th>Departman Kapsamı</th>
+                                <th>Durum</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Employee material in Model)
+                            {
+
+                                <tr>
+                                    <td>@material.Code</td>
+                                    <td>@material.Name</td>
+                                    <td>@material.EmployeeType</td>
+                                    <td>@material.Title</td>
+                                    <td>@material.Department</td>
+                                    <td>@material.RDDepartment</td>
+                                    <td>@material.CanPublish</td>
+                                    <td>@material.ItIsAnRDEngineer</td>
+                                    <td>@material.DepartmentScope</td>
+                                    <td>@material.Status</td>
+
+
+                                </tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

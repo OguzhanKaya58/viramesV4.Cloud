@@ -1,0 +1,86 @@
+﻿
+
+@{
+    ViewBag.Title = "unitSetDefinition";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<SpeCode>
+
+
+<section class="content-header">
+  
+    <div class="box-body">
+        <a class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i> Aktarım
+        </a>
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Birim Seti Özel Kod Tanımları
+
+                    </h2>
+
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Özel Kod</th>
+                                <th>Özel Kod Türü</th>
+                                <th>Özel Kod Durumu</th>
+                                <th>Yazı Rengi</th>
+                                <th>Eğik Yazı</th>
+                                <th>Kalın Yazı</th>
+                                <th>Karakter Boyutu</th>
+                                <th>Yazı Tipi Adı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (SpeCode unitSet in Model)
+                            {
+
+                                <tr>
+                                    <td>@unitSet.SpecialCode</td>
+                                    <td>@unitSet.SpeCodeType</td>
+                                    <td>@unitSet.Status</td>
+                                    <td>@unitSet.FontColor</td>
+                                    <td>@unitSet.FontItalic</td>
+                                    <td>@unitSet.FontBold</td>
+                                    <td>@unitSet.FontSize</td>
+                                    <td>@unitSet.FontName</td>
+
+                                </tr>
+
+                            }
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+

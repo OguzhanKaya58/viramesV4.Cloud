@@ -1,0 +1,92 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.DocumentEmployeeAppointment
+
+@{
+    ViewBag.Title = "detailEmployeeAppointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+        <h3>Personel Döküman Ataması</h3>
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+            <a class="btn btn-app btn btn-primary" href="~/DocumentManagement/EditEmployeeAppointment/@Model.ID">
+                <i class="fa fa-edit"></i> Düzenle
+            </a>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Görüntüle</h3>
+                    </div>
+                    <div class="box-body">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Employee)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Employee)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Document)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Document)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreatedBy)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreatedBy)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreatedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreatedDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ModifiedBy)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ModifiedBy)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ModifiedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ModifiedDate)
+                            </dd>
+                        </dl>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+
+

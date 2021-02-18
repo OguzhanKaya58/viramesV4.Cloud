@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "salesFiche";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<MaterialFiche>
+
+<section class="content-header">
+    <div class="box-body">
+        
+        <a href="http://virames.cloud/ProductManagement/newSalesFiche" class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+            
+       
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i>Aktarım
+        </a>
+       
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>Satış İrsaliyeleri</h2>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Numarası</th>
+                                <th>Tarih</th>
+                                <th>Türü</th>
+                                <th>Depo</th>
+                                <th>Depo Girdi</th>
+                                <th>Personel</th>
+                                <th>İş Emri</th>
+                                <th>Cari Hesap</th>
+                                <th>Özel Kod</th>
+                                <th>Barkod Durum</th>
+                                <th>Onay Durumu</th>
+                                <th>Malzeme Fiş Durumu</th>
+                                <th>Satın Alma Siparişi</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (MaterialFiche salesFiche in Model)
+                            {
+
+                                <tr>
+                                    <td>@salesFiche.Number</td>
+                                    <td>@salesFiche.Date</td>
+                                    <td>@salesFiche.Type</td>
+                                    <td>@salesFiche.Warehouse</td>
+                                    <td>@salesFiche.InputWarehouse</td>
+                                    <td>@salesFiche.Employee</td>
+                                    <td>@salesFiche.Workorder</td>
+                                    <td>@salesFiche.Account</td>
+                                    <td>@salesFiche.SpeCode</td>
+                                    <td>@salesFiche.BarcodeStatus</td>
+                                    <td>@salesFiche.FicheApprove</td>
+                                    <td>@salesFiche.MaterialFicheStatus</td>
+                                    <td>@salesFiche.PurchaseOrder</td>
+                                    <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailSalesFiche", "ProductManagement", new { id = salesFiche.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("editSalesFiche", "ProductManagement", new { id = salesFiche.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                            <a href="@Url.Action("deleteSalesFiche", "ProductManagement", new { id = salesFiche.ID })"><span class="fa fa-trash"> Sil </span></a> <br />
+                                        </div>
+
+                                    </div>
+                                </td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

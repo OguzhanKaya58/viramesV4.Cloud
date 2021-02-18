@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "Improprieties";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<NonConformance>
+
+
+<section class="content-header">
+    <h1>
+        Uygunsuzluklar
+
+    </h1>
+
+    <div class="box-body ">
+        <div class="btn-group">
+
+
+            <button type="button" class="btn btn-primary ">
+                <span class=" fa fa-file"></span> Yeni
+            </button>
+
+        </div>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-edit"></span> Düzenle
+        </button>
+
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-eye"></span> Görüntüle
+        </button>
+
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-print"></span> Kopyala
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-id-card"></span> Kullanıldığı Kartlar
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-share-square"></span> Aktarım
+        </button>
+        <button type="button" class="btn btn-danger">
+            <span class=" fa fa-trash"></span> Sil
+        </button>
+    </div>
+
+
+    <ol class="breadcrumb">
+        <li class="active">Uygunsuzluklar</li>
+    </ol>
+
+
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Uygunsuzluk Türü</th>
+                                <th>Tanım</th>
+                                <th>İş Emri</th>
+                                <th>İş Emri İşlem Adımı</th>
+                                <th>Malzeme </th>
+                                <th>Tarih</th>
+                                <th>Uygunsuzluk Durumu</th>
+                                <th>Personel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (NonConformance improprieties in Model)
+                            {
+
+                            <tr>
+                                <td>@improprieties.ImproprietyType</td>
+                                <td>@improprieties.Definition</td>
+                                <td>@improprieties.Workorder</td>
+                                <td>@improprieties.WorkorderOperationStep</td>
+                                <td>@improprieties.Material</td>
+                                <td>@improprieties.NonConformanceDate</td>
+                                <td>@improprieties.NonConformenceStatus</td>
+                                <td>@improprieties.Employee</td>
+                            </tr>
+
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Uygunsuzluk Türü</th>
+                                <th>Tanım</th>
+                                <th>İş Emri</th>
+                                <th>İş Emri İşlem Adımı</th>
+                                <th>Malzeme </th>
+                                <th>Tarih</th>
+                                <th>Uygunsuzluk Durumu</th>
+                                <th>Personel</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+

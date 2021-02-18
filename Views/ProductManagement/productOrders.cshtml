@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "productOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<ProductOrder>
+
+<section class="content-header">
+
+    <div class="box-body">
+        <a class="btn btn-app btn btn-primary" href="~/ProductManagement/materialDefinitions"> <span class=" fa fa-backward"></span>Geri</a>
+
+    </div>
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Dökümana Atanan Kayıtlar
+
+                    </h2>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <h2> Üretim Emirleri </h2>
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Numara</th>
+                                <th>Ana Malzeme</th>
+                                <th>Depo</th>
+                                <th>Reçete</th>
+                                <th>Miktarı</th>
+                                <th>Proje</th>
+                                <th>Durum</th>
+                                <th>Tamamlama</th>
+                                <th>Durum Planlaması</th>
+                              
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (ProductOrder material in Model)
+                            {
+
+                                <tr>
+                                    <td>@material.Number</td>
+                                    <td>@material.MainMaterial</td>
+                                    <td>@material.Warehouse</td>
+                                    <td>@material.BOM</td>
+                                    <td>@material.Amount</td>
+                                    <td>@material.Project</td>
+                                    <td>@material.ProductOrderStatus</td>
+                                    <td>@material.Completion</td>
+                                    <td>@material.PlanningStatus</td>
+                                  
+
+
+                                </tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

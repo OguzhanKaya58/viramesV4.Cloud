@@ -1,0 +1,250 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.Material
+
+@{
+    ViewBag.Title = "deleteMaterialDefinition";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Sil</h3>
+                        <div class="box-body">
+                        </div>
+                        <div>
+                            <div>
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.MaterialType.Definition)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.MaterialType.Definition)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.SerialTemplate.Code)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.SerialTemplate.Code)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.SpeCode.SpecialCode)
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.SpeCode.SpecialCode)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.UnitSet.Code)
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.UnitSet.Code)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Code)
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Code)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Definition)
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Definition)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.PackedMaterial)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.PackedMaterial)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.ERPReference)
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.ERPReference)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.TraceType)
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.TraceType)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Status)
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Status)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.LotCount)
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.LotCount)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Virtual)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Virtual)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Saleable)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Saleable)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Purchasable)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Purchasable)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.AverageOrderQuantity)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.AverageOrderQuantity)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.ExpirationTime)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.ExpirationTime)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.PurchaseVAT)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.PurchaseVAT)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.SalesVAT)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.SalesVAT)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.SalesReturnsVAT)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.SalesReturnsVAT)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.PurchasesReturnsVAT)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.PurchasesReturnsVAT)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.BOMUnit)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.BOMUnit)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.PurchaseUnit)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.PurchaseUnit)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.CreatedBy)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.CreatedBy)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.CreatedDate)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.CreatedDate)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.ModifiedBy)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.ModifiedBy)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.ModifiedDate)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.ModifiedDate)
+                                    </dd>
+                                </dl>
+                            </div>
+                            <br />
+                            <div class="form-actions col-xs-2">
+                                <input type="submit" value="Sil" class="btn btn-app btn btn-primary" />
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

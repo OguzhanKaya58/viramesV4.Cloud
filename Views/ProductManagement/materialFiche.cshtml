@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "materialFiche";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<MaterialFiche>
+
+
+<section class="content-header">
+    <div class="box-body">
+     
+        <div class="btn-group">
+            <button type="button" class=" btn-app dropdown-toggle" data-toggle="dropdown">
+                <span class=" fa fa-file"></span> Yeni
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="http://virames.cloud/ProductManagement/newFicheMaterial">Sarf Fişi</a></li>
+                <li><a href="#">Fire Fişi</a></li>
+                <li><a href="#">Üretimden Giriş Fişi</a></li>
+                <li><a href="#">Depo Transfer Fişi</a></li>
+                <li><a href="#">Sayım Fazlası Fişi</a></li>
+                <li><a href="#">Sayım Eksiği Fişi</a></li>
+                <li><a href="#">Devir Fişi</a></li>
+                <li class="divider"></li>
+
+            </ul>
+        </div>
+        
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i>Aktarım
+        </a>
+     
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+            <div class="box">
+        
+                <div class="box-header">
+                    <h2> Malzeme Fişleri</h2>
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Numarası</th>
+                                <th>Tarih</th>
+                                <th>Türü</th>
+                                <th>Depo</th>
+                                <th>Depo Girdi</th>
+                                <th>Personel</th>
+                                <th>İş Emri</th>
+                                <th>Cari Hesap</th>
+                                <th>Özel Kod</th>
+                                <th>Barkod Durum</th>
+                                <th>Onay Durumu</th>
+                                <th>Malzeme Fiş Durumu</th>
+                                <th>Satın Alma Siparişi</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (MaterialFiche materialfiche in Model)
+                            {
+
+                            <tr>
+                                <td>@materialfiche.Number</td>
+                                <td>@materialfiche.Date</td>
+                                <td>@materialfiche.Type</td>
+                                <td>@materialfiche.Warehouse</td>
+                                <td>@materialfiche.InputWarehouse</td>
+                                <td>@materialfiche.Employee</td>
+                                <td>@materialfiche.Workorder</td>
+                                <td>@materialfiche.Account</td>
+                                <td>@materialfiche.SpeCode</td>
+                                <td>@materialfiche.BarcodeStatus</td>
+                                <td>@materialfiche.FicheApprove</td>
+                                <td>@materialfiche.MaterialFicheStatus</td>
+                                <td>@materialfiche.PurchaseOrder</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailFicheMaterial", "ProductManagement", new { id = materialfiche.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("detailFicheMaterial", "ProductManagement", new { id = materialfiche.ID })"><span class="fa fa-edit"> Düzenle </span> </a><br />
+                                            @*<a href="@Url.Action("detailMaterialFiche", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-receipt"> Reçete Listesi </span> <br />
+                                            @*<a href="@Url.Action("detailCriteriaSet", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-tasks"> Kriter Setleri </span> <br />
+                                            @*<a href="@Url.Action("detailDocumentManagement", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-sitemap"> Döküman Yönetimi </span> <br />
+                                            <a href="@Url.Action("deleteFicheMaterial", "ProductManagement", new { id = materialfiche.ID })"><span class="fa fa-trash"> Sil </span></a> <br />
+
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+

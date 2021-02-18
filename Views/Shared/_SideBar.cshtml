@@ -1,0 +1,1423 @@
+﻿@using viramesV4.Cloud.Helpers;
+@using viramesV4.Cloud.Models
+@using viramesV4.Object.HelperLayer
+
+
+<div class="user-panel">
+    <div class="pull-left image">
+        <img src="~/Content/dist/img/user.png" class="img-circle" alt="User Image">
+    </div>
+    <div class="pull-left info">
+        <p>@Statics.GetUser()</p>
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+    </div>
+</div>
+
+<form action="#" method="get" class="sidebar-form">
+    <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+<ul class="sidebar-menu" data-widget="tree">
+    <li class="header">MAIN NAVIGATION</li>
+    <li class="treeview && @if (ViewBag.Isactive== 1) { @Html.ActivePage("ProductManagement", "materialDefinitions") } && @if (ViewBag.Isactive== 1000) { @Html.ActivePage("ProductManagement", "engineeringOperations") } && @if (ViewBag.Isactive== 2) { @Html.ActivePage("ProductManagement", "materialFiche") } && @if (ViewBag.Isactive== 3) { @Html.ActivePage("ProductManagement", "materialCriteriaSetAppointments") } && @if (ViewBag.Isactive== 4) { @Html.ActivePage("ProductManagement", "materialPriceAppointment") } &&@if (ViewBag.Isactive== 5) { @Html.ActivePage("ProductManagement", "purchaseFiche") } &&@if (ViewBag.Isactive== 6) { @Html.ActivePage("ProductManagement", "salesFiche") } &&@if (ViewBag.Isactive== 7) { @Html.ActivePage("ProductManagement", "serialLotNumberMaintenanceRepairRecord") } && @if (ViewBag.Isactive== 8) { @Html.ActivePage("productManagement", "unitSetDefinition") } && @if (ViewBag.Isactive== 9) { @Html.ActivePage("ProductManagement", "materialSpeCode") } && @if (ViewBag.Isactive== 10) { @Html.ActivePage("ProductManagement", "materialClasses") } &&@if (ViewBag.Isactive== 11) { @Html.ActivePage("ProductManagement", "materialType") } && @if (ViewBag.Isactive== 12) { @Html.ActivePage("ProductManagement", "serialTemplate") } && @if (ViewBag.Isactive== 13) { @Html.ActivePage("ProductManagement", "materialSpecification") } && @if (ViewBag.Isactive== 14) { @Html.ActivePage("ProductManagement", "unitSetSpeCode") } && @if (ViewBag.Isactive== 15) { @Html.ActivePage("ProductManagement", "materialFicheSpeCode") }">
+        <a class="side" href="#">
+            <i class="fa fa-box-open"></i> <span>(PI) Ürün Yönetimi</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+
+            <li class="treeview && @if (ViewBag.Isactive== 1) { @Html.ActivePage("ProductManagement", "materialDefinitions") } && @if (ViewBag.Isactive== 1000) { @Html.ActivePage("ProductManagement", "engineeringOperations") }" >
+                <a href="#">
+                    <i class="fa fa-share"></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+
+                    <li class="treeview && @if (ViewBag.Isactive== 1) { @Html.ActivePage("ProductManagement", "materialDefinitions") } && @if (ViewBag.Isactive== 1000) { @Html.ActivePage("ProductManagement", "engineeringOperations") } ">
+                        <a href="#">
+                            <i class="fa fa-share"></i>  (PI101) Malzeme Tanımları
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+
+                            <li class=" @if (ViewBag.Isactive== 1) { @Html.ActivePage("ProductManagement", "materialDefinitions") } ">
+                                <a href="http://virames.cloud/ProductManagement/materialDefinitions">
+                                    <i class="fa fa-circle fa-xs"></i> Malzeme Bilgileri
+                                </a>
+                            </li>
+                            <li class=" @if (ViewBag.Isactive== 1000) { @Html.ActivePage("ProductManagement", "engineeringOperations") } ">
+                                <a href="http://virames.cloud/ProductManagement/engineeringOperations">
+                                    <i class="fa fa-circle fa-xs"></i> Mühendislik İşlemleri
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="treeview && @if (ViewBag.Isactive== 2) { @Html.ActivePage("ProductManagement", "materialFiche") } && @if (ViewBag.Isactive== 3) { @Html.ActivePage("ProductManagement", "materialCriteriaSetAppointments") } && @if (ViewBag.Isactive== 4) { @Html.ActivePage("ProductManagement", "materialPriceAppointment") } &&@if (ViewBag.Isactive== 5) { @Html.ActivePage("ProductManagement", "purchaseFiche") } &&@if (ViewBag.Isactive== 6) { @Html.ActivePage("ProductManagement", "salesFiche") } &&@if (ViewBag.Isactive== 7) { @Html.ActivePage("ProductManagement", "serialLotNumberMaintenanceRepairRecord") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> İşlemler
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 2) { @Html.ActivePage("ProductManagement", "materialFiche") }">
+                        <a href="http://virames.cloud/ProductManagement/materialFiche">
+                            <i class="fa fa-circle fa-xs"></i> (PI201)Malzeme Fişleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 3) { @Html.ActivePage("ProductManagement", "materialCriteriaSetAppointments") }">
+                        <a href="http://virames.cloud/ProductManagement/materialCriteriaSetAppointments">
+                            <i class="fa fa-circle fa-xs"></i> (PI202)Malzeme Kriter Seti Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 4) { @Html.ActivePage("ProductManagement", "materialPriceAppointment") }">
+                        <a href="http://virames.cloud/ProductManagement/materialPriceAppointment">
+                            <i class="fa fa-circle fa-xs"></i> (PI203)Malzeme Birim Fiyatı Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 5) { @Html.ActivePage("ProductManagement", "purchaseFiche") }">
+                        <a href="http://virames.cloud/ProductManagement/purchaseFiche">
+                            <i class="fa fa-circle fa-xs"></i> (PI204)Satınalma İrsaliyeleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 6) { @Html.ActivePage("ProductManagement", "salesFiche") }">
+                        <a href="http://virames.cloud/ProductManagement/salesFiche">
+                            <i class="fa fa-circle fa-xs"></i> (PI205)Satış İrsaliyeleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 7) { @Html.ActivePage("ProductManagement", "serialLotNumberMaintenanceRepairRecord") }">
+                        <a href="http://virames.cloud/ProductManagement/serialLotNumberMaintenanceRepairRecord">
+                            <i class="fa fa-circle fa-xs"></i> (PI206)Seri/Lot No Bak.On Kayıtları
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i>  Raporlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI301)Birim Seti Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI302)Malzeme Özellik Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI303)Malzeme Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI304)Malzeme Türü Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI305)Malzeme Birimleri Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI306)Malz.Öz.Atamaları Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI307)Malzeme Değer Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI308)Malzeme Fiş Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI309)Malzeme Hareket Dökümü
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI310)Malzeme Giriş Çıkış Toplamları
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI311)Malzeme Ekstresi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI312)Malzeme Seri/Lot No Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> PI313)Malzeme Özel Kod Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI316)Seri/Lot Şablon Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI317)Seri/Lot Şab.Malz.At.Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI318)Malzeme Birim Fiyat Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI319)Lot/seri Dönüşüm Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI320)Bilgi Notu Seri/Lot Dön.Rap.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI321) İş Emri verilmeyen Malzemeler
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 8) { @Html.ActivePage("productManagement", "unitSetDefinition") }  && @if (ViewBag.Isactive== 9) { @Html.ActivePage("ProductManagement", "materialSpeCode") } && @if (ViewBag.Isactive== 10) { @Html.ActivePage("ProductManagement", "materialClasses") } && @if (ViewBag.Isactive== 11) { @Html.ActivePage("ProductManagement", "materialType") } && @if (ViewBag.Isactive== 12) { @Html.ActivePage("ProductManagement", "serialTemplate") } && @if (ViewBag.Isactive== 13) { @Html.ActivePage("ProductManagement", "materialSpecification") } && @if (ViewBag.Isactive== 14) { @Html.ActivePage("ProductManagement", "unitSetSpeCode") } && @if (ViewBag.Isactive== 15) { @Html.ActivePage("ProductManagement", "materialFicheSpeCode") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> Tanımlamalar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 8) { @Html.ActivePage("productManagement", "unitSetDefinition") }">
+                        <a href="http://virames.cloud/productManagement/unitSetDefinition">
+                            <i class="fa fa-circle fa-xs"></i> (PI401) Birim Seti Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 9) { @Html.ActivePage("ProductManagement", "materialSpeCode") }">
+                        <a href="http://virames.cloud/ProductManagement/materialSpeCode">
+                            <i class="fa fa-circle fa-xs"></i> (PI402) Malzeme Özel Kod Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 10) { @Html.ActivePage("ProductManagement", "materialClasses") }">
+                        <a href="http://virames.cloud/ProductManagement/materialClasses">
+                            <i class="fa fa-circle fa-xs"></i> (PI403) Malzeme Sınıfları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 11) { @Html.ActivePage("ProductManagement", "materialType") }">
+                        <a href="http://virames.cloud/ProductManagement/materialType">
+                            <i class="fa fa-circle fa-xs"></i> (PI405) Malzeme Türleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 12) { @Html.ActivePage("ProductManagement", "serialTemplate") }">
+                        <a href="http://virames.cloud/ProductManagement/serialTemplate">
+                            <i class="fa fa-circle fa-xs"></i> (PI406) Seri/Parti Şablonları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 13) { @Html.ActivePage("ProductManagement", "materialSpecification") }">
+                        <a href="http://virames.cloud/ProductManagement/materialSpecification">
+                            <i class="fa fa-circle fa-xs"></i> (PI407) Malzeme Özellik Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 14) { @Html.ActivePage("ProductManagement", "unitSetSpeCode") }">
+                        <a href="http://virames.cloud/ProductManagement/unitSetSpeCode">
+                            <i class="fa fa-circle fa-xs"></i> (PI408) Birim Seti Özel Kod Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 15) { @Html.ActivePage("ProductManagement", "materialFicheSpeCode") }">
+                        <a href="http://virames.cloud/ProductManagement/materialFicheSpeCode">
+                            <i class="fa fa-circle fa-xs"></i> (PI409) Malz.Fiş.Öz.Kod Tanımları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </li>   
+    <li class="treeview && @if (ViewBag.Isactive== 16) { @Html.ActivePage("warehousemanagement", "wareHouseDefinitions") } && @if (ViewBag.Isactive== 17) { @Html.ActivePage("warehousemanagement", "materialWarehouseInformations") } && @if (ViewBag.Isactive== 18) { @Html.ActivePage("WareHouseManagement", "wareHouseParameters") } && @if (ViewBag.Isactive== 19) { @Html.ActivePage("wareHouseManagement", "shelfLocationDefinitions") } && @if (ViewBag.Isactive== 20) { @Html.ActivePage("WarehouseManagement", "storageConditionSet") }">
+        <a class="side" href="#">
+            <i class="fa fa-warehouse"></i> <span>(WM) Depo Yönetimi</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+
+            <li class="treeview && @if (ViewBag.Isactive== 16) { @Html.ActivePage("warehousemanagement", "wareHouseDefinitions") } && @if (ViewBag.Isactive== 17) { @Html.ActivePage("warehousemanagement", "materialWarehouseInformations") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li class="@if (ViewBag.Isactive== 16) { @Html.ActivePage("warehousemanagement", "wareHouseDefinitions") }">
+                        <a href="http://virames.cloud/warehousemanagement/wareHouseDefinitions">
+                            <i class="fa fa-circle fa-xs"></i> (WM101) Depo Tanımları
+                        </a>
+                    </li>
+
+                    <li class="@if (ViewBag.Isactive== 17) { @Html.ActivePage("warehousemanagement", "materialWarehouseInformations") }">
+                        <a href="http://virames.cloud/warehousemanagement/materialWarehouseInformations">
+                            <i class="fa fa-circle fa-xs"></i> (WM102) Malzeme Ambar Bilgileri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 18) { @Html.ActivePage("WareHouseManagement", "wareHouseParameters") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> İşlemler
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (WM201) Depo Toplamları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 18) { @Html.ActivePage("WareHouseManagement", "wareHouseParameters") }">
+                        <a href="http://virames.cloud/WareHouseManagement/wareHouseParameters">
+                            <i class="fa fa-circle fa-xs"></i> (WM202) Depo Parametreleri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i>  Raporlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (WM301) Malzeme Depo Durum Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (WM302) Malzeme Depo Seviye Kontrol Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (WM303) Malzeme/Raf Yeri Dağılımı
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (WM304) Depo Raf Yeri Listesi
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 19) { @Html.ActivePage("wareHouseManagement", "shelfLocationDefinitions") } && @if (ViewBag.Isactive== 20) { @Html.ActivePage("WarehouseManagement", "storageConditionSet") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> Tanımlamalar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 19) { @Html.ActivePage("wareHouseManagement", "shelfLocationDefinitions") }">
+                        <a href="http://virames.cloud/wareHouseManagement/shelfLocationDefinitions">
+                            <i class="fa fa-circle fa-xs"></i> (WM401) Raf Yeri Tanımlamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 20) { @Html.ActivePage("WarehouseManagement", "storageConditionSet") }">
+                        <a href="http://virames.cloud/WarehouseManagement/storageConditionSet">
+                            <i class="fa fa-circle fa-xs"></i> (WM402) Saklama Koşul Set Listesi
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview && @if (ViewBag.Isactive== 21) { @Html.ActivePage("ProductionPlanning", "shiftDefinitions") }&& @if (ViewBag.Isactive== 22) { @Html.ActivePage("ProductionPlanning", "interruptionTypeDefinition") } && @if (ViewBag.Isactive== 23) { @Html.ActivePage("ProductionPlanning", "bomDefinitions") } && @if (ViewBag.Isactive== 24) { @Html.ActivePage("ProductionPlanning", "holiday") } && @if (ViewBag.Isactive== 25) { @Html.ActivePage("ProductionPlanning", "project") } && @if (ViewBag.Isactive== 26) { @Html.ActivePage("ProductionPlanning", "productionOrders") } && @if (ViewBag.Isactive== 27) { @Html.ActivePage("ProductionPlanning", "workOrders") } && @if (ViewBag.Isactive== 28) { @Html.ActivePage("ProductionPlanning", "workOrderOperationStep") } && @if (ViewBag.Isactive== 29) { @Html.ActivePage("ProductionPlanning", "materialRequirementPlan") } && @if (ViewBag.Isactive== 30) { @Html.ActivePage("ProductionPlanning", "recipeSpecifiCodeDefinitions") } && @if (ViewBag.Isactive== 31) { @Html.ActivePage("ProductionPlanning", "projectSpeCodeDefinitions") } && @if (ViewBag.Isactive== 32) { @Html.ActivePage("ProductionPlanning", "productionOrderSpeCodeDefinitions") } && @if (ViewBag.Isactive== 250) { @Html.ActivePage("ProductionPlanning", "kanbanDashBoard") }">
+        <a class="side" href="#">
+            <i class="fa fa-exchange-alt"></i> <span>(PP) Üretim Planlama</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li class="treeview && @if (ViewBag.Isactive== 21) { @Html.ActivePage("ProductionPlanning", "shiftDefinitions") }&& @if (ViewBag.Isactive== 22) { @Html.ActivePage("ProductionPlanning", "interruptionTypeDefinition") } && @if (ViewBag.Isactive== 23) { @Html.ActivePage("ProductionPlanning", "bomDefinitions") } && @if (ViewBag.Isactive== 24) { @Html.ActivePage("ProductionPlanning", "holiday") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li class="@if (ViewBag.Isactive== 21) { @Html.ActivePage("ProductionPlanning", "shiftDefinitions") }">
+                        <a href="http://virames.cloud/ProductionPlanning/shiftDefinitions">
+                            <i class="fa fa-circle fa-xs"></i> (PP101) Vardiya Tanımlamaları
+                        </a>
+                    </li>
+
+                    <li class="@if (ViewBag.Isactive== 22) { @Html.ActivePage("ProductionPlanning", "interruptionTypeDefinition") }">
+                        <a href="http://virames.cloud/ProductionPlanning/interruptionTypeDefinition">
+                            <i class="fa fa-circle fa-xs"></i> (PP102) Duruş Türü Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 23) { @Html.ActivePage("ProductionPlanning", "bomDefinitions") }">
+                        <a href="http://virames.cloud/ProductionPlanning/bomDefinitions">
+                            <i class="fa fa-circle fa-xs"></i> (PP103) Ürün Reçete Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 24) { @Html.ActivePage("ProductionPlanning", "holiday") }">
+                        <a href="http://virames.cloud/ProductionPlanning/holiday">
+                            <i class="fa fa-circle fa-xs"></i> (PP104) Tatiller
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 25) { @Html.ActivePage("ProductionPlanning", "project") } && @if (ViewBag.Isactive== 26) { @Html.ActivePage("ProductionPlanning", "productionOrders") } && @if (ViewBag.Isactive== 27) { @Html.ActivePage("ProductionPlanning", "workOrders") } && @if (ViewBag.Isactive== 28) { @Html.ActivePage("ProductionPlanning", "workOrderOperationStep") } && @if (ViewBag.Isactive== 29) { @Html.ActivePage("ProductionPlanning", "materialRequirementPlan") } && @if (ViewBag.Isactive== 250) { @Html.ActivePage("ProductionPlanning", "kanbanDashBoard") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> İşlemler
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 25) { @Html.ActivePage("ProductionPlanning", "project") }">
+                        <a href="http://virames.cloud/ProductionPlanning/project">
+                            <i class="fa fa-circle fa-xs"></i> (PP201) Projeler
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 26) { @Html.ActivePage("ProductionPlanning", "productionOrders") }">
+                        <a href="http://virames.cloud/ProductionPlanning/productionOrders">
+                            <i class="fa fa-circle fa-xs"></i> (PP202) Üretim Emirleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 27) { @Html.ActivePage("ProductionPlanning", "workOrders") }">
+                        <a href="http://virames.cloud/ProductionPlanning/workOrders">
+                            <i class="fa fa-circle fa-xs"></i> (PP203) İş Emirleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 250) { @Html.ActivePage("ProductionPlanning", "kanbanDashBoard") }">
+                        <a href="http://virames.cloud/ProductionPlanning/kanbanDashBoard">
+                            <i class="fa fa-circle fa-xs"></i> İş Emri Durumları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 28) { @Html.ActivePage("ProductionPlanning", "workOrderOperationStep") }">
+                        <a href="http://virames.cloud/ProductionPlanning/workOrderOperationStep">
+                            <i class="fa fa-circle fa-xs"></i> (PP205) İş Emri İşlem Adımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 29) { @Html.ActivePage("ProductionPlanning", "materialRequirementPlan") }">
+                        <a href="http://virames.cloud/ProductionPlanning/materialRequirementPlan">
+                            <i class="fa fa-circle fa-xs"></i> (PP206) Malzeme İhtiyaç Planlamaları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i>  Raporlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP301) Ürün Reçetesi Malzeme İlişkisi Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP302) İleriye Doğru İzleme
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP303) Geriye Doğru İzleme
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP304) Lot/Seri Hareketleri Dökümü
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP305) Vardiya Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP306) Reçete Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP307) Reçete İşlem Adımı Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP308) Duruş Nedenleri Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP309) Üretim Emri Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP310) İş Emri Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP311) Üretim Emri Durum Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP312) İş Emri Durum Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP313) Malzeme İhtiyaç Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP314) Duruş Nedenleri Ekstresi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP315) Üretim Emri Malzeme Kullanım Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP316) Üretim Emri Üretilemez Malzeme İhtiyaç Planlama
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP317) Üretim Emri Üretilebilir Malzeme İhtiyaç Planlama
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP318) Üretim PLanlama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP319) Proje Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP320) Proje Üretim Emri Durumu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP321) Proje İş Emri Durumu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP322) Proje Analizi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP323) Routing Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP324) Ürün Ağacı Dökümü
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP325) Tatil Günleri Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP326) Seri/Lot Numarası İşlem Adımı Dökümü
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP327) İş Emri İşlem Adımı Dökümü
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP328) İş İstasyonu Üretim Emri Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP329) Proje Üretilemez Malzeme İhtiyaç Planlama
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP330) Proje Üretilebilir Malzeme İhtiyaç Planlama
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP331) Personel Döküman Kullanım Analizi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PP332) Proje Üretim Emirleri Takip Raporu
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 30) { @Html.ActivePage("ProductionPlanning", "recipeSpecifiCodeDefinitions") } && @if (ViewBag.Isactive== 31) { @Html.ActivePage("ProductionPlanning", "projectSpeCodeDefinitions") } && @if (ViewBag.Isactive== 32) { @Html.ActivePage("ProductionPlanning", "productionOrderSpeCodeDefinitions") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> Tanımlamalar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 30) { @Html.ActivePage("ProductionPlanning", "recipeSpecifiCodeDefinitions") }">
+                        <a href="http://virames.cloud/ProductionPlanning/recipeSpecifiCodeDefinitions">
+                            <i class="fa fa-circle fa-xs"></i> (PP401)Reçete Özel Kod Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 31) { @Html.ActivePage("ProductionPlanning", "projectSpeCodeDefinitions") }">
+                        <a href="http://virames.cloud/ProductionPlanning/projectSpeCodeDefinitions">
+                            <i class="fa fa-circle fa-xs"></i> (PP402)Proje Özel Kod Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 32) { @Html.ActivePage("ProductionPlanning", "productionOrderSpeCodeDefinitions") }">
+                        <a href="http://virames.cloud/ProductionPlanning/productionOrderSpeCodeDefinitions">
+                            <i class="fa fa-circle fa-xs"></i> (PP403)Üretim Emir.Öz.Kod Tanımları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview && @if (ViewBag.Isactive== 33) { @Html.ActivePage("QualityManagement", "qualityControlCriteriaSet") } && @if (ViewBag.Isactive== 34) { @Html.ActivePage("QualityManagement", "Improprieties") } && @if (ViewBag.Isactive== 35) { @Html.ActivePage("QualityManagement", "qualityControlFiche") } && @if (ViewBag.Isactive== 36) { @Html.ActivePage("QualityManagement", "correctivePreventiveActivities") } && @if (ViewBag.Isactive== 37) { @Html.ActivePage("QualityManagement", "purchaseReceiptsApprovalTransactions") } && @if (ViewBag.Isactive== 38) { @Html.ActivePage("QualityManagement", "criteriaSetSpeCode") } && @if (ViewBag.Isactive== 39) { @Html.ActivePage("QualityManagement", "ImproprietyType") } && @if (ViewBag.Isactive== 40) { @Html.ActivePage("QualityManagement", "ImproprietyStepDefinitions") }">
+        <a class="side" href="#">
+            <i class="fa fa-check"></i> <span>(QM) Kalite Yönetimi</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+
+            <li class="treeview  && @if (ViewBag.Isactive== 33) { @Html.ActivePage("QualityManagement", "qualityControlCriteriaSet") } && @if (ViewBag.Isactive== 34) { @Html.ActivePage("QualityManagement", "Improprieties") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li class="@if (ViewBag.Isactive== 33) { @Html.ActivePage("QualityManagement", "qualityControlCriteriaSet") }">
+                        <a href="http://virames.cloud/QualityManagement/qualityControlCriteriaSet">
+                            <i class="fa fa-circle fa-xs"></i>(QM101) Kalite Kontrol Kriter Setleri
+                        </a>
+                    </li>
+
+                    <li class="@if (ViewBag.Isactive== 34) { @Html.ActivePage("QualityManagement", "Improprieties") }">
+                        <a href="http://virames.cloud/QualityManagement/Improprieties">
+                            <i class="fa fa-circle fa-xs"></i> (QM102) Uygunsuzluklar
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 35) { @Html.ActivePage("QualityManagement", "qualityControlFiche") } && @if (ViewBag.Isactive== 36) { @Html.ActivePage("QualityManagement", "correctivePreventiveActivities") } && @if (ViewBag.Isactive== 37) { @Html.ActivePage("QualityManagement", "purchaseReceiptsApprovalTransactions") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> İşlemler
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 35) { @Html.ActivePage("QualityManagement", "qualityControlFiche") }">
+                        <a href="http://virames.cloud/QualityManagement/qualityControlFiche">
+                            <i class="fa fa-circle fa-xs"></i> (QM201)Kalite Kontrol Fişleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 36) { @Html.ActivePage("QualityManagement", "correctivePreventiveActivities") }">
+                        <a href="http://virames.cloud/QualityManagement/correctivePreventiveActivities">
+                            <i class="fa fa-circle fa-xs"></i> (QM202)Düzeltici Önleyici Faaliyetler
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 37) { @Html.ActivePage("QualityManagement", "purchaseReceiptsApprovalTransactions") }">
+                        <a href="http://virames.cloud/QualityManagement/purchaseReceiptsApprovalTransactions">
+                            <i class="fa fa-circle fa-xs"></i> (QM203)S.alma İrsa.On. Hareketleri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i>  Raporlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (QM301) Malzeme KKK Seti Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (QM302) KKK Setleri Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (QM303) Malzeme Kalite Kontrol Analizi Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (QM304) Uygunsuzluk Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (QM305) Uygunsuzluk Ekstresi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (QM306) Uygunsuzluk Dökümü
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 38) { @Html.ActivePage("QualityManagement", "criteriaSetSpeCode") } && @if (ViewBag.Isactive== 39) { @Html.ActivePage("QualityManagement", "ImproprietyType") } && @if (ViewBag.Isactive== 40) { @Html.ActivePage("QualityManagement", "ImproprietyStepDefinitions") } ">
+                <a href="#">
+                    <i class="fa fa-share"></i> Tanımlamalar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 38) { @Html.ActivePage("QualityManagement", "criteriaSetSpeCode") }">
+                        <a href="http://virames.cloud/QualityManagement/criteriaSetSpeCode">
+                            <i class="fa fa-circle fa-xs"></i> (QM401) Kriter Seti Özel Kod Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 39) { @Html.ActivePage("QualityManagement", "ImproprietyType") }">
+                        <a href="http://virames.cloud/QualityManagement/ImproprietyType">
+                            <i class="fa fa-circle fa-xs"></i> (QM402) Uygunsuzluk Tipleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 40) { @Html.ActivePage("QualityManagement", "ImproprietyStepDefinitions") }">
+                        <a href="http://virames.cloud/QualityManagement/ImproprietyStepDefinitions">
+                            <i class="fa fa-circle fa-xs"></i> (QM403) Uygunsuzluk Adım Tanımları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview && @if (ViewBag.Isactive== 41) { @Html.ActivePage("ResourceManagement", "WorkstationGroup") } && if (ViewBag.Isactive== 43) { @Html.ActivePage("ResourceManagement", "Workstation") } && @if (ViewBag.Isactive== 44) { @Html.ActivePage("ResourceManagement", "employee") } && @if (ViewBag.Isactive== 45) { @Html.ActivePage("ResourceManagement", "certificateList") } && @if (ViewBag.Isactive== 46) { @Html.ActivePage("ResourceManagement", "workstationPeriodicMaintenance") } && @if (ViewBag.Isactive== 47) { @Html.ActivePage("ResourceManagement", "employeeWorkstationGroupAppointment") } && @if (ViewBag.Isactive== 48) { @Html.ActivePage("ResourceManagement", "workstationShiftAppointment") } && @if (ViewBag.Isactive== 49) { @Html.ActivePage("ResourceManagement", "workstationGroupWorkstationAppointment") } && @if (ViewBag.Isactive== 50) { @Html.ActivePage("ResourceManagement", "employeeCertificateAppointment") } && @if (ViewBag.Isactive== 51) { @Html.ActivePage("ResourceManagement", "employeeShiftAppointment") } && @if (ViewBag.Isactive== 52) { @Html.ActivePage("ResourceManagement", "employeeWorkstationAppointment") } && @if (ViewBag.Isactive== 53) { @Html.ActivePage("resourceManagement", "location") } && @if (ViewBag.Isactive== 54) { @Html.ActivePage("ResourceManagement", "department") } && @if (ViewBag.Isactive== 55) { @Html.ActivePage("ResourceManagement", "departmentScopeRecord") }">
+        <a  class="side" href="#">
+            <i class="fa fa-boxes"></i> <span>(RM) Kaynak Yönetimi</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+
+            <li class="treeview && @if (ViewBag.Isactive== 41) { @Html.ActivePage("ResourceManagement", "WorkstationGroup") } && if (ViewBag.Isactive== 43) { @Html.ActivePage("ResourceManagement", "Workstation") } && @if (ViewBag.Isactive== 44) { @Html.ActivePage("ResourceManagement", "employee") } && @if (ViewBag.Isactive== 45) { @Html.ActivePage("ResourceManagement", "certificateList") } ">
+                <a href="#">
+                    <i class="fa fa-share"></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li class="@if (ViewBag.Isactive== 41) { @Html.ActivePage("ResourceManagement", "WorkstationGroup") }">
+                        <a href="http://virames.cloud/ResourceManagement/WorkstationGroup">
+                            <i class="fa fa-circle fa-xs"></i>(RM101) İş İstasyonu Havuzu Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 43) { @Html.ActivePage("ResourceManagement", "Workstations") }">
+                        <a href="http://virames.cloud/ResourceManagement/Workstations">
+                            <i class="fa fa-circle fa-xs"></i>(RM102) İş İstasyonu Tanımı
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 44) { @Html.ActivePage("ResourceManagement", "employee") }">
+                        <a href="http://virames.cloud/ResourceManagement/employee">
+                            <i class="fa fa-circle fa-xs"></i>(RM103) Personel Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 45) { @Html.ActivePage("ResourceManagement", "certificateList") }">
+                        <a href="http://virames.cloud/ResourceManagement/certificateList">
+                            <i class="fa fa-circle fa-xs"></i>(RM104) Belge Kartları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 46) { @Html.ActivePage("ResourceManagement", "workstationPeriodicMaintenance") } && @if (ViewBag.Isactive== 47) { @Html.ActivePage("ResourceManagement", "employeeWorkstationGroupAppointment") } && @if (ViewBag.Isactive== 48) { @Html.ActivePage("ResourceManagement", "workstationShiftAppointment") } && @if (ViewBag.Isactive== 49) { @Html.ActivePage("ResourceManagement", "workstationGroupWorkstationAppointment") } && @if (ViewBag.Isactive== 50) { @Html.ActivePage("ResourceManagement", "employeeCertificateAppointment") } && @if (ViewBag.Isactive== 51) { @Html.ActivePage("ResourceManagement", "employeeShiftAppointment") } && @if (ViewBag.Isactive== 52) { @Html.ActivePage("ResourceManagement", "employeeWorkstationAppointment") } ">
+                <a href="#">
+                    <i class="fa fa-share"></i> İşlemler
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 46) { @Html.ActivePage("ResourceManagement", "workstationPeriodicMaintenance") }">
+                        <a href="http://virames.cloud/ResourceManagement/workstationPeriodicMaintenance">
+                            <i class="fa fa-circle fa-xs"></i>(RM201)İş İstasyonu Periyodik Bakımı
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 47) { @Html.ActivePage("ResourceManagement", "employeeWorkstationGroupAppointment") }">
+                        <a href="http://virames.cloud/ResourceManagement/employeeWorkstationGroupAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(RM202)İş İst. Havuz Per. Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 48) { @Html.ActivePage("ResourceManagement", "workstationShiftAppointment") }">
+                        <a href="http://virames.cloud/ResourceManagement/workstationShiftAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(RM203)İş İst. Vardiya Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 49) { @Html.ActivePage("ResourceManagement", "workstationGroupWorkstationAppointment") }">
+                        <a href="http://virames.cloud/ResourceManagement/workstationGroupWorkstationAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(RM204)İş İst. Havuzu İş İst. Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 50) { @Html.ActivePage("ResourceManagement", "employeeCertificateAppointment") }">
+                        <a href="http://virames.cloud/ResourceManagement/employeeCertificateAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(RM205)Personel Sertifika Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 51) { @Html.ActivePage("ResourceManagement", "employeeShiftAppointment") }">
+                        <a href="http://virames.cloud/ResourceManagement/employeeShiftAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(RM206)Personel Vardiya Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 52) { @Html.ActivePage("ResourceManagement", "employeeWorkstationAppointment") }">
+                        <a href="http://virames.cloud/ResourceManagement/employeeWorkstationAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(RM207)Personel İş İst. Atamaları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i>  Raporlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM301) İş İstasyonu Havuzu Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM302) İş İstasyonu Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM303) Personel Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i> (PI304) Malzeme Türü Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM304) Belge Kartları Listesi
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM305) Kaynak Kullanım Raporları
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM306) Kaynak Kapasite Aşım Raporu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM307) Personel Belge Kartları Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM308) İş istasyonu Periyodik Bakım Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM309) İş istasyonu İş Emri Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM310) Personel İş Emri Dökümü
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM311) Personel Vardiya Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM312) İş İstasyonu Vardiya Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM313) Personel Çalışma Takvimi Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM314) İş istasyonu Çalışma Takvimi Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM315) İş istasyonu Personel Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(RM316) İş istasyonu Havuzu İş İstasyonu
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 53) { @Html.ActivePage("resourceManagement", "location") } && @if (ViewBag.Isactive== 54) { @Html.ActivePage("ResourceManagement", "department") } && @if (ViewBag.Isactive== 55) { @Html.ActivePage("ResourceManagement", "departmentScopeRecord") } ">
+                <a href="#">
+                    <i class="fa fa-share"></i> Tanımlamalar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 53) { @Html.ActivePage("resourceManagement", "location") }">
+                        <a href="http://virames.cloud/resourceManagement/location">
+                            <i class="fa fa-circle fa-xs"></i>(RM401) Konum Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 54) { @Html.ActivePage("ResourceManagement", "department") }">
+                        <a href="http://virames.cloud/ResourceManagement/department">
+                            <i class="fa fa-circle fa-xs"></i>(RM402) Departmanlar
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 55) { @Html.ActivePage("ResourceManagement", "departmentScopeRecord") }">
+                        <a href="http://virames.cloud/ResourceManagement/departmentScopeRecord">
+                            <i class="fa fa-circle fa-xs"></i>(RM403) Depart. Kapsamı Tanımları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview  && @if (ViewBag.Isactive== 56) { @Html.ActivePage("AssetsManagement", "asset") } && @if (ViewBag.Isactive== 57) { @Html.ActivePage("AssetsManagement", "realEstate") } && @if (ViewBag.Isactive== 58) { @Html.ActivePage("AssetsManagement", "vehicle") } && @if (ViewBag.Isactive== 59) { @Html.ActivePage("AssetsManagement", "equipment") } && @if (ViewBag.Isactive== 60) { @Html.ActivePage("AssetsManagement", "periodicMaintenanceForAsset") } && @if (ViewBag.Isactive== 61) { @Html.ActivePage("AssetsManagement", "speCodeForAsset") }">
+        <a class="side" href="#">
+            <i class="fa fa-th-large"></i> <span>(ASM)Varlık Yönetimi</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+
+            <li class="treeview && @if (ViewBag.Isactive== 56) { @Html.ActivePage("AssetsManagement", "asset") } && @if (ViewBag.Isactive== 57) { @Html.ActivePage("AssetsManagement", "realEstate") } && @if (ViewBag.Isactive== 58) { @Html.ActivePage("AssetsManagement", "vehicle") } && @if (ViewBag.Isactive== 59) { @Html.ActivePage("AssetsManagement", "equipment") } ">
+                <a href="#">
+                    <i class="fa fa-share"></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 56) { @Html.ActivePage("AssetsManagement", "asset") }">
+                        <a href="http://virames.cloud/AssetsManagement/asset">
+                            <i class="fa fa-circle fa-xs"></i>(ASM101) Varlık Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 57) { @Html.ActivePage("AssetsManagement", "realEstate") }">
+                        <a href="http://virames.cloud/AssetsManagement/realEstate">
+                            <i class="fa fa-circle fa-xs"></i>(ASM102) Gayrimenkul Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 58) { @Html.ActivePage("AssetsManagement", "vehicle") }">
+                        <a href="http://virames.cloud/AssetsManagement/vehicle">
+                            <i class="fa fa-circle fa-xs"></i>(ASM103) Taşıt Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 59) { @Html.ActivePage("AssetsManagement", "equipment") }">
+                        <a href="http://virames.cloud/AssetsManagement/equipment">
+                            <i class="fa fa-circle fa-xs"></i>(ASM104) Ekipman Tanımları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 60) { @Html.ActivePage("AssetsManagement", "periodicMaintenanceForAsset") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> İşlemler
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 60) { @Html.ActivePage("AssetsManagement", "periodicMaintenanceForAsset") }">
+                        <a href="http://virames.cloud/AssetsManagement/periodicMaintenanceForAsset">
+                            <i class="fa fa-circle fa-xs"></i>(ASM201)Varlık Periyodik Bak.Kayıt
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i>  Raporlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu"></ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 61) { @Html.ActivePage("AssetsManagement", "speCodeForAsset") }" ">
+                <a href="#">
+                    <i class="fa fa-share"></i> Tanımlamalar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 61) { @Html.ActivePage("AssetsManagement", "speCodeForAsset") }">
+                        <a href="http://virames.cloud/AssetsManagement/speCodeForAsset">
+                            <i class="fa fa-circle fa-xs"></i>(ASM401) Varlık Özel Kod Tanımları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview && @if (ViewBag.Isactive== 62) { @Html.ActivePage("MessageManagement", "inBoxMessage") } && @if (ViewBag.Isactive== 64) { @Html.ActivePage("MessageManagement", "sendedMessage") } && @if (ViewBag.Isactive== 65) { @Html.ActivePage("MessageManagement", "trash") }">
+        <a class="side" href="#">
+            <i class="fa fa-envelope"></i> <span>(MSG)Mesaj Yönetimi</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+
+            <li class="treeview && @if (ViewBag.Isactive== 62) { @Html.ActivePage("MessageManagement", "inBoxMessage") } && @if (ViewBag.Isactive== 64) { @Html.ActivePage("MessageManagement", "sendedMessage") } && @if (ViewBag.Isactive== 65) { @Html.ActivePage("MessageManagement", "trash") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 62) { @Html.ActivePage("MessageManagement", "inBoxMessage") }">
+                        <a href="http://virames.cloud/MessageManagement/inBoxMessage">
+                            <i class="fa fa-circle fa-xs"></i>(MSG101) Gelen Kutusu
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 64) { @Html.ActivePage("MessageManagement", "sendedMessage") }">
+                        <a href="http://virames.cloud/MessageManagement/sendedMessage">
+                            <i class="fa fa-circle fa-xs"></i>(MSG101) Giden Kutusu
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 65) { @Html.ActivePage("MessageManagement", "trash") }">
+                        <a href="http://virames.cloud/MessageManagement/trash">
+                            <i class="fa fa-circle fa-xs"></i>(MSG101) Çöp Kutusu
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i> Tanımlamalar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(MSG401) Mesaj Konum Tanımları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview && @if (ViewBag.Isactive== 66) { @Html.ActivePage("DocumentManagement", "document") }&& @if (ViewBag.Isactive== 66) { @Html.ActivePage("DocumentManagement", "document") } && @if (ViewBag.Isactive== 67) { @Html.ActivePage("DocumentManagement", "documentBomAppointment") } && @if (ViewBag.Isactive== 68) { @Html.ActivePage("DocumentManagement", "documentMaterialAppointment") } && @if (ViewBag.Isactive== 69) { @Html.ActivePage("DocumentManagement", "documentWorkstationAppointment") } && @if (ViewBag.Isactive== 70) { @Html.ActivePage("DocumentManagement", "documentWorkstationGroupAppointment") } && @if (ViewBag.Isactive== 71) { @Html.ActivePage("DocumentManagement", "documentEmployeeAppointment") } && @if (ViewBag.Isactive== 72) { @Html.ActivePage("DocumentManagement", "documentProductOrderAppointment") } && if (ViewBag.Isactive== 73) { @Html.ActivePage("DocumentManagement", "documentMaterialFicheAppointment") } && @if (ViewBag.Isactive== 74) { @Html.ActivePage("DocumentManagement", "documentCertificateAppointment") } && @if (ViewBag.Isactive== 75) { @Html.ActivePage("DocumentManagement", "documentProjectAppointwment") } && @if (ViewBag.Isactive== 76) { @Html.ActivePage("DocumentManagement", "documentPurchaseIndentAppointment") } && @if (ViewBag.Isactive== 77) { @Html.ActivePage("DocumentManagement", "documentPurchaseProposalAppointment") } && @if (ViewBag.Isactive== 78) { @Html.ActivePage("DocumentManagement", "documentPurchaseContractAppointment") } && @if (ViewBag.Isactive== 79) { @Html.ActivePage("DocumentManagement", "documentPurchaseOrderAppointment") }">
+
+        <a class="side" href="#">
+            <i class="fa fa-file-alt"></i> <span>(DM)Döküman Yönetimi</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+
+            <li class="treeview && @if (ViewBag.Isactive== 66) { @Html.ActivePage("DocumentManagement", "document") } ">
+                <a href="#">
+                    <i class="fa fa-share "></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 66) { @Html.ActivePage("DocumentManagement", "document") }">
+                        <a href="http://virames.cloud/DocumentManagement/document">
+                            <i class="fa fa-circle fa-xs"></i>(DM101) Döküman Yönetimi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM102) Klasör Yönetimi
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 67) { @Html.ActivePage("DocumentManagement", "documentBomAppointment") } && @if (ViewBag.Isactive== 68) { @Html.ActivePage("DocumentManagement", "documentMaterialAppointment") } && @if (ViewBag.Isactive== 69) { @Html.ActivePage("DocumentManagement", "documentWorkstationAppointment") } && @if (ViewBag.Isactive== 70) { @Html.ActivePage("DocumentManagement", "documentWorkstationGroupAppointment") } && @if (ViewBag.Isactive== 71) { @Html.ActivePage("DocumentManagement", "documentEmployeeAppointment") } && @if (ViewBag.Isactive== 72) { @Html.ActivePage("DocumentManagement", "documentProductOrderAppointment") } && if (ViewBag.Isactive== 73) { @Html.ActivePage("DocumentManagement", "documentMaterialFicheAppointment") } && @if (ViewBag.Isactive== 74) { @Html.ActivePage("DocumentManagement", "documentCertificateAppointment") } && @if (ViewBag.Isactive== 75) { @Html.ActivePage("DocumentManagement", "documentProjectAppointwment") } && @if (ViewBag.Isactive== 76) { @Html.ActivePage("DocumentManagement", "documentPurchaseIndentAppointment") } && @if (ViewBag.Isactive== 77) { @Html.ActivePage("DocumentManagement", "documentPurchaseProposalAppointment") } && @if (ViewBag.Isactive== 78) { @Html.ActivePage("DocumentManagement", "documentPurchaseContractAppointment") } && @if (ViewBag.Isactive== 79) { @Html.ActivePage("DocumentManagement", "documentPurchaseOrderAppointment") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> İşlemler
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 67) { @Html.ActivePage("DocumentManagement", "documentBomAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentBomAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM201) Reçete Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 68) { @Html.ActivePage("DocumentManagement", "documentMaterialAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentMaterialAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM202) Malzeme Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 69) { @Html.ActivePage("DocumentManagement", "documentWorkstationAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentWorkstationAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM203) İş İstasyonu Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 70) { @Html.ActivePage("DocumentManagement", "documentWorkstationGroupAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentWorkstationGroupAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM204) İş İstasyonu Havuzu Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 71) { @Html.ActivePage("DocumentManagement", "documentEmployeeAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentEmployeeAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM205) Personel Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 72) { @Html.ActivePage("DocumentManagement", "documentProductOrderAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentProductOrderAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM206) Üretim Emri Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 73) { @Html.ActivePage("DocumentManagement", "documentMaterialFicheAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentMaterialFicheAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM207) Malzeme Fişi Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 74) { @Html.ActivePage("DocumentManagement", "documentCertificateAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentCertificateAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM208) Sertifika Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 75) { @Html.ActivePage("DocumentManagement", "documentProjectAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentProjectAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM209) Proje Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 76) { @Html.ActivePage("DocumentManagement", "documentPurchaseIndentAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentPurchaseIndentAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM210) Satın Alma Emri Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 77) { @Html.ActivePage("DocumentManagement", "documentPurchaseProposalAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentPurchaseProposalAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM211) Satın Alma Teklifi Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 78) { @Html.ActivePage("DocumentManagement", "documentPurchaseContractAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentPurchaseContractAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM212) Satın Alma Sözleşmesi Döküman Atamaları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 79) { @Html.ActivePage("DocumentManagement", "documentPurchaseOrderAppointment") }">
+                        <a href="http://virames.cloud/DocumentManagement/documentPurchaseOrderAppointment">
+                            <i class="fa fa-circle fa-xs"></i>(DM213) Satın Alma Siparişi Döküman Atamaları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i>  Raporlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM301) Döküman Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM302) Malzeme Döküman Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM303) İş İstasyonu Döküman Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM304) Malzeme Fİşi Döküman Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM305) Reçete Döküman Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM306) Üretim Emri Döküman Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM307) Proje Döküman Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM308) İş İstasyonu Havuzu Döküman Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM309) Personel Döküman Atama Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(DM310) Belge Kartları Döküman Atama Listesi
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview  && @if (ViewBag.Isactive== 80) { @Html.ActivePage("SystemManagement", "role") } && @if (ViewBag.Isactive== 81) { @Html.ActivePage("SystemManagement", "user") } && @if (ViewBag.Isactive== 82) { @Html.ActivePage("SystemManagement", "workArea") } &&  @if (ViewBag.Isactive== 83) { @Html.ActivePage("SystemManagement", "terminal") } && @if (ViewBag.Isactive== 84) { @Html.ActivePage("SystemManagement", "reportDesign") } && @if (ViewBag.Isactive== 85) { @Html.ActivePage("SystemManagement", "roleAuthorization") } && @if (ViewBag.Isactive== 86) { @Html.ActivePage("SystemManagement", "layOut") }  && @if (ViewBag.Isactive== 87) { @Html.ActivePage("SystemManagement", "lockedObject") } && @if (ViewBag.Isactive== 88) { @Html.ActivePage("SystemManagement", "log") } && @if (ViewBag.Isactive== 89) { @Html.ActivePage("SystemManagement", "roleAuthorization") }">
+        <a class="side" href="#">
+            <i class="fa fa-cogs"></i> <span>(SYS)Sistem Yönetimi</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+
+            <li class="treeview && @if (ViewBag.Isactive== 80) { @Html.ActivePage("SystemManagement", "role") } && @if (ViewBag.Isactive== 81) { @Html.ActivePage("SystemManagement", "user") } && @if (ViewBag.Isactive== 82) { @Html.ActivePage("SystemManagement", "workArea") } &&  @if (ViewBag.Isactive== 83) { @Html.ActivePage("SystemManagement", "terminal") } && @if (ViewBag.Isactive== 84) { @Html.ActivePage("SystemManagement", "reportDesign") }  ">
+                <a href="#">
+                    <i class="fa fa-share"></i> Ana Kayıtlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li class="@if (ViewBag.Isactive== 80) { @Html.ActivePage("SystemManagement", "role") } ">
+                        <a href="http://virames.cloud/SystemManagement/role">
+                            <i class="fa fa-circle fa-xs"></i>(SYS101) Rol Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 81) { @Html.ActivePage("SystemManagement", "user") } ">
+                        <a href="http://virames.cloud/SystemManagement/user">
+                            <i class="fa fa-circle fa-xs"></i>(SYS102) Kullanıcı Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 82) { @Html.ActivePage("SystemManagement", "workArea") } ">
+                        <a href="http://virames.cloud/SystemManagement/workArea">
+                            <i class="fa fa-circle fa-xs"></i>(SYS103) Çalışma Alanı Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 83) { @Html.ActivePage("SystemManagement", "terminal") } ">
+                        <a href="http://virames.cloud/SystemManagement/terminal">
+                            <i class="fa fa-circle fa-xs"></i>(SYS104) Terminal Tanımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 84) { @Html.ActivePage("SystemManagement", "reportDesign") } ">
+                        <a href="http://virames.cloud/SystemManagement/reportDesign">
+                            <i class="fa fa-circle fa-xs"></i>(SYS105) Rapor Tanımları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview && @if (ViewBag.Isactive== 85) { @Html.ActivePage("SystemManagement", "roleAuthorization") } && @if (ViewBag.Isactive== 86) { @Html.ActivePage("SystemManagement", "layOut") }  && @if (ViewBag.Isactive== 87) { @Html.ActivePage("SystemManagement", "lockedObject") } && @if (ViewBag.Isactive== 88) { @Html.ActivePage("SystemManagement", "log") } && @if (ViewBag.Isactive== 89) { @Html.ActivePage("SystemManagement", "roleAuthorization") }">
+                <a href="#">
+                    <i class="fa fa-share"></i> İşlemler
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@if (ViewBag.Isactive== 85) { @Html.ActivePage("SystemManagement", "roleAuthorization") } ">
+                        <a href="">
+                            <i class="fa fa-circle fa-xs"></i>(SYS201) Kullanıcı Yetkilendirme
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 86) { @Html.ActivePage("SystemManagement", "layOut") } ">
+                        <a href="http://virames.cloud/SystemManagement/layOut">
+                            <i class="fa fa-circle fa-xs"></i>(SYS202) Layout Tasarımları
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 87) { @Html.ActivePage("SystemManagement", "lockedObject") } ">
+                        <a href="http://virames.cloud/SystemManagement/lockedObject">
+                            <i class="fa fa-circle fa-xs"></i>(SYS203) Kilitlenmiş Tasarımlar
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 88) { @Html.ActivePage("SystemManagement", "log") } ">
+                        <a href="http://virames.cloud/SystemManagement/log">
+                            <i class="fa fa-circle fa-xs"></i>(SYS204) Log Kayıtları
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-circle fa-xs"></i>(SYS205) Silinmiş Kayıtlar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-circle fa-xs"></i>(SYS206) Lisans İşlemleri
+                        </a>
+                    </li>
+                    <li class="@if (ViewBag.Isactive== 89) { @Html.ActivePage("SystemManagement", "roleAuthorization") } ">
+                        <a href="http://virames.cloud/SystemManagement/roleAuthorization">
+                            <i class="fa fa-circle fa-xs"></i>(SYS207) Rol Yetkilendirme
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(SYS208) Excel'den İçe Aktarma
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i>Raporlar
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(SYS301) Rol Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(SYS302) Kullanıcı Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(SYS303) Kullanıcı Yetki Dökümü
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(SYS304) Terminal Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(SYS305) Çalışma Alanı Listesi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle fa-xs"></i>(SYS306) Kullanıcı Kullanım Analizi
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+

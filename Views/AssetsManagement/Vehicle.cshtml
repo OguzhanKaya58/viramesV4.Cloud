@@ -1,0 +1,109 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Vehicle>
+@{
+    ViewBag.Title = "vehicle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h3>Taşıt Tanımları</h3>
+    <div class="box-body">
+        <a class="btn btn-app">
+            <i class="fa fa-share-square" data-toggle="modal" data-target="#ModalButton"></i> Aktarım
+        </a>
+        <div class="modal fade" id="ModalButton" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3>Dışa Aktar</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Text File (.txt)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Excel File (.xlsx)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio1">Html File (.txt)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                            <label class="form-check-label" for="inlineRadio2">PDF File (.pdf)</label>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Aktar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Vasıta Kodu</th>
+                                <th>Vasıta Tanımı</th>
+                                <th>Vasıta Seri Numarası</th>
+                                <th>Varlık Kaydı</th>
+                                <th>Üretildiği Yıl</th>
+                                <th>Koltuk Sayısı</th>
+                                <th>Yakıt tipi</th>
+                                <th>Motor Tipi</th>
+                                <th>Amontisman Değeri</th>
+                                <th>Amontisman Süresi (Yıl)</th>
+                                <th>Seçim</th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Vehicle vehicle in Model)
+                            {
+                            <tr>
+                                <td>@vehicle.Code</td>
+                                <td>@vehicle.Definition</td>
+                                <td>@vehicle.SerialNumber</td>
+                                <td>@vehicle.Asset</td>
+                                <td>@vehicle.YearOfManufacture</td>
+                                <td>@vehicle.NumberOfSeats</td>
+                                <td>@vehicle.FuelType</td>
+                                <td>@vehicle.EngineType</td>
+                                <td>@vehicle.AmortizationValue</td>
+                                <td>@vehicle.AmortizationYear</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("DetailVehicle", "AssetsManagement", new { id = vehicle.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("EditVehicle", "AssetsManagement", new { id = vehicle.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

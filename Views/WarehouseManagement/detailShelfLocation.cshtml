@@ -1,0 +1,64 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.ShelfLocation
+
+@{
+    ViewBag.Title = "detailShelfLocation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+
+    <div class="box-body ">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+
+                    <div class="box-body">
+                        <h3>Raf Yeri Tanımı</h3>
+                        <hr />
+                    </div>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.StorageConditionSet)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.StorageConditionSet)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Warehouse.WarehouseName)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Warehouse.WarehouseName)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.LocationOfShelf)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.LocationOfShelf)
+                        </dd>
+
+
+
+                    </dl>
+                </div>
+
+            </div>
+
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    <!-- /.row -->
+</section>
+}

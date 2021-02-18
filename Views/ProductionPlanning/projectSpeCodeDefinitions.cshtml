@@ -1,0 +1,247 @@
+﻿
+@{
+    ViewBag.Title = "projectSpeCodeDefinitions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<SpeCode>
+
+
+<section class="content-header">
+    <h1>
+        Proje Özel Kod İşlemleri
+
+    </h1>
+
+    <div class="box-body">
+        <a href="http://virames.cloud/ProductionPlanning/newProjectSpeCode" class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i>Aktarım
+        </a>
+
+    </div>
+
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Özel Kod</th>
+                                <th>Özel Kod Türü</th>
+                                <th>Özel Kod Durumu</th>
+                                <th>Yazı Rengi</th>
+                                <th>Eğik Yazı</th>
+                                <th>Kalın Yazı</th>
+                                <th>Karakter Boyutu</th>
+                                <th>Yazı Tipi Adı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (SpeCode projectSpeCode in Model)
+                            {
+
+                                <tr>
+                                    <td>
+                                        @if (projectSpeCode.FontBold == false && projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpecialCode</i>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpecialCode </strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpecialCode</i></strong>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.SpecialCode
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpeCodeType</i>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <b><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpeCodeType </b>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <b><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpeCodeType</i></b>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.SpeCodeType
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true && @projectSpeCode.FontBold == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.Status</i></strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong> <p style="color: @projectSpeCode.FontColor;">@projectSpeCode.Status</strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.Status</i>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.Status
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true && @projectSpeCode.FontBold == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontColor</i></strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontColor</strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontColor</i>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.FontColor
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontBold == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true && @projectSpeCode.FontBold == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontSize</i></strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontSize</strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontSize</i>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.FontSize
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true && @projectSpeCode.FontBold == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontName</i></strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontName</strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontName</i>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.FontName
+                                        }
+                                    </td>
+                                    <td>
+                                        <div class="dropdown btn-group dropleft">
+                                            <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                                Seç
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a href="@Url.Action("detailProjectSpeCode", "ProductionPlanning", new { id = projectSpeCode.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                                <a href="@Url.Action("editProjectSpeCode", "ProductionPlanning", new { id = projectSpeCode.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                                <a href="#" onclick="javascript:deleteRow('@projectSpeCode.ID', '@projectSpeCode.SpecialCode');"><span class="fa fa-trash"> Sil </span></a> <br />
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<script>
+    function deleteRow(id, name) {
+        swal({
+            title: "Silmek istediğinize emin misiniz?",
+            text: "\"" + name + "\" özel kodlu kayıtı silecek misiniz?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sil",
+            closeOnConfirm: false
+
+        }, function () {
+            swal("Silindi!", "İlgili kayıt silindi", "success");
+            window.location.href = '/ProductionPlanning/deleteProjectSpeCode/' + id;
+            closeOnConfirm: true;
+
+        });
+    };
+</script>
+
+
+
+
+
+
+

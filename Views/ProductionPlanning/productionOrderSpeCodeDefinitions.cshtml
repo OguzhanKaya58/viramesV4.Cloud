@@ -1,0 +1,252 @@
+﻿
+@{
+    ViewBag.Title = "productionOrderSpeCodeDefinitions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<SpeCode>
+
+
+<section class="content-header">
+    <h1>
+        Üretim Emri Özel Kod İşlemleri
+
+    </h1>
+
+    <div class="box-body">
+        <a href="http://virames.cloud/ProductionPlanning/newProductSpeCode" class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i>Aktarım
+        </a>
+
+    </div>
+
+    <ol class="breadcrumb">
+        <li class="active">Üretim Özel Kod İşlemleri</li>
+    </ol>
+
+
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Özel Kod</th>
+                                <th>Özel Kod Türü</th>
+                                <th>Özel Kod Durumu</th>
+                                <th>Yazı Rengi</th>
+                                <th>Eğik Yazı</th>
+                                <th>Kalın Yazı</th>
+                                <th>Karakter Boyutu</th>
+                                <th>Yazı Tipi Adı</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (SpeCode productOrderSpeCode in Model)
+                            {
+
+                            <tr>
+                                <td>
+                                    @if (productOrderSpeCode.FontBold == false && productOrderSpeCode.FontItalic == true)
+                                    {
+                                        <i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.SpecialCode</i>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == true && @productOrderSpeCode.FontItalic == false)
+                                    {
+                                        <strong><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.SpecialCode </strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == true && @productOrderSpeCode.FontItalic == true)
+                                    {
+                                        <strong><i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.SpecialCode</i></strong>
+                                    }
+                                    else
+                                    {
+                                        @productOrderSpeCode.SpecialCode
+                                    }
+                                </td>
+                                <td>
+                                    @if (@productOrderSpeCode.FontBold == false && @productOrderSpeCode.FontItalic == true)
+                                    {
+
+                                        <i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.SpeCodeType</i>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == true && @productOrderSpeCode.FontItalic == false)
+                                    {
+                                        <b><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.SpeCodeType </b>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == true && @productOrderSpeCode.FontItalic == true)
+                                    {
+                                        <b><i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.SpeCodeType</i></b>
+                                    }
+                                    else
+                                    {
+                                        @productOrderSpeCode.SpeCodeType
+                                    }
+
+                                </td>
+                                <td>
+                                    @if (@productOrderSpeCode.FontItalic == true && @productOrderSpeCode.FontBold == true)
+                                    {
+                                        <strong><i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.Status</i></strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == true && @productOrderSpeCode.FontItalic == false)
+                                    {
+                                        <strong> <p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.Status</strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == false && @productOrderSpeCode.FontItalic == true)
+                                    {
+                                        <i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.Status</i>
+                                    }
+                                    else
+                                    {
+                                        @productOrderSpeCode.Status
+                                    }
+                                </td>
+                                <td>
+                                    @if (@productOrderSpeCode.FontItalic == true && @productOrderSpeCode.FontBold == true)
+                                    {
+                                        <strong><i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontColor</i></strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == true && @productOrderSpeCode.FontItalic == false)
+                                    {
+                                        <strong><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontColor</strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == false && @productOrderSpeCode.FontItalic == true)
+                                    {
+                                        <i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontColor</i>
+                                    }
+                                    else
+                                    {
+                                        @productOrderSpeCode.FontColor
+                                    }
+                                </td>
+                                <td>
+                                    @if (@productOrderSpeCode.FontItalic == true)
+                                    {
+                                        <input type="checkbox" value="" checked>
+                                    }
+                                    else
+                                    {
+                                        <input type="checkbox" value="">
+                                    }
+                                </td>
+                                <td>
+                                    @if (@productOrderSpeCode.FontBold == true)
+                                    {
+                                        <input type="checkbox" value="" checked>
+                                    }
+                                    else
+                                    {
+                                        <input type="checkbox" value="">
+                                    }
+
+                                </td>
+                                <td>
+                                    @if (@productOrderSpeCode.FontItalic == true && @productOrderSpeCode.FontBold == true)
+                                    {
+                                        <strong><i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontSize</i></strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == true && @productOrderSpeCode.FontItalic == false)
+                                    {
+                                        <strong><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontSize</strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == false && @productOrderSpeCode.FontItalic == true)
+                                    {
+                                        <i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontSize</i>
+                                    }
+                                    else
+                                    {
+                                        @productOrderSpeCode.FontSize
+                                    }
+                                </td>
+                                <td>
+                                    @if (@productOrderSpeCode.FontItalic == true && @productOrderSpeCode.FontBold == true)
+                                    {
+                                        <strong><i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontName</i></strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == true && @productOrderSpeCode.FontItalic == false)
+                                    {
+                                        <strong><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontName</strong>
+                                    }
+                                    else if (@productOrderSpeCode.FontBold == false && @productOrderSpeCode.FontItalic == true)
+                                    {
+                                        <i><p style="color: @productOrderSpeCode.FontColor;">@productOrderSpeCode.FontName</i>
+                                    }
+                                    else
+                                    {
+                                        @productOrderSpeCode.FontName
+                                    }
+                                </td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailProductSpeCode", "ProductionPlanning", new { id = productOrderSpeCode.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("editProductSpeCode", "ProductionPlanning", new { id = productOrderSpeCode.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                            <a href="#" onclick="javascript:deleteRow('@productOrderSpeCode.ID', '@productOrderSpeCode.SpecialCode');"><span class="fa fa-trash"> Sil </span></a> <br />
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            }
+                        </tbody>
+                       
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<script>
+    function deleteRow(id, name) {
+        swal({
+            title: "Silmek istediğinize emin misiniz?",
+            text: "\"" + name + "\" özel kodlu kayıtı silecek misiniz?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sil",
+            closeOnConfirm: false
+
+        }, function () {
+            swal("Silindi!", "İlgili kayıt silindi", "success");
+            window.location.href = '/ProductionPlanning/deleteProjectSpeCode/' + id;
+            closeOnConfirm: true;
+
+        });
+    };
+</script>
+
+
+
+
+
+

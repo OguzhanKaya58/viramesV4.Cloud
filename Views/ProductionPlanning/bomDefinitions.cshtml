@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "bomDefinitions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<BOM>
+
+
+<section class="content-header">
+    <h1>
+       Reçete Tanımı
+
+    </h1>
+
+    <div class="box-body">
+
+        <a href="http://virames.cloud/ProductionPlanning/newBOMDefinition" class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+
+
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i>Aktarım
+        </a>
+
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Reçete Kodu</th>
+                                <th>Reçete Tanımı</th>
+                                <th>Malzeme</th>
+                                <th>Reçete Kaynağı</th>
+                                <th>İş İstasyonu</th>
+                                <th>İş İstasyonu Havuzu</th>
+                                <th>Kapasite Tahsis Oranı</th>
+                                <th>Formül Tercihi</th>
+                                <th>Öncelik</th>
+                                <th>Durum</th>
+                                <th>Depo</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (BOM bomDefinition in Model)
+                            {
+
+                            <tr>
+                                <td>@bomDefinition.Code</td>
+                                <td>@bomDefinition.Definition</td>
+                                <td>@bomDefinition.Material</td>
+                                <td>@bomDefinition.BOMSourceType</td>
+                                <td>@bomDefinition.Workstation</td>
+                                <td>@bomDefinition.WorkstationGroup</td>
+                                <td>@bomDefinition.CapacityAllocationRate</td>
+                                <td>@bomDefinition.FormulaPreference</td>
+                                <td>@bomDefinition.Priority</td>
+                                <td>@bomDefinition.Status</td>
+                                <td>@bomDefinition.Warehouse</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailBOMDefinition", "ProductionPlanning", new { id = bomDefinition.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("editBOMDefinition", "ProductionPlanning", new { id = bomDefinition.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                            <a href="@Url.Action("deleteBOMDefinition", "ProductionPlanning", new { id = bomDefinition.ID })"><span class="fa fa-trash"> Sil </span></a> <br />
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Reçete Kodu</th>
+                                <th>Reçete Tanımı</th>
+                                <th>Malzeme</th>
+                                <th>Reçete Kaynağı</th>
+                                <th>İş İstasyonu</th>
+                                <th>İş İstasyonu Havuzu</th>
+                                <th>Kapasite Tahsis Oranı</th>
+                                <th>Formül Tercihi</th>
+                                <th>Öncelik</th>
+                                <th>Durum</th>
+                                <th>Depo</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+

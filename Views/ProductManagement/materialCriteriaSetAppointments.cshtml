@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "materialCriteriaSetAppointments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<MaterialCriteriaSetAppointment>
+
+
+<section class="content-header">
+    <h1>
+        Malzeme Kriter Seti Atamaları
+
+    </h1>
+
+    <div class="box-body">
+        <a href="http://virames.cloud/ProductManagement/newMaterialCriteriaSetAppointments" class="btn btn-app btn btn-primary">
+            
+            <i class="fa fa-file"></i> Yeni
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i> Aktarım
+        </a>
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Malzeme Kriter Seti Atamaları
+
+                    </h2>
+
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Malzeme</th>
+                                <th>Kriter Seti</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (MaterialCriteriaSetAppointment materialCriteriaSetAppointment in Model)
+                            {
+
+                            <tr>
+                                <td>@materialCriteriaSetAppointment.Material</td>
+                                <td>@materialCriteriaSetAppointment.CriteriaSet</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailMaterialCriteriaSetAppointments", "ProductManagement", new { id = materialCriteriaSetAppointment.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("editMaterialCriteriaSetAppointments", "ProductManagement", new { id = materialCriteriaSetAppointment.ID })"><span class="fa fa-edit"> Düzenle </span> </a><br />
+                                            @*<a href="@Url.Action("detailMaterialFiche", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-receipt"> Reçete Listesi </span> <br />
+                                            @*<a href="@Url.Action("detailCriteriaSet", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-tasks"> Kriter Setleri </span> <br />
+                                            @*<a href="@Url.Action("detailDocumentManagement", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-sitemap"> Döküman Yönetimi </span> <br />
+                                            @*<a href="@Url.Action("deleteFicheMaterial", "ProductManagement", new { id = materialfiche.ID })"><span class="fa fa-trash"> Sil </span></a> <br />*@*@*@*@
+
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+

@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "correctivePreventiveActivities";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<NonConformanceCPA>
+
+
+<section class="content-header">
+    <h1>
+        Düzeltici Önleyici Faaliyet Tanımları
+
+    </h1>
+
+    <div class="box-body ">
+        <div class="btn-group">
+
+
+            <button type="button" class="btn btn-primary ">
+                <span class=" fa fa-key"></span> Kullanıcı Şifre Değiştir
+            </button>
+
+        </div>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-edit"></span> Çalışma Alanı Değiştir
+        </button>
+
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-sign-in"></span> Yeniden Giriş
+        </button>
+
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-dashboard"></span> DashBoard Seç
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-info"></span> Hakkında
+        </button>
+    </div>
+
+
+    <ol class="breadcrumb">
+        <li class="active"> Düzeltici Önleyici Faaliyet Tanımları</li>
+    </ol>
+
+
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Uygunsuzluk</th>
+                                <th>Uygunsuzluk Adımı</th>
+                                <th>Personel</th>
+                                <th>Alınan Kararlar</th>
+                                <th>Bilgi</th>
+                                <th>İşlem Tarihi</th>
+                                <th>Dosya/Döküman</th>
+                                <th>Personel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (NonConformanceCPA correctivePreventive in Model)
+                            {
+
+                                <tr>
+                                    <td>@correctivePreventive.NonConformance</td>
+                                    <td>@correctivePreventive.NonConformanceStep</td>
+                                    <td>@correctivePreventive.Employee</td>
+                                    <td>@correctivePreventive.DesicionsTaken</td>
+                                    <td>@correctivePreventive.Information</td>
+                                    <td>@correctivePreventive.OperationDate</td>
+                                    <td>@correctivePreventive.FileName</td>
+                                    <td>@correctivePreventive.Employee</td>
+                                </tr>
+
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Uygunsuzluk</th>
+                                <th>Uygunsuzluk Adımı</th>
+                                <th>Personel</th>
+                                <th>Alınan Kararlar</th>
+                                <th>Bilgi</th>
+                                <th>İşlem Tarihi</th>
+                                <th>Dosya/Döküman</th>
+                                <th>Personel</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+

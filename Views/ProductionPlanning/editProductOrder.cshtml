@@ -1,0 +1,243 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.ProductOrder
+
+@{
+    ViewBag.Title = "editProductOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="content-header">
+        <h3>Üretim Emri Tanımı</h3>
+
+    </section>
+    <section class="content">
+        <div class="row">
+
+            <div class="box">
+                <div class="box-header">
+
+                    <div class="box-body">
+
+                        <hr />
+                    </div>
+                    <div class="form-horizontal">
+                        <center><h3> Üretim Emri </h3></center>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Number, htmlAttributes: new { @class = "control-label col-md-3" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Number, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control"} })
+                                    @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SpeCodeID, "SpeCodeID", htmlAttributes: new { @class = "control-label col-md-3" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.SpeCodeID, (IEnumerable<SelectListItem>)ViewBag.SpeCode, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.SpeCodeID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ProductOrderStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EnumDropDownListFor(model => model.ProductOrderStatus, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.ProductOrderStatus, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <center><h3> Üretim Emri Genel Bilgiler </h3></center>
+                        <hr />
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MainMaterialID, "MainMaterialID", htmlAttributes: new { @class = "control-label col-md-3" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.MainMaterialID, (IEnumerable<SelectListItem>)ViewBag.Material, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.MainMaterialID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ConfigurationID, "ConfigurationID", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.ConfigurationID, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ConfigurationID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.BOMID, "BOMID", htmlAttributes: new { @class = "control-label col-md-3" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.BOMID, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.BOMID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.WarehouseID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.WarehouseID, (IEnumerable<SelectListItem>)ViewBag.Warehouse, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.WarehouseID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.PlanningStatus, htmlAttributes: new { @class = "control-label col-md-3" })
+                                <div class="col-md-8">
+                                    @Html.EnumDropDownListFor(model => model.PlanningStatus, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.PlanningStatus, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ProjectID, "ProjectID", htmlAttributes: new { @class = "control-label col-md-3" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.ProjectID, (IEnumerable<SelectListItem>)ViewBag.Project, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.ProjectID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Completion, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.Completion, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Completion, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <center> <h3>Tarih Bilgileri</h3></center>
+                        <hr />
+                        <div class="col-lg-4">
+                            <h3>Hedeflenen Tarih</h3>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TargetStartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.TargetStartDate, new { htmlAttributes = new { @class = "form-control"} })
+                                    @Html.ValidationMessageFor(model => model.TargetStartDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TargetEndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.TargetEndDate, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.TargetEndDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <h3>Planlanan Tarih</h3>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.PlanningStartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.PlanningStartDate, new { htmlAttributes = new { @class = "form-control"} })
+                                    @Html.ValidationMessageFor(model => model.PlanningStartDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.PlanningEndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.PlanningEndDate, new { htmlAttributes = new { @class = "form-control"} })
+                                    @Html.ValidationMessageFor(model => model.PlanningEndDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <h3>Gerçekleşen Tarih</h3>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ActualStartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.ActualStartDate, new { htmlAttributes = new { @class = "form-control"} })
+                                    @Html.ValidationMessageFor(model => model.ActualStartDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ActualEndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.ActualEndDate, new { htmlAttributes = new { @class = "form-control"} })
+                                    @Html.ValidationMessageFor(model => model.ActualEndDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-8">
+                                <center>
+
+                                    <input type="submit" value="Kaydet" class="btn btn-app btn btn-primary" />
+
+                                    <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                                        <i class="fa fa-times"></i> Vazgeç
+                                    </a>
+                                </center>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+}

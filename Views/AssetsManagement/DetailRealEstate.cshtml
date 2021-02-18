@@ -1,0 +1,172 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.RealEstate
+
+@{
+    ViewBag.Title = "detailRealEstate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+        <h3>Gayrimenkül Tanımları</h3>
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+            <a class="btn btn-app btn btn-primary" href="~/AssetsManagement/EditRealEstate/@Model.ID">
+                <i class="fa fa-edit"></i> Düzenle
+            </a>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Görüntüle</h3>
+                    </div>
+                    <div class="box-body">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Code)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Code)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Definition)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Definition)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Address)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Address)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.DatePeriodicMaintenance)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.DatePeriodicMaintenance)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CountPeriodicMaintenance)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CountPeriodicMaintenance)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PeriodicMaintenanceDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PeriodicMaintenanceDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.LastPeriodicMaintenanceDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.LastPeriodicMaintenanceDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Area)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Area)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.BlockNumber)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.BlockNumber)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PlotNumber)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PlotNumber)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.LayoutNumber)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.LayoutNumber)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.AmortizationValue)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.AmortizationValue)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreatedBy)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreatedBy)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreatedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreatedDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ModifiedBy)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ModifiedBy)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ModifiedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ModifiedDate)
+                            </dd>
+
+                        </dl>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+

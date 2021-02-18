@@ -1,0 +1,120 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model viramesV4.Object.BusinessLogicLayer.Master.EmployeeWorkstationGroupAppointment
+
+@{
+    ViewBag.Title = "newEmployeeWorkstationGroupAppointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/Content/dist/duallistbox-master/src/bootstrap-duallistbox.css" rel="stylesheet" />
+
+@using (Html.BeginForm("newEmployeeWorkstationGroupAppointment", "ResourceManagement"))
+{
+    @Html.AntiForgeryToken()
+
+
+    <section class="content-header">
+        <h3>İş İstasyonu Havuzu Personel Atamaları</h3>
+        <div class="box-body">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <br />
+                    <br />
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.WorkstationGroup, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(model => model.WorkstationGroupID, (IEnumerable<SelectListItem>)ViewBag.WorkstationGroup, string.Empty, new { @class = "form-control chosen-select", @onchange = "GetEmployees(this.value)" })
+                                @Html.ValidationMessageFor(model => model.WorkstationGroup, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel-body">
+                        <h3 class="box-info">Personel</h3>
+                        <div class="hr-line-dashed"></div>
+                        <div class="ibox">
+                            <form id="form" action="#" class="wizard-big">
+                                <select class="form-control dual_select" multiple id="Employees" name="Employees">
+                                    @foreach (var item in (IEnumerable
+                                    <SelectListItem>
+                                        )ViewBag.Employees)
+                                    {
+                                        <option value=@item.Value>@item.Text</option>
+                                    }
+                                    @if (ViewBag.WorkstationGroupEmployees != null)
+                                    {
+                                        foreach (var item in (IEnumerable<SelectListItem>
+                                            )ViewBag.WorkstationGroupEmployees)
+                                        {
+                                            <option selected value=@item.Value>@item.Text</option>
+                                        }
+                                    }
+
+
+                                </select>
+                            </form>
+                            <br />
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-10 col-md-9">
+                            <input type="submit" value="Kaydet" class="btn btn-app btn btn-primary" />
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+
+                    <script type="text/javascript">
+                    $('.chosen-select').chosen({ width: "100%" });
+                    </script>
+                    <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#data_3 .input-group.date').datepicker({
+                            startView: 2,
+                            todayBtn: "linked",
+                            keyboardNavigation: false,
+                            forceParse: false, autoclose: true
+                        });
+                    });
+                    $(document).ready(function () {
+                        $('.dual_select').bootstrapDualListbox({
+                            selectorMinimalHeight: 160
+                        });
+                    });
+                    </script>
+                    <script type="text/javascript">
+                    function GetEmployees(id) {
+                        window.location.href = '/ResourceManagement/GetEmployees?id=' + id;
+                       // location.reload(true);
+
+                    }
+                    </script>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootsrapcdn.com/bootstrap/3.3.6/js/bootsrap.min.js"></script>
+<script src="~/Content/dist/duallistbox-master/src/jquery.bootstrap-duallistboxx.js"></script>

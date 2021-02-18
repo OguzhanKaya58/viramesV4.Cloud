@@ -1,0 +1,92 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Workstation>
+
+@{
+    ViewBag.Title = "workstationGroupWorkstationAppointmentAssigned";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h3>İş İstasyonu Tanımları</h3>
+    <div class="box-body ">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">İş İstasyonu Havuzuna Atanmış İş İstasyonları</h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>İş İstasyonu Kodu</th>
+                                <th>İş İstasyonu Tanımı</th>
+                                <th>Konum</th>
+                                <th>Tarih Periyodik Bakımı</th>
+                                <th>Periyodik Bakım Sayısı</th>
+                                <th>İş İstasyonu Durumu</th>
+                                <th>Gerçekleşen Son Periyodik Bakım Tarihi</th>
+                                <th>Mevcut Periyodik Bakım Sayısı</th>
+                                <th>Gerçekleşen Son P.Bakım Tarihi</th>
+                                <th>Düzenle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Workstation workstation in Model)
+                            {
+                            <tr>
+                                <td>@workstation.Code</td>
+                                <td>@workstation.Definition</td>
+                                <td>@workstation.Location</td>
+                                <td>
+                                    @if (workstation.DatePeriodicMaintenance == true)
+                                    {
+                                        <input type="checkbox" checked />
+                                    }
+                                    @if (workstation.DatePeriodicMaintenance == false)
+                                    {
+                                        <input type="checkbox" />
+                                    }
+                                </td>
+                                <td>
+                                    @if (workstation.CountPeriodicMaintenance == true)
+                                    {
+                                        <input type="checkbox" checked />
+                                    }
+                                    @if (workstation.CountPeriodicMaintenance == false)
+                                    {
+                                        <input type="checkbox" />
+                                    }
+                                </td>
+                                <td>@workstation.Status</td>
+                                <td>@workstation.LastPeriodicMaintenanceDate</td>
+                                <td>@workstation.CurrentPeriodicMaintanceCount</td>
+                                <td>@workstation.AmortizationYear</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("DetailWorkstation", "ResourceManagement", new { id = workstation.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("EditWorkstation", "ResourceManagement", new { id = workstation.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

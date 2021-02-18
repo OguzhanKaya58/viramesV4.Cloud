@@ -1,0 +1,119 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.Warehouse
+
+@{
+    /**/
+
+    ViewBag.Title = "newWarehouseDefinition";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+       
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+
+                        <div class="box-body">
+                        </div>
+                        <div class="form-horizontal">
+                            <h3>Depo Tanımları</h3>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EnumDropDownListFor(model => model.Status, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.WarehouseName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.WarehouseName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.WarehouseName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ERPReference, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.ERPReference, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ERPReference, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Quality, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-4">
+                                        <div class="checkbox">
+                                            @Html.EditorFor(model => model.Quality)
+                                            @Html.ValidationMessageFor(model => model.Quality, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Default, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-4">
+                                        <div class="checkbox">
+                                            @Html.EditorFor(model => model.Default)
+                                            @Html.ValidationMessageFor(model => model.Default, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Center, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-4">
+                                        <div class="checkbox">
+                                            @Html.EditorFor(model => model.Center)
+                                            @Html.ValidationMessageFor(model => model.Center, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-">
+                                    <center> <input type="submit" value="Kaydet" class="btn btn-app btn btn-primary" /></center>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+}

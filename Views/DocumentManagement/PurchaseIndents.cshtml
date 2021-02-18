@@ -1,0 +1,92 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<PurchaseIndent>
+@{
+    ViewBag.Title = "purchaseIndents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h3>Satınalma Emirleri</h3>
+    <div class="box-body">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square" data-toggle="modal" data-target="#ModalButton"></i> Aktarım
+        </a>
+        <div class="modal fade" id="ModalButton" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3>Dışa Aktar</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Text File (.txt)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Excel File (.xlsx)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio1">Html File (.txt)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                            <label class="form-check-label" for="inlineRadio2">PDF File (.pdf)</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Aktar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Numara</th>
+                                <th>Satınalma Talebi</th>
+                                <th>Personel</th>
+                                <th>Proje</th>
+                                <th>Tarih</th>
+                                <th>Durum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (PurchaseIndent purchaseIndent in Model)
+                            {
+                                <tr>
+                                    <td>@purchaseIndent.Number</td>
+                                    <td>@purchaseIndent.PurchaseDemand</td>
+                                    <td>@purchaseIndent.Employee</td>
+                                    <td>@purchaseIndent.Project</td>
+                                    <td>@purchaseIndent.Date.ToString("yyyy.MM.dd")</td>
+                                    <td>@purchaseIndent.ApprovalInformation</td>
+                                </tr>
+
+
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

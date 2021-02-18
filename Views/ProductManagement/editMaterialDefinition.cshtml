@@ -1,0 +1,113 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.Material
+
+@{
+    ViewBag.Title = "editMaterialDefinition";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="content-header">
+
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" href="~/ProductManagement/materialDefinitions">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3>Malzeme Tanımları</h3>
+                    </div>
+                    <div class="form-horizontal">
+
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID)
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(model => model.Status, (ViewBag.RecordStatus as SelectList), new { @class = "form-control chosen-select" })
+                                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Definition, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Definition, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Definition, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MaterialType.Definition, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.MaterialType.Definition, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MaterialType.Definition, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MaterialSpecification.Definition, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.MaterialSpecification.Definition, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MaterialSpecification.Definition, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.SpeCode.SpecialCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-8">
+
+                                @Html.EditorFor(model => model.SpeCode.SpecialCode, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.SpeCode.SpecialCode, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+
+                            @Html.LabelFor(model => model.PurchaseGroupCode.GroupCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.PurchaseGroupCode.GroupCode, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PurchaseGroupCode.GroupCode, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+
+                            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Status, (ViewBag.RecordStatus as SelectList), new { @class = "form-control chosen-select" })
+                                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <center> <input type="submit" value="Kaydet" class="btn-app " /></center>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

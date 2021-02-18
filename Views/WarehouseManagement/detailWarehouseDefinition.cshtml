@@ -1,0 +1,94 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.Warehouse
+
+@{
+    ViewBag.Title = "detailWarehouseDefinition";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+
+    <div class="box-body ">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Döküman Tanımı
+
+                    </h2>
+                </div>
+                <div>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Code)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Code)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Status)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Status)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.WarehouseName)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.WarehouseName)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Quality)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Quality)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Default)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Default)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Center)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Center)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ERPReference)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ERPReference)
+                        </dd>
+
+
+
+                    </dl>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

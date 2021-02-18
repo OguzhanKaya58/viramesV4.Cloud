@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "serialTemplate";
+}
+
+
+@{
+    ViewBag.Title = "unitSetDefinition";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<SerialTemplate>
+
+
+<section class="content-header">
+   
+    <div class="box-body">
+        <a class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i> Aktarım
+        </a>
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Seri/Parti Şablonları
+
+                    </h2>
+
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Seri Şablon Kodu</th>
+                                <th>Seri Şablon Tanımı</th>
+                                <th>Varsayılan Seri Şablonu</th>
+                                <th>Barkod Türü</th>
+                                <th>Durum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (SerialTemplate serialTemplate in Model)
+                            {
+
+                            <tr>
+                                <td>@serialTemplate.Code</td>
+                                <td>@serialTemplate.Definition</td>
+
+                                <td>
+                                    @if (serialTemplate.Default == true)
+                                    {
+                                        <input type="checkbox" value="" checked>
+                                    }
+                                    @if (serialTemplate.Default == false)
+                                    {
+                                        <input type="checkbox" value="">
+                                    }
+                                </td>
+                                <td>@serialTemplate.BarcodeType</td>
+                                <td>@serialTemplate.Status</td>
+
+                            </tr>
+
+                        }
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+

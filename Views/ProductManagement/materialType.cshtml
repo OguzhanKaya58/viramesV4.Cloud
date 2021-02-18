@@ -1,0 +1,133 @@
+﻿
+
+@{
+    ViewBag.Title = "purchaseFiche";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<MaterialType>
+
+
+<section class="content-header">
+    
+    <div class="box-body">
+        
+        <a class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i> Aktarım
+        </a>
+      
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2> Malzeme Türü Tanımları</h2>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Malzeme Türü Tanımı</th>
+                                <th>Üretilebilir</th>
+                                <th>Malzeme Grubu</th>
+                                <th>Paket Malzeme</th>
+                                <th>Konfigürasyonlu Malzeme</th>
+                                <th>Araç</th>
+                                <th>Periyodik Bakımlı Araç</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (MaterialType materialType in Model)
+                            {
+
+                                <tr>
+                                    <td>@materialType.Definition</td>
+                                    <td>
+                                        @if (@materialType.Producible == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        @if (@materialType.Producible == false)
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+                                                                    </td>
+                                    <td>
+                                        @if (@materialType.MaterialGroup == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        @if (@materialType.MaterialGroup == false)
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@materialType.PackingMaterial == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        @if (@materialType.PackingMaterial == false)
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@materialType.Configuration == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        @if (@materialType.Configuration == false)
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (materialType.Tool == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        @if (@materialType.Tool == false)
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@materialType.PeriodicMaintenanceTool == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        @if (@materialType.PeriodicMaintenanceTool == false)
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

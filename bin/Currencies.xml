@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+  <Currencies>
+    <Currency1 symbol="AFN" value="Afghan Afghani"></Currency1>
+    <Currency3 symbol="ALL" value="Albanian Lek"></Currency3>
+    <Currency4 symbol="DZD" value="Algerian Dinar"></Currency4>
+    <Currency5 symbol="USD" value="United States Dollar"></Currency5>
+    <Currency6 symbol="AOA" value="Angolan Kwanza"></Currency6>
+    <Currency7 symbol="XCD" value="East Caribbean Dollar"></Currency7>
+    <Currency8 symbol="ARS" value="Argentine Peso"></Currency8>
+    <Currency9 symbol="AMD" value="Armenian Dram"></Currency9>
+    <Currency10 symbol="AWG" value="Aruban Florin"></Currency10>
+    <Currency11 symbol="SHP" value="Saint Helena Pound"></Currency11>
+    <Currency12 symbol="AUD" value="Australian Dollar"></Currency12>
+    <Currency13 symbol="AZN" value="Azerbaijan Manat"></Currency13>
+    <Currency14 symbol="BSD" value="Bahamian Dollar"></Currency14>
+    <Currency15 symbol="BHD" value="Bahraini Dinar"></Currency15>
+    <Currency16 symbol="BDT" value="Bangladeshi Taka"></Currency16>
+    <Currency17 symbol="BBD" value="Barbadian Dollar"></Currency17>
+    <Currency18 symbol="BYN" value="Belarusian Ruble"></Currency18>
+    <Currency19 symbol="BZD" value="Belize Dollar"></Currency19>
+    <Currency20 symbol="BMD" value="Bermudian Dollar"></Currency20>
+    <Currency21 symbol="BTN" value="Bhutanese Ngultrum"></Currency21>
+    <Currency22 symbol="BOB" value="Bolivian Boliviano"></Currency22>
+    <Currency23 symbol="BAM" value="Bosnia And Herzegovina Convertible Mark"></Currency23>
+    <Currency24 symbol="BWP" value="Botswana Pula"></Currency24>
+    <Currency25 symbol="BRL" value="Brazilian Real"></Currency25>
+    <Currency26 symbol="BND" value="Brunei Dollar"></Currency26>
+    <Currency27 symbol="BGN" value="Bulgarian Lev"></Currency27>
+    <Currency28 symbol="BIF" value="Burundi Franc"></Currency28>
+    <Currency29 symbol="CVE" value="Cape Verdean Escudo"></Currency29>
+    <Currency30 symbol="KHR" value="Cambodian Riel"></Currency30>
+    <Currency32 symbol="CAD" value="Canadian Dollar"></Currency32>
+    <Currency33 symbol="KYD" value="Cayman Islands Dollar"></Currency33>
+    <Currency34 symbol="XAF" value="Central African CFA Franc"></Currency34>
+    <Currency35 symbol="NZD" value="New Zealand Dollar"></Currency35>
+    <Currency36 symbol="CLP" value="Chilean Peso"></Currency36>
+    <Currency37 symbol="CNY" value="Chinese Yuan Renminbi"></Currency37>
+    <Currency38 symbol="COP" value="Colombian Peso"></Currency38>
+    <Currency39 symbol="KMF" value="Comorian Franc"></Currency39>
+    <Currency40 symbol="CDF" value="Congolese Franc"></Currency40>
+    <Currency41 symbol="none" value="Cook Islands Dollar"></Currency41>
+    <Currency42 symbol="CRC" value="Costa Rican Colon"></Currency42>
+    <Currency43 symbol="HRK" value="Croatian Kuna"></Currency43>
+    <Currency44 symbol="CUP" value="Cuban Peso"></Currency44>
+    <Currency45 symbol="CZK" value="Czech Koruna"></Currency45>
+    <Currency46 symbol="DKK" value="Danish Krone"></Currency46>
+    <Currency47 symbol="DJF" value="Djiboutian Franc"></Currency47>
+    <Currency48 symbol="DOP" value="Dominican Peso"></Currency48>
+    <Currency49 symbol="EGP" value="Egyptian Pound"></Currency49>
+    <Currency50 symbol="ERN" value="Eritrean Nakfa"></Currency50>
+    <Currency51 symbol="SZL" value="Swazi Lilangeni"></Currency51>
+    <Currency52 symbol="ETB" value="Ethiopian Birr"></Currency52>
+    <Currency53 symbol="FKP" value="Falkland Islands Pound"></Currency53>
+    <Currency54 symbol="none" value="Faroese Krona"></Currency54>
+    <Currency55 symbol="FJD" value="Fijian Dollar"></Currency55>
+    <Currency56 symbol="XPF" value="CFP Franc"></Currency56>
+    <Currency57 symbol="GMD" value="Gambian Dalasi"></Currency57>
+    <Currency58 symbol="GEL" value="Georgian Lari"></Currency58>
+    <Currency59 symbol="GHS" value="Ghanaian Cedi"></Currency59>
+    <Currency60 symbol="GIP" value="Gibraltar Pound"></Currency60>
+    <Currency61 symbol="GTQ" value="Guatemalan Quetzal"></Currency61>
+    <Currency62 symbol="GGP" value="Guernsey Pound"></Currency62>
+    <Currency63 symbol="GNF" value="Guinean Franc"></Currency63>
+    <Currency64 symbol="GYD" value="Guyanese Dollar"></Currency64>
+    <Currency65 symbol="HTG" value="Haitian Gourde"></Currency65>
+    <Currency66 symbol="HNL" value="Honduran Lempira"></Currency66>
+    <Currency67 symbol="HKD" value="Hong Kong Dollar"></Currency67>
+    <Currency68 symbol="HUF" value="Hungarian Forint"></Currency68>
+    <Currency69 symbol="ISK" value="Icelandic Krona"></Currency69>
+    <Currency70 symbol="INR" value="Indian Rupee"></Currency70>
+    <Currency71 symbol="IDR" value="Indonesian Rupiah"></Currency71>
+    <Currency72 symbol="XDR" value="SDR (Special Drawing Right)"></Currency72>
+    <Currency73 symbol="IRR" value="Iranian Rial"></Currency73>
+    <Currency74 symbol="IQD" value="Iraqi Dinar"></Currency74>
+    <Currency75 symbol="IMP" value="Manx Pound"></Currency75>
+    <Currency76 symbol="ILS" value="Israeli New Shekel"></Currency76>
+    <Currency77 symbol="JMD" value="Jamaican Dollar"></Currency77>
+    <Currency78 symbol="JPY" value="Japanese Yen"></Currency78>
+    <Currency79 symbol="JEP" value="Jersey Pound"></Currency79>
+    <Currency80 symbol="JOD" value="Jordanian Dinar"></Currency80>
+    <Currency81 symbol="KZT" value="Kazakhstani Tenge"></Currency81>
+    <Currency82 symbol="KES" value="Kenyan Shilling"></Currency82>
+    <Currency83 symbol="KWD" value="Kuwaiti Dinar"></Currency83>
+    <Currency84 symbol="KGS" value="Kyrgyzstani Som"></Currency84>
+    <Currency85 symbol="LAK" value="Lao Kip"></Currency85>
+    <Currency86 symbol="LBP" value="Lebanese Pound"></Currency86>
+    <Currency87 symbol="LSL" value="Lesotho Loti"></Currency87>
+    <Currency88 symbol="LRD" value="Liberian Dollar"></Currency88>
+    <Currency89 symbol="LYD" value="Libyan Dinar"></Currency89>
+    <Currency90 symbol="CHF" value="Swiss Franc"></Currency90>
+    <Currency91 symbol="MOP" value="Macanese Pataca"></Currency91>
+    <Currency92 symbol="MKD" value="Macedonian Denar"></Currency92>
+    <Currency93 symbol="MGA" value="Malagasy Ariary"></Currency93>
+    <Currency94 symbol="MWK" value="Malawian Kwacha"></Currency94>
+    <Currency95 symbol="MYR" value="Malaysian Ringgit"></Currency95>
+    <Currency96 symbol="MVR" value="Maldivian Rufiyaa"></Currency96>
+    <Currency97 symbol="MRU" value="Mauritanian Ouguiya"></Currency97>
+    <Currency98 symbol="MUR" value="Mauritian Rupee"></Currency98>
+    <Currency99 symbol="MXN" value="Mexican Peso"></Currency99>
+    <Currency100 symbol="MDL" value="Moldovan Leu"></Currency100>
+    <Currency101 symbol="MNT" value="Mongolian Tugrik"></Currency101>
+    <Currency102 symbol="MAD" value="Moroccan Dirham"></Currency102>
+    <Currency103 symbol="MZN" value="Mozambican Metical"></Currency103>
+    <Currency104 symbol="MMK" value="Myanmar Kyat"></Currency104>
+    <Currency105 symbol="NAD" value="Namibian Dollar"></Currency105>
+    <Currency106 symbol="NPR" value="Nepalese Rupee"></Currency106>
+    <Currency107 symbol="NIO" value="Nicaraguan Cordoba"></Currency107>
+    <Currency108 symbol="NGN" value="Nigerian Naira"></Currency108>
+    <Currency109 symbol="KPW" value="North Korean Won"></Currency109>
+    <Currency110 symbol="NOK" value="Norwegian Krone"></Currency110>
+    <Currency111 symbol="OMR" value="Omani Rial"></Currency111>
+    <Currency112 symbol="PKR" value="Pakistani Rupee"></Currency112>
+    <Currency113 symbol="PGK" value="Papua New Guinean Kina"></Currency113>
+    <Currency114 symbol="PYG" value="Paraguayan Guarani"></Currency114>
+    <Currency115 symbol="PEN" value="Peruvian Sol"></Currency115>
+    <Currency116 symbol="PHP" value="Philippine Peso"></Currency116>
+    <Currency117 symbol="PLN" value="Polish Zloty"></Currency117>
+    <Currency118 symbol="QAR" value="Qatari Riyal"></Currency118>
+    <Currency119 symbol="RON" value="Romanian Leu"></Currency119>
+    <Currency120 symbol="RUB" value="Russian Ruble"></Currency120>
+    <Currency121 symbol="RWF" value="Rwandan Franc"></Currency121>
+    <Currency122 symbol="WST" value="Samoan Tala"></Currency122>
+    <Currency123 symbol="STN" value="Sao Tome And Principe Dobra"></Currency123>
+    <Currency124 symbol="SAR" value="Saudi Arabian Riyal"></Currency124>
+    <Currency125 symbol="RSD" value="Serbian Dinar"></Currency125>
+    <Currency126 symbol="SCR" value="Seychellois Rupee"></Currency126>
+    <Currency127 symbol="SLL" value="Sierra Leonean Leone"></Currency127>
+    <Currency128 symbol="SGD" value="Singapore Dollar"></Currency128>
+    <Currency129 symbol="ANG" value="Netherlands Antillean Guilder"></Currency129>
+    <Currency130 symbol="SBD" value="Solomon Islands Dollar"></Currency130>
+    <Currency131 symbol="SOS" value="Somali Shilling"></Currency131>
+    <Currency132 symbol="ZAR" value="South African Rand"></Currency132>
+    <Currency133 symbol="GBP" value="Pound Sterling"></Currency133>
+    <Currency134 symbol="KRW" value="South Korean Won"></Currency134>
+    <Currency135 symbol="SSP" value="South Sudanese Pound"></Currency135>
+    <Currency136 symbol="LKR" value="Sri Lankan Rupee"></Currency136>
+    <Currency137 symbol="SDG" value="Sudanese Pound"></Currency137>
+    <Currency138 symbol="SRD" value="Surinamese Dollar"></Currency138>
+    <Currency139 symbol="SEK" value="Swedish Krona"></Currency139>
+    <Currency140 symbol="SYP" value="Syrian Pound"></Currency140>
+    <Currency141 symbol="TWD" value="New Taiwan Dollar"></Currency141>
+    <Currency142 symbol="TJS" value="Tajikistani Somoni"></Currency142>
+    <Currency143 symbol="TZS" value="Tanzanian Shilling"></Currency143>
+    <Currency144 symbol="THB" value="Thai Baht"></Currency144>
+    <Currency145 symbol="XOF" value="West African CFA Franc"></Currency145>
+    <Currency146 symbol="TOP" value="Tongan Pa’anga"></Currency146>
+    <Currency147 symbol="TTD" value="Trinidad And Tobago Dollar"></Currency147>
+    <Currency148 symbol="TND" value="Tunisian Dinar"></Currency148>
+    <Currency149 symbol="TRY" value="Turkish Lira"></Currency149>
+    <Currency150 symbol="TMT" value="Turkmen Manat"></Currency150>
+    <Currency151 symbol="UGX" value="Ugandan Shilling"></Currency151>
+    <Currency152 symbol="UAH" value="Ukrainian Hryvnia"></Currency152>
+    <Currency153 symbol="AED" value="UAE Dirham"></Currency153>
+    <Currency154 symbol="UYU" value="Uruguayan Peso"></Currency154>
+    <Currency155 symbol="UZS" value="Uzbekistani Som"></Currency155>
+    <Currency156 symbol="VUV" value="Vanuatu Vatu"></Currency156>
+    <Currency157 symbol="VEF" value="Venezuelan Bolivar"></Currency157>
+    <Currency158 symbol="VND" value="Vietnamese Dong"></Currency158>
+    <Currency159 symbol="YER" value="Yemeni Rial"></Currency159>
+    <Currency160 symbol="ZMW" value="Zambian Kwacha"></Currency160>
+  </Currencies>
+  <Countries>
+    
+  </Countries>
+</Data>

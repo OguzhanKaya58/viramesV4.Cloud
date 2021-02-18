@@ -1,0 +1,76 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<ReportDesign>
+@{
+    ViewBag.Title = "reportDesign";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+        Rapor Tanımları
+    </h1>
+    <div class="box-body ">
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-file"></span> Yeni
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-edit"></span> Düzenle
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-sign-out"></span> Tasarımı Dışarı Aktar
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-sign-in"></span> Tasarımı İçeri Aktar
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-share-square"></span> Aktarım
+        </button>
+        <button type="button" class="btn btn-danger">
+            <span class=" fa fa-trash"></span> Sil
+        </button>
+    </div>
+
+
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Modül</th>
+                                <th>Rapor Adı</th>
+                                <th>Varsayılan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (ReportDesign reportDesign in Model)
+                            {
+                            <tr>
+                                <td>@reportDesign.Modules</td>
+                                <td>@reportDesign.ReportName</td>
+                                <td>
+                                    @if (@reportDesign.Default == true)
+                                    {
+                                        <input type="checkbox" checked />
+                                    }
+                                    @if (@reportDesign.Default == false)
+                                    {
+                                        <input type="checkbox" />
+                                    }
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

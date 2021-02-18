@@ -1,0 +1,77 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Document>
+@{
+    ViewBag.Title = "documentRecords";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h3>Dökümana Atanan Kayıtlar</h3>
+    <div class="box-body">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Döküman No</th>
+                                <th>Döküman Açıklama</th>
+                                <th>Proje</th>
+                                <th>Durum</th>
+                                <th>Seçim</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Document document in Model)
+                            {
+                            <tr>
+                                <td>@document.DocumentNo</td>
+                                <td>@document.Description</td>
+                                <td>@document.Project</td>
+                                <td>@document.Status</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("DetailDocument", "DocumentManagement", new { id = document.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("EditDocument", "DocumentManagement", new { id = document.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                            <a href="@Url.Action("DeleteDocument", "DocumentManagement", new { id = document.ID })"><span class="fa fa-trash"> Sil </span></a> <br />
+                                            <a href="@Url.Action("Material", "DocumentManagement", new { id = document.ID })"><span class="glyphicon glyphicon-link"> Malzeme </span></a> <br />
+                                            <a href="@Url.Action("Bom", "DocumentManagement", new { id = document.ID })"><span class="	glyphicon glyphicon-oil"> Reçeteler </span></a> <br />
+                                            <a href="@Url.Action("MaterialFiches", "DocumentManagement", new { id = document.ID })"><span class="fa fa-receipt"> Malzeme Fişleri </span></a> <br />
+                                            <a href="@Url.Action("Employee", "DocumentManagement", new { id = document.ID })"><span class="fa fa-users"> Personeller </span></a> <br />
+                                            <a href="@Url.Action("Project", "DocumentManagement", new { id = document.ID })"><span class="fa fa-tasks"> Projeler </span></a> <br />
+                                            <a href="@Url.Action("ProductOrders", "DocumentManagement", new { id = document.ID })"><span class="	glyphicon glyphicon-inbox"> Üretim Emirleri </span></a> <br />
+                                            <a href="@Url.Action("WorkStations", "DocumentManagement", new { id = document.ID })"><span class="fa fa-wrench"> İş İstasyonları </span></a> <br />
+                                            <a href="@Url.Action("PurchaseContracts", "DocumentManagement", new { id = document.ID })"><span class="fa fa-shopping-cart"> Satınalma Sözleşmeleri </span></a> <br />
+                                            <a href="@Url.Action("PurchaseIndents", "DocumentManagement", new { id = document.ID })"><span class="fa fa-shopping-cart"> Satınalma Emirleri </span></a> <br />
+                                            <a href="@Url.Action("PurchaseOrders", "DocumentManagement", new { id = document.ID })"><span class="fa fa-shopping-cart"> Satınalma Siparişleri </span></a> <br />
+                                            <a href="@Url.Action("PurchaseProposal", "DocumentManagement", new { id = document.ID })"><span class="fa fa-shopping-cart"> Satınalma Teklifleri </span></a> <br />
+                                            <a href="@Url.Action("Certificates", "DocumentManagement", new { id = document.ID })"><span class="fas fa-certificate"> Sertifikalar </span></a> <br />
+
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

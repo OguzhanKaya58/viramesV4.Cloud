@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "productionOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<ProductOrder>
+
+
+<section class="content-header">
+    <h1>
+       Üretim Emri Tanımları
+
+    </h1>
+
+    <div class="box-body">
+
+        <a href="http://virames.cloud/ProductionPlanning/newProductOrder" class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+
+
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i>Aktarım
+        </a>
+
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Numara</th>
+                                <th>Depo</th>
+                                <th>Açıklama</th>
+                                <th>Miktarı</th>
+                                <th>Durum</th>
+                                <th>Tamamlama</th>
+                                <th>Tarih</th>
+                                <th>Özel Kod</th>
+                                <th>Ana Malzeme</th>
+                                <th>Durum Planlaması</th>
+                                <th>İşlem</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (ProductOrder productOrder in Model)
+                            {
+
+                            <tr>
+                                <td>@productOrder.Number</td>
+                                <td>@productOrder.Warehouse</td>
+                                <td>@productOrder.DescriptionPreview</td>
+                                <td>@productOrder.Amount</td>
+                                <td>@productOrder.ProductOrderStatus</td>
+                                <td>% @productOrder.Completion</td>
+                                <td>@productOrder.Date</td>
+                                <td>@productOrder.SpeCode</td>
+                                <td>@productOrder.MainMaterial</td>
+                                <td>@productOrder.PlanningStatus</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailProductOrder", "ProductionPlanning", new { id = productOrder.ID })" ><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("editProductOrder", "ProductionPlanning", new { id = productOrder.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                            <a  href="#" onclick="javascript:deleteRow('@productOrder.ID', '@productOrder.Number');"  ><span class="fa fa-trash" > Sil </span></a> <br />
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Numara</th>
+                                <th>Depo</th>
+                                <th>Açıklama</th>
+                                <th>Miktarı</th>
+                                <th>Durum</th>
+                                <th>Tanımlama</th>
+                                <th>Tarih</th>
+                                <th>Özel Kod</th>
+                                <th>Ana Malzeme</th>
+                                <th>Durum Planlaması</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+<script>
+    function deleteRow(id, name) {
+        swal({
+            title: "Silmek istediğinize emin misiniz?",
+            text: "\"" + name + "\" numaralı kayıtı silecek misiniz?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sil",
+            closeOnConfirm: false
+         
+        }, function () {
+            swal("Silindi!", "İlgili kayıt silindi", "success");
+            window.location.href = '/ProductionPlanning/deleteProductOrder/' + id;
+            closeOnConfirm: true;
+
+        });
+    };
+</script>
+
+

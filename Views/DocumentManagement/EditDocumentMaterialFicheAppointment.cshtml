@@ -1,0 +1,58 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.DocumentMaterialFicheAppointment
+
+@{
+    ViewBag.Title = "editDocumentMaterialFicheAppointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="content-header">
+        <h3>Malzeme Fişi Döküman Ataması</h3>
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Düzenle</h3>
+                        <div class="box-body">
+                        </div>
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MaterialFiche, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.DropDownListFor(model => model.MaterialFicheID, (IEnumerable<SelectListItem>)ViewBag.MaterialFiche, string.Empty, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.MaterialFicheID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Document, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.DropDownListFor(model => model.DocumentID, (IEnumerable<SelectListItem>)ViewBag.Document, string.Empty, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.DocumentID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Kaydet" class="btn btn-app btn btn-primary" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+}

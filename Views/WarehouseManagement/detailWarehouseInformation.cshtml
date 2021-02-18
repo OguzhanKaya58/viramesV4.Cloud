@@ -1,0 +1,146 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.Material
+
+@{
+    ViewBag.Title = "detailWarehouseInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+
+    <div class="box-body ">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+
+                    <div class="box-body">
+                        <h3>Malzeme Ambar Bilgisi</h3>
+                        <hr />
+                    </div>
+                    <dl class="dl-horizontal">
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.MaterialClass.Code)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.MaterialClass.Code)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.MaterialSpecification.Code)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.MaterialSpecification.Code)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.MaterialType.Definition)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.MaterialType.Definition)
+                        </dd>
+
+
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ShelfLocation.LocationOfShelf)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ShelfLocation.LocationOfShelf)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.SpeCode.SpecialCode)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.SpeCode.SpecialCode)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.StorageConditionSet.Code)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.StorageConditionSet.Code)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.UnitSet.Code)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.UnitSet.Code)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Code)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Code)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Definition)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Definition)
+                        </dd>
+
+
+
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TraceType)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.TraceType)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Image)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Image)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Saleable)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Saleable)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Purchasable)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Purchasable)
+                        </dd>
+
+
+
+                    </dl>
+                    <br />
+                    <br />
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

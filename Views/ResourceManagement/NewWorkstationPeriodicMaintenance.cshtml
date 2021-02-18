@@ -1,0 +1,107 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.PeriodicMaintenance
+
+@{
+    ViewBag.Title = "newWorkstationPeriodicMaintenance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+        <h3>Yeni İş İstasyonu Havuzu</h3>
+        <div class="box-body">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <br />
+                    <br />
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Workstation, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(model => model.Workstation, (IEnumerable<SelectListItem>)ViewBag.Workstation, new { @class = "form-control chosen-select" })
+                                @Html.ValidationMessageFor(model => model.Workstation, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Employee, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(model => model.Employee, (IEnumerable<SelectListItem>)ViewBag.Employee, new { @class = "form-control chosen-select" })
+                                @Html.ValidationMessageFor(model => model.Employee, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NewNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.NewNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NewNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.OldNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.OldNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.OldNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NewDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.NewDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NewDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.OldDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.OldDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.OldDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Details, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Details, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Kaydet" class="btn btn-app btn btn-primary" />
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

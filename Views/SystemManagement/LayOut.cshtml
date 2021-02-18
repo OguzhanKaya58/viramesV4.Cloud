@@ -1,0 +1,55 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.System
+@model IList<Layout>
+@{
+    ViewBag.Title = "layOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+        Layout Tasarımları
+    </h1>
+    <div class="box-body ">
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-share-square"></span> Aktarım
+        </button>
+        <button type="button" class="btn btn-danger">
+            <span class=" fa fa-trash"></span> Sil
+        </button>
+    </div>
+
+
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Kullanıcı</th>
+                                <th>İsim</th>
+                                <th>Açıklama</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Layout layoutt in Model)
+                            {
+                                <tr>
+                                    <td>@layoutt.User</td>
+                                    <td>@layoutt.Name</td>
+                                    <td>@layoutt.Definition</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

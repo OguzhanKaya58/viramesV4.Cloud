@@ -1,0 +1,249 @@
+﻿
+@{
+    ViewBag.Title = "criteriaSetSpeCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<SpeCode>
+
+
+<section class="content-header">
+    <h1>
+        Kriter Seti Özel Kod İşlemleri
+
+    </h1>
+
+    <div class="box-body ">
+        <div class="btn-group">
+
+
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-file"></span> Yeni
+        </button>
+        </div>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-edit"></span> Düzenle
+        </button>
+
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-eye"></span> Görüntüle
+        </button>
+
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-copy"></span> Kopyala
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-share-square"></span> Aktarım
+        </button>
+        <button type="button" class="btn btn-danger">
+            <span class=" fa fa-trash"></span> Sil
+        </button>
+    </div>
+
+
+    <ol class="breadcrumb">
+        <li class="active">Kriter Seti Özel Kod İşlemleri</li>
+    </ol>
+
+
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Özel Kod</th>
+                                <th>Özel Kod Türü</th>
+                                <th>Özel Kod Durumu</th>
+                                <th>Yazı Rengi</th>
+                                <th>Eğik Yazı</th>
+                                <th>Kalın Yazı</th>
+                                <th>Karakter Boyutu</th>
+                                <th>Yazı Tipi Adı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (SpeCode projectSpeCode in Model)
+                            {
+
+                                <tr>
+                                    <td>
+                                        @if (projectSpeCode.FontBold == false && projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpecialCode</i>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpecialCode </strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpecialCode</i></strong>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.SpecialCode
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpeCodeType</i>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <b><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpeCodeType </b>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <b><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.SpeCodeType</i></b>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.SpeCodeType
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true && @projectSpeCode.FontBold == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.Status</i></strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong> <p style="color: @projectSpeCode.FontColor;">@projectSpeCode.Status</strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.Status</i>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.Status
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true && @projectSpeCode.FontBold == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontColor</i></strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontColor</strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontColor</i>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.FontColor
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontBold == true)
+                                        {
+                                            <input type="checkbox" value="" checked>
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" value="">
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true && @projectSpeCode.FontBold == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontSize</i></strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontSize</strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontSize</i>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.FontSize
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (@projectSpeCode.FontItalic == true && @projectSpeCode.FontBold == true)
+                                        {
+                                            <strong><i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontName</i></strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == true && @projectSpeCode.FontItalic == false)
+                                        {
+                                            <strong><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontName</strong>
+                                        }
+                                        else if (@projectSpeCode.FontBold == false && @projectSpeCode.FontItalic == true)
+                                        {
+                                            <i><p style="color: @projectSpeCode.FontColor;">@projectSpeCode.FontName</i>
+                                        }
+                                        else
+                                        {
+                                            @projectSpeCode.FontName
+                                        }
+                                    </td>
+
+                                </tr>
+
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Özel Kod</th>
+                                <th>Özel Kod Türü</th>
+                                <th>Özel Kod Durumu</th>
+                                <th>Yazı Rengi</th>
+                                <th>Eğik Yazı</th>
+                                <th>Kalın Yazı</th>
+                                <th>Karakter Boyutu</th>
+                                <th>Yazı Tipi Adı</th>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+
+
+

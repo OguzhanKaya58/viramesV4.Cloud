@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "materialWarehouseInformations";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Material>
+
+
+<section class="content-header">
+    <h1>
+        Malzeme Ambar Bilgileri
+
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Malzeme Türü</th>
+                                <th>Malzeme Kodu</th>
+                                <th>Malzeme Tanımı</th>
+                                <th>Birim Seti</th>
+                                <th>Satılabilir</th>
+                                <th>Satın Alınabilir</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             @foreach (Material materialWarehouseInformation in Model)
+                            {
+
+                             <tr>
+                                <td>@materialWarehouseInformation.MaterialType</td>
+                                <td>@materialWarehouseInformation.Code</td>
+                                <td>@materialWarehouseInformation.Definition</td>
+                                <td>@materialWarehouseInformation.UnitSet</td>
+                                <td>
+                                    @if (@materialWarehouseInformation.Saleable == true)
+                                    {
+                                        <input type="checkbox" value="" checked>
+                                    }
+                                    @if (@materialWarehouseInformation.Saleable == false)
+                                    {
+                                        <input type="checkbox" value="">
+                                    }
+                                </td>
+                                <td>
+                                    @if (@materialWarehouseInformation.Purchasable == true)
+                                    {
+                                        <input type="checkbox" value="" checked>
+                                    }
+                                    @if (@materialWarehouseInformation.Purchasable == false)
+                                    {
+                                        <input type="checkbox" value="">
+                                    }
+                                </td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailWarehouseInformation", "WarehouseManagement", new { id = materialWarehouseInformation.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("editWarehouseInformation", "WarehouseManagement", new { id = materialWarehouseInformation.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+
+                                        </div>
+
+                                    </div>
+                                </td>   
+                                    
+                          </tr>
+
+                              }
+                        </tbody>
+                       
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+

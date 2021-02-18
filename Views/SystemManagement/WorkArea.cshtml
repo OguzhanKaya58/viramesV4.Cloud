@@ -1,0 +1,73 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.System
+@model IList<Workarea>
+@{
+    ViewBag.Title = "workArea";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h3>Rol Tanımları</h3>
+    <div class="box-body">
+        <a class="btn btn-app btn btn-primary" href="~/SystemManagement/NewWorkArea">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Çalışma Alanı Kodu</th>
+                                <th>Çalışma Alanı Adı</th>
+                                <th>Durum</th>
+                                <th>Başlangıç Tarihi</th>
+                                <th>Bitiş Tarihi</th>
+                                <th>Majör</th>
+                                <th>Minör</th>
+                                <th>Patch</th>
+                                <th>Veri Tabanı Türü</th>
+                                <th>Seçim</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Workarea workarea in Model)
+                            {
+                            <tr>
+                                <td>@workarea.Code</td>
+                                <td>@workarea.Name</td>
+                                <td>@workarea.Status</td>
+                                <td>@workarea.StartDate</td>
+                                <td>@workarea.EndDate</td>
+                                <td>@workarea.Major</td>
+                                <td>@workarea.Minor</td>
+                                <td>@workarea.Patch</td>
+                                <td>@workarea.DatabaseType</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("EditWorkArea", "SystemManagement", new { id = workarea.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                            <a href="@Url.Action("DeleteWorkArea", "SystemManagement", new { id = workarea.ID })"><span class="fa fa-trash"> Sil </span></a> <br />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

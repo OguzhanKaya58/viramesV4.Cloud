@@ -1,0 +1,154 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.Workstation
+
+@{
+    ViewBag.Title = "detailWorkstation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+        <h3>İş İstasyonu Tanımları</h3>
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+            <a class="btn btn-app btn btn-primary" href="~/ResourceManagement/EditWorkstation/@Model.ID">
+                <i class="fa fa-edit"></i> Düzenle
+            </a>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Görüntüle</h3>
+                    </div>
+                    <div class="box-body">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Code)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Code)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Definition)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Definition)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CodeAndDefinition)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CodeAndDefinition)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.AllocableCapacity)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.AllocableCapacity)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Cost)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Cost)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.DatePeriodicMaintenance)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.DatePeriodicMaintenance)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CountPeriodicMaintenance)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CountPeriodicMaintenance)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PeriodicMaintenanceDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PeriodicMaintenanceDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.LastPeriodicMaintenanceDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.LastPeriodicMaintenanceDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ERPCode)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ERPCode)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreatedBy)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreatedBy)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreatedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreatedDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ModifiedBy)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ModifiedBy)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ModifiedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ModifiedDate)
+                            </dd>
+
+                        </dl>
+                    </div>
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+    </section>
+
+}

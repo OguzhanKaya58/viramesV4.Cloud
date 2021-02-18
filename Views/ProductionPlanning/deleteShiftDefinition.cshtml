@@ -1,0 +1,160 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.Shift
+@{
+    ViewBag.Title = "deleteShiftDefinition";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="content-header">
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+
+                        <div class="box-body">
+                            <h3>Vardiya Tanımı</h3>
+                            <hr />
+                        </div>
+                        <center> <h3>Vardiya Bilgileri</h3></center>
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Definition, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Definition, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Definition, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.WorkingDay, htmlAttributes: new { @class = "control-label col-md-5" })
+                                    <div class="col-md-6">
+                                        @Html.EnumDropDownListFor(model => model.WorkingDay, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.WorkingDay, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-6">
+                                        @Html.EnumDropDownListFor(model => model.Status, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <center> <h3>Vardiya Detayları</h3></center><br /><br>
+                        <div class="col-lg-6">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.StartDay, htmlAttributes: new { @class = "control-label col-md-5" })
+                                    <div class="col-md-6">
+                                        @Html.EnumDropDownListFor(model => model.StartDay, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.StartDay, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.EndDay, htmlAttributes: new { @class = "control-label col-md-5" })
+                                    <div class="col-md-6">
+                                        @Html.EnumDropDownListFor(model => model.EndDay, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.EndDay, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.GetTotalWorkingTime, htmlAttributes: new { @class = "control-label col-md-5 " })
+                                    <div class="col-md-6">
+                                        @Html.EditorFor(model => model.GetTotalWorkingTime, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.GetTotalWorkingTime, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.GetTotalPauseTime, htmlAttributes: new { @class = "control-label col-md-5" })
+                                    <div class="col-md-6">
+                                        @Html.EditorFor(model => model.GetTotalPauseTime, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.GetTotalPauseTime, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.StartTime, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-6">
+                                        @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.EndTime, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-6">
+                                        @Html.EditorFor(model => model.EndTime, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.PauseCount, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-6">
+                                        @Html.EditorFor(model => model.PauseCount, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PauseCount, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.TotalTime, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-6">
+                                        @Html.EditorFor(model => model.TotalTime, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.TotalTime, "", new { @class = "text-danger" })
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Başlangıç Günü</th>
+                                    <th>Başlangıç Saati</th>
+                                    <th>Bitiş Günü</th>
+                                    <th>Bitiş Zamanı</th>
+                                    <th>Toplam Duraklama Süresi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-8">
+                                <center> <input type="submit" value="Sil" class="btn btn-app btn btn-primary" /></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+}

@@ -1,0 +1,75 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.ShelfLocation
+
+@{
+    ViewBag.Title = "editShelfLocation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+
+                        <div class="box-body">
+                        </div>
+
+                        <div class="form-horizontal">
+                            <h3>Raf Yeri Tanımı</h3>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.ID)
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.LocationOfShelf, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.LocationOfShelf, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.LocationOfShelf, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.WarehouseID, "WarehouseID", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.WarehouseID, (IEnumerable<SelectListItem>)ViewBag.Warehouse, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.WarehouseID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.StorageConditionSetID, "StorageConditionSetID", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.StorageConditionSetID, (IEnumerable<SelectListItem>)ViewBag.StorageConditionSet, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.StorageConditionSetID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-8">
+                                <center> <input type="submit" value="Kaydet" class="btn btn-app btn btn-primary" /></center>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+}

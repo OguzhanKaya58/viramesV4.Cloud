@@ -1,0 +1,1088 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Authorizations>
+    <ribbonPageMain value="true" resource="ribbonPageMain">
+      <rbbnPGUserAndWorkArea value="true" resource="rbbnPGUserAndWorkArea">
+        <btn_frmMain_ChangeUser value="true" resource="btnChangeUser" />
+        <brn_frmMain_ChangeWorkarea value ="true" resource="btnChangeWorkarea" />
+      </rbbnPGUserAndWorkArea>
+      <rbbnPGtransfer value="true" resource="rbbnPGtransfer">
+        <btn_frmMain_Transfer value="true" resource="btnTransfer" />
+      </rbbnPGtransfer>
+      <rbbnPGDashboard value="true" resource="rbbnPGDashboard">
+        <btn_frmMain_Dashboard value="true" resource="btnDashboard" />
+      </rbbnPGDashboard>
+      <rbbnPGAbout value="true" resource="rbbnPGAbout">
+        <btn_frmMain_About value="true" resource="btnAbout" />
+      </rbbnPGAbout>
+    </ribbonPageMain>
+
+    <grpPI value="true" resource="grpPI">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <PI101 value="true" resource="frmMain_PI101">
+          <rbbnPageMaterialInfo  value="true" resource="rbbnPageMaterialInfo">
+              <btn_frmMaterials_New value="true" resource="btnNew"></btn_frmMaterials_New>
+              <btn_frmMaterials_Edit value="true" resource="btnEdit"></btn_frmMaterials_Edit>
+              <btn_frmMaterials_Review value="true" resource="btnReview"></btn_frmMaterials_Review>
+              <btn_frmMaterials_SoftDelet value="true" resource="btnSoftDelete"></btn_frmMaterials_SoftDelet>
+              <btn_frmMaterials_Copy value="true" resource="btnCopy"></btn_frmMaterials_Copy>
+              <btn_frmMaterials_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterials_RestoreDefault>
+              <btn_frmMaterials_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterials_TraceRecord>
+              <btn_frmMaterials_BOM  value="true" resource="btnBOMList"></btn_frmMaterials_BOM>
+              <btn_frmMaterials_CriteriaSets value="true" resource="btnCriteriaSets"></btn_frmMaterials_CriteriaSets>
+              <btn_frmMaterials_Document value="true" resource="btnDocument"></btn_frmMaterials_Document>
+              <btn_frmMaterials_Export value="true" resource="btnExport"></btn_frmMaterials_Export>
+              <btn_frmMaterials_SeriLotNumber value="true" resource="btnSeriLotNumber"></btn_frmMaterials_SeriLotNumber>
+              <btn_frmMaterials_MaterialTransaction value="true" resource="btnMaterialTransaction"></btn_frmMaterials_MaterialTransaction>
+          </rbbnPageMaterialInfo>
+          <rbbnPageEngineerProcess  value="true" resource="rbbnPageEngineerProcess">
+              <btn_frmMaterials_SeriLotNumber value="true" resource="btnSeriLotNumber"></btn_frmMaterials_SeriLotNumber>
+              <btn_frmMaterials_MaterialTransaction value="true" resource="btnMaterialTransaction"></btn_frmMaterials_MaterialTransaction>
+          </rbbnPageEngineerProcess>
+        </PI101>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <PI201 value="true" resource="frmMain_PI201">
+          <rbbnPageMaterialFiches  value="true" resource="rbbnPageMaterialFiches">
+              <btn_frmMaterialFiches_New value="true" resource="btnNew"></btn_frmMaterialFiches_New>
+              <btn_frmMaterialFiches_Edit value="true" resource="btnEdit"></btn_frmMaterialFiches_Edit>
+              <btn_frmMaterialFiches_Review value="true" resource="btnReview"></btn_frmMaterialFiches_Review>
+              <btn_frmMaterialFiches_SoftDelet value="true" resource="btnSoftDelete"></btn_frmMaterialFiches_SoftDelet>
+              <btn_frmMaterialFiches_Copy value="true" resource="btnCopy"></btn_frmMaterialFiches_Copy>
+              <btn_frmMaterialFiches_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterialFiches_RestoreDefault>
+              <btn_frmMaterialFiches_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterialFiches_TraceRecord>
+              <btn_frmMaterialFiches_Document value="true" resource="btnDocument"></btn_frmMaterialFiches_Document>
+              <btn_frmMaterialFiches_Barcode value="true" resource="btnBarcode"></btn_frmMaterialFiches_Barcode>
+              <btn_frmMaterialFiches_Print value="true" resource="btnPrint"></btn_frmMaterialFiches_Print>
+              <btn_frmMaterialFiches_Export value="true" resource="btnExport"></btn_frmMaterialFiches_Export>
+              <btn_frmMaterialFiches_WarehouseTransferFiche value="true" resource="btnWarehouseTransferFiche"></btn_frmMaterialFiches_WarehouseTransferFiche>
+              <btn_frmMaterialFiches_PeriodFiche value="true" resource="btnPeriodFiche"></btn_frmMaterialFiches_PeriodFiche>
+              <btn_frmMaterialFiches_WastageFiche value="true" resource="btnWastageFiche"></btn_frmMaterialFiches_WastageFiche>
+              <btn_frmMaterialFiches_ConsumptionFiche value="true" resource="btnConsumptionFiche"></btn_frmMaterialFiches_ConsumptionFiche>
+              <btn_frmMaterialFiches_DeficitCycleCount value="true" resource="btnDeficitCycleCount"></btn_frmMaterialFiches_DeficitCycleCount>
+              <btn_frmMaterialFiches_ExcessCycleCount value="true" resource="btnExcessCycleCount"></btn_frmMaterialFiches_ExcessCycleCount>
+              <btn_frmMaterialFiches_IntroToProductFiche value="true" resource="btnIntroToProductFiche"></btn_frmMaterialFiches_IntroToProductFiche>
+          </rbbnPageMaterialFiches>
+        </PI201>
+        <PI202 value="true" resource="frmMain_PI202">
+          <rbbnPageMaterialCriteriaSetAppointments value="true" resource="rbbnPageMaterialCriteriaSetAppointments">
+              <btn_frmMaterialCriteriaSetAppointments_New value="true" resource="btnNew"></btn_frmMaterialCriteriaSetAppointments_New>
+              <btn_frmMaterialCriteriaSetAppointments_Edit value="true" resource="btnEdit"></btn_frmMaterialCriteriaSetAppointments_Edit>
+              <btn_frmMaterialCriteriaSetAppointments_Review value="true" resource="btnReview"></btn_frmMaterialCriteriaSetAppointments_Review>
+              <btn_frmMaterialCriteriaSetAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmMaterialCriteriaSetAppointments_SoftDelete>
+              <btn_frmMaterialCriteriaSetAppointments_Copy value="true" resource="btnCopy"></btn_frmMaterialCriteriaSetAppointments_Copy>
+              <btn_frmMaterialCriteriaSetAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterialCriteriaSetAppointments_RestoreDefault>
+              <btn_frmMaterialCriteriaSetAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterialCriteriaSetAppointments_TraceRecord> 
+              <btn_frmMaterialCriteriaSetAppointments_Export value="true" resource="btnExport"></btn_frmMaterialCriteriaSetAppointments_Export> 
+          </rbbnPageMaterialCriteriaSetAppointments>
+        </PI202>
+        <PI203 value="true" resource="frmMain_PI203">
+          <rbbnPageMaterialPriceAppointments  value="true" resource="rbbnPageMaterialPriceAppointments">
+              <btn_frmMaterialPriceAppointments_New value="true" resource="btnNew"></btn_frmMaterialPriceAppointments_New>
+              <btn_frmMaterialPriceAppointments_Edit value="true" resource="btnEdit"></btn_frmMaterialPriceAppointments_Edit>
+              <btn_frmMaterialPriceAppointments_Review value="true" resource="btnReview"></btn_frmMaterialPriceAppointments_Review>
+              <btn_frmMaterialPriceAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmMaterialPriceAppointments_SoftDelete>
+              <btn_frmMaterialPriceAppointments_Copy value="true" resource="btnCopy"></btn_frmMaterialPriceAppointments_Copy>
+              <btn_frmMaterialPriceAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterialPriceAppointments_RestoreDefault>
+              <btn_frmMaterialPriceAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterialPriceAppointments_TraceRecord>
+              <btn_frmMaterialPriceAppointments_Export value="true" resource="btnExport"></btn_frmMaterialPriceAppointments_Export>  
+           </rbbnPageMaterialPriceAppointments>
+        </PI203>
+        <PI204 value="true" resource="frmMain_PI204">
+          <rbbnPageMaterialFiches  value="true" resource="rbbnPageMaterialFiches">
+              <btn_frmMaterialFiches_New value="true" resource="btnNew"></btn_frmMaterialFiches_New>
+              <btn_frmMaterialFiches_Edit value="true" resource="btnEdit"></btn_frmMaterialFiches_Edit>
+              <btn_frmMaterialFiches_Review value="true" resource="btnReview"></btn_frmMaterialFiches_Review>
+              <btn_frmMaterialFiches_SoftDelet value="true" resource="btnSoftDelete"></btn_frmMaterialFiches_SoftDelet>
+              <btn_frmMaterialFiches_Copy value="true" resource="btnCopy"></btn_frmMaterialFiches_Copy>
+              <btn_frmMaterialFiches_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterialFiches_RestoreDefault>
+              <btn_frmMaterialFiches_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterialFiches_TraceRecord>
+              <btn_frmMaterialFiches_Document value="true" resource="btnDocument"></btn_frmMaterialFiches_Document>
+              <btn_frmMaterialFiches_Barcode value="true" resource="btnBarcode"></btn_frmMaterialFiches_Barcode>
+              <btn_frmMaterialFiches_Print value="true" resource="btnPrint"></btn_frmMaterialFiches_Print>
+              <btn_frmMaterialFiches_Export value="true" resource="btnExport"></btn_frmMaterialFiches_Export>
+           </rbbnPageMaterialFiches>
+        </PI204>
+        <PI205 value="true" resource="frmMain_PI205">
+          <rbbnPageMaterialFiches  value="true" resource="rbbnPageMaterialFiches">
+              <btn_frmMaterialFiches_New value="true" resource="btnNew"></btn_frmMaterialFiches_New>
+              <btn_frmMaterialFiches_Edit value="true" resource="btnEdit"></btn_frmMaterialFiches_Edit>
+              <btn_frmMaterialFiches_Review value="true" resource="btnReview"></btn_frmMaterialFiches_Review>
+              <btn_frmMaterialFiches_SoftDelet value="true" resource="btnSoftDelete"></btn_frmMaterialFiches_SoftDelet>
+              <btn_frmMaterialFiches_Copy value="true" resource="btnCopy"></btn_frmMaterialFiches_Copy>
+              <btn_frmMaterialFiches_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterialFiches_RestoreDefault>
+              <btn_frmMaterialFiches_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterialFiches_TraceRecord>
+              <btn_frmMaterialFiches_Document value="true" resource="btnDocument"></btn_frmMaterialFiches_Document>
+              <btn_frmMaterialFiches_Barcode value="true" resource="btnBarcode"></btn_frmMaterialFiches_Barcode>
+              <btn_frmMaterialFiches_Print value="true" resource="btnPrint"></btn_frmMaterialFiches_Print>
+              <btn_frmMaterialFiches_Export value="true" resource="btnExport"></btn_frmMaterialFiches_Export>
+           </rbbnPageMaterialFiches>
+        </PI205>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <PI301 value="true" resource="frmMain_PI301"></PI301>
+        <PI302 value="true" resource="frmMain_PI302"></PI302>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup">
+        <PI401 value="true" resource="frmMain_PI401">
+          <rbbnPageUnitSets value="true" resource="rbbnPageUnitSets">
+              <btn_frmUnitSets_New value="true" resource="btnNew"></btn_frmUnitSets_New>
+              <btn_frmUnitSets_Edit value="true" resource="btnEdit"></btn_frmUnitSets_Edit>
+              <btn_frmUnitSets_Review value="true" resource="btnReview"></btn_frmUnitSets_Review>
+              <btn_frmUnitSets_SoftDelete value="true" resource="btnSoftDelete"></btn_frmUnitSets_SoftDelete>
+              <btn_frmUnitSets_Copy value="true" resource="btnCopy"></btn_frmUnitSets_Copy>
+              <btn_frmUnitSets_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmUnitSets_RestoreDefault>
+              <btn_frmUnitSets_TraceRecord value="true" resource="btnTraceRecord"></btn_frmUnitSets_TraceRecord>
+              <btn_frmUnitSets_Export value="true" resource="btnExport"></btn_frmUnitSets_Export>
+
+          </rbbnPageUnitSets>
+        </PI401>
+        <PI402 value="true" resource="frmMain_PI402">
+          <rbbnPageSpeCodes value="true" resource="rbbnPageSpeCodes">
+              <btn_frmSpeCodes_New value="true" resource="btnNew"></btn_frmSpeCodes_New>
+              <btn_frmSpeCodes_Edit value="true" resource="btnEdit"></btn_frmSpeCodes_Edit>
+              <btn_frmSpeCodes_Review value="true" resource="btnReview"></btn_frmSpeCodes_Review>
+              <btn_frmSpeCodes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSpeCodes_SoftDelete>
+              <btn_frmSpeCodes_Copy value="true" resource="btnCopy"></btn_frmSpeCodes_Copy>
+              <btn_frmSpeCodes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSpeCodes_RestoreDefault>
+              <btn_frmSpeCodes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSpeCodes_TraceRecord>
+              <btn_frmSpeCodes_Export value="true" resource="btnExport"></btn_frmSpeCodes_Export>
+
+          </rbbnPageSpeCodes>
+        </PI402>
+        <PI405 value="true" resource="frmMain_PI405">
+          <rbbnPageMaterialTypes  value="true" resource="rbbnPageMaterialTypes">
+              <btn_frmMaterialTypes_New value="true" resource="btnNew"></btn_frmMaterialTypes_New>
+              <btn_frmMaterialTypes_Edit value="true" resource="btnEdit"></btn_frmMaterialTypes_Edit>
+              <btn_frmMaterialTypes_Review value="true" resource="btnReview"></btn_frmMaterialTypes_Review>
+              <btn_frmMaterialTypes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmMaterialTypes_SoftDelete>
+              <btn_frmMaterialTypes_Copy value="true" resource="btnCopy"></btn_frmMaterialTypes_Copy>
+              <btn_frmMaterialTypes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterialTypes_RestoreDefault>
+              <btn_frmMaterialTypes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterialTypes_TraceRecord>
+              <btn_frmMaterialTypes_Export value="true" resource="btnExport"></btn_frmMaterialTypes_Export>
+          </rbbnPageMaterialTypes>
+        </PI405>
+        <PI406 value="true" resource="frmMain_PI406">
+          <rbbnPageSerialTemplates value="true" resource="rbbnPageSerialTemplates">
+              <btn_frmSerialTemplates_New value="true" resource="btnNew" ></btn_frmSerialTemplates_New>
+              <btn_frmSerialTemplates_Edit value="true" resource="btnEdit"></btn_frmSerialTemplates_Edit>
+              <btn_frmSerialTemplates_Review value="true" resource="btnReview"></btn_frmSerialTemplates_Review>
+              <btn_frmSerialTemplates_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSerialTemplates_SoftDelete>
+              <btn_frmSerialTemplates_Copy value="true" resource="btnCopy"></btn_frmSerialTemplates_Copy>
+              <btn_frmSerialTemplates_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSerialTemplates_RestoreDefault>
+              <btn_frmSerialTemplates_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSerialTemplates_TraceRecord>
+              <btn_frmSerialTemplates_Default value="true" resource="btnDefault"></btn_frmSerialTemplates_Default>
+              <btn_frmSerialTemplates_Export value="true" resource="btnExport"></btn_frmSerialTemplates_Export>
+          </rbbnPageSerialTemplates>
+        </PI406>
+        <PI407 value="true" resource="frmMain_PI407">
+          <rbbnPageMetarialSpecifiations value="true" resource="rbbnPageMetarialSpecifiations">
+              <btn_frmMaterialSpecifications_New value="true" resource="btnNew"></btn_frmMaterialSpecifications_New>
+              <btn_frmMaterialSpecifications_Edit value="true" resource="btnEdit"></btn_frmMaterialSpecifications_Edit>
+              <btn_frmMaterialSpecifications_Review value="true" resource="btnReview"></btn_frmMaterialSpecifications_Review>
+              <btn_frmMaterialSpecifications_SoftDelete value="true" resource="btnSoftDelete"></btn_frmMaterialSpecifications_SoftDelete>
+              <btn_frmMaterialSpecifications_Copy value="true" resource="btnCopy"></btn_frmMaterialSpecifications_Copy>
+              <btn_frmMaterialSpecifications_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterialSpecifications_RestoreDefault>
+              <btn_frmMaterialSpecifications_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterialSpecifications_TraceRecord>
+              <btn_frmMaterialSpecifications_Export value="true" resource="btnExport"></btn_frmMaterialSpecifications_Export>
+          </rbbnPageMetarialSpecifiations>
+        </PI407>
+        <PI408 value="true" resource="frmMain_PI408">
+          <rbbnPageSpeCodes value="true" resource="rbbnPageSpeCodes">
+              <btn_frmSpeCodes_New value="true" resource="btnNew"></btn_frmSpeCodes_New>
+              <btn_frmSpeCodes_Edit value="true" resource="btnEdit"></btn_frmSpeCodes_Edit>
+              <btn_frmSpeCodes_Review value="true" resource="btnReview"></btn_frmSpeCodes_Review>
+              <btn_frmSpeCodes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSpeCodes_SoftDelete>
+              <btn_frmSpeCodes_Copy value="true" resource="btnCopy"></btn_frmSpeCodes_Copy>
+              <btn_frmSpeCodes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSpeCodes_RestoreDefault>
+              <btn_frmSpeCodes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSpeCodes_TraceRecord>
+              <btn_frmSpeCodes_Export value="true" resource="btnExport"></btn_frmSpeCodes_Export>
+          </rbbnPageSpeCodes>
+        </PI408>
+        <PI409 value="true" resource="frmMain_PI409">
+          <rbbnPageSpeCodes value="true" resource="rbbnPageSpeCodes">
+              <btn_frmSpeCodes_New value="true" resource="btnNew"></btn_frmSpeCodes_New>
+              <btn_frmSpeCodes_Edit value="true" resource="btnEdit"></btn_frmSpeCodes_Edit>
+              <btn_frmSpeCodes_Review value="true" resource="btnReview"></btn_frmSpeCodes_Review>
+              <btn_frmSpeCodes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSpeCodes_SoftDelete>
+              <btn_frmSpeCodes_Copy value="true" resource="btnCopy"></btn_frmSpeCodes_Copy>
+              <btn_frmSpeCodes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSpeCodes_RestoreDefault>
+              <btn_frmSpeCodes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSpeCodes_TraceRecord>
+              <btn_frmSpeCodes_Export value="true" resource="btnExport"></btn_frmSpeCodes_Export>
+          </rbbnPageSpeCodes>
+        </PI409>
+      </NodeSetup>
+    </grpPI>
+
+    <grpWM value="true" resource="grpWM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <WM101 value="true" resource="frmMain_WM101">
+          <rbbnPageWarehouses value="true" resource="rbbnPageWarehouses">
+            <rbbnPGNew  value="true" resource="rbbnPGNew"></rbbnPGNew>
+            <rbbnPGProcess  value="true" resource="rbbnPGProcess"></rbbnPGProcess>
+            <rbbnPGShelfLocations value="true" resource="rbbnPGShelfLocations"></rbbnPGShelfLocations>
+            <rbbnPGExport value="true" resource="rbbnPGExport"></rbbnPGExport>
+            <rbbnPGClose value="true" resource="rbbnPGClose"></rbbnPGClose>
+          </rbbnPageWarehouses>
+          <rbbnPageWarehousesLevels value="true" resource="rbbnPageWarehousesLevels">
+            <rbbnPGWarehouseLevels value="true" resource="rbbnPGWarehouseLevels"></rbbnPGWarehouseLevels>
+            <rbbnPGWarehouseSum value="true" resource="rbbnPGWarehouseSum"></rbbnPGWarehouseSum>
+          </rbbnPageWarehousesLevels>
+        </WM101>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <WM201 value="true" resource="frmMain_WM201">
+          <rbbnPageWarehouseSums value="true" resource="rbbnPageWarehouseSums">
+            
+          </rbbnPageWarehouseSums>
+        </WM201>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <WM301 value="true" resource="frmMain_WM301"></WM301>
+        <WM302 value="true" resource="frmMain_WM302"></WM302>
+        <WM303 value="true" resource="frmMain_WM303"></WM303>
+        <WM304 value="true" resource="frmMain_WM304"></WM304>
+        <WM305 value="true" resource="frmMain_WM305"></WM305>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup">
+        <WM401 value="true" resource="frmMain_WM401">
+          <rbbnPageShelfLocations value="true" resource="rbbnPageShelfLocations">
+            <btn_frmShelfLocations_New value="true" resource="btnNew"></btn_frmShelfLocations_New>
+            <btn_frmShelfLocations_Edit value="true" resource="btnEdit"></btn_frmShelfLocations_Edit>
+            <btn_frmShelfLocations_Review value="true" resource="btnReview"></btn_frmShelfLocations_Review>
+            <btn_frmShelfLocations_SoftDelete value="true" resource="btnSoftDelete"></btn_frmShelfLocations_SoftDelete>
+            <btn_frmShelfLocations_Copy value="true" resource="btnCopy"></btn_frmShelfLocations_Copy>
+            <btn_frmShelfLocations_Export value="true" resource="btnExport"></btn_frmShelfLocations_Export>
+          </rbbnPageShelfLocations>
+        </WM401>
+      </NodeSetup>
+    </grpWM>
+
+    <grpDM value="true" resource="grpDM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <DM101 value="true" resource="frmMain_DM101">
+          <rbbnPageDocuments value="true" resource="rbbnPageDocuments">
+              <btn_frmDocuments_New value="true" resource="btnNew"></btn_frmDocuments_New>
+              <btn_frmDocuments_Edit value="true" resource="btnEdit"></btn_frmDocuments_Edit>
+              <btn_frmDocuments_Review value="true" resource="btnReview"></btn_frmDocuments_Review>
+              <btn_frmDocuments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocuments_SoftDelete>
+              <btn_frmDocuments_Copy value="true" resource="btnCopy"></btn_frmDocuments_Copy>
+              <btn_frmDocuments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocuments_RestoreDefault>
+              <btn_frmDocuments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocuments_TraceRecord>
+              <btn_frmDocuments_OpenFile value="true" resource="btnOpenFile"></btn_frmDocuments_OpenFile>
+              <btn_frmDocuments_ScanningFile value="true" resource="btnScanningFile"></btn_frmDocuments_ScanningFile>
+              <btn_frmDocuments_Export value="true" resource="btnExport"></btn_frmDocuments_Export>
+          </rbbnPageDocuments>
+        </DM101>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <DM201 value="true" resource="frmMain_DM201">
+          <rbbnPageDocumnentBOMAppointments value="true" resource="rbbnPageDocumentBOMAppointments">
+              <btn_frmDocumentBOMAppointments_New value="true" resource="btnNew"></btn_frmDocumentBOMAppointments_New>
+              <btn_frmDocumentBOMAppointments_Edit value="true" resource="btnEdit"></btn_frmDocumentBOMAppointments_Edit>
+              <btn_frmDocumentBOMAppointments_Review value="true" resource="btnReview"></btn_frmDocumentBOMAppointments_Review>
+              <btn_frmDocumentBOMAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocumentBOMAppointments_SoftDelete>
+              <btn_frmDocumentBOMAppointments_Copy value="true" resource="btnCopy"></btn_frmDocumentBOMAppointments_Copy>
+              <btn_frmDocumentBOMAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocumentBOMAppointments_RestoreDefault>
+              <btn_frmDocumentBOMAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocumentBOMAppointments_TraceRecord>
+              <btn_frmDocumentBOMAppointments_Export value="true" resource="btnExport"></btn_frmDocumentBOMAppointments_Export>
+          </rbbnPageDocumnentBOMAppointments>
+        </DM201>
+        <DM202 value="true" resource="frmMain_DM202">
+          <rbbnPageDocumnentMaterialAppointments value="true" resource="rbbnPageDocumentMaterialAppointments">
+              <btn_frmDocumentMaterialAppointments_New value="true" resource="btnNew"></btn_frmDocumentMaterialAppointments_New>
+              <btn_frmDocumentMaterialAppointments_Edit value="true" resource="btnEdit"></btn_frmDocumentMaterialAppointments_Edit>
+              <btn_frmDocumentMaterialAppointments_Review value="true" resource="btnReview"></btn_frmDocumentMaterialAppointments_Review>
+              <btn_frmDocumentMaterialAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocumentMaterialAppointments_SoftDelete>
+              <btn_frmDocumentMaterialAppointments_Copy value="true" resource="btnCopy"></btn_frmDocumentMaterialAppointments_Copy>
+              <btn_frmDocumentMaterialAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocumentMaterialAppointments_RestoreDefault>
+              <btn_frmDocumentMaterialAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocumentMaterialAppointments_TraceRecord>
+              <btn_frmDocumentMaterialAppointments_Export value="true" resource="btnExport"></btn_frmDocumentMaterialAppointments_Export>
+          </rbbnPageDocumnentMaterialAppointments>
+        </DM202>
+        <DM203 value="true" resource="frmMain_DM203">
+          <rbbnPageDocumnentWorkstationAppointments value="true" resource="rbbnPageDocumentWorkstationAppointments">
+              <btn_frmDocumentWorkstationAppointments_New value="true" resource="btnNew"></btn_frmDocumentWorkstationAppointments_New>
+              <btn_frmDocumentWorkstationAppointments_Edit value="true" resource="btnEdit"></btn_frmDocumentWorkstationAppointments_Edit>
+              <btn_frmDocumentWorkstationAppointments_Review value="true" resource="btnReview"></btn_frmDocumentWorkstationAppointments_Review>
+              <btn_frmDocumentWorkstationAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocumentWorkstationAppointments_SoftDelete>
+              <btn_frmDocumentWorkstationAppointments_Copy value="true" resource="btnCopy"></btn_frmDocumentWorkstationAppointments_Copy>
+              <btn_frmDocumentWorkstationAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocumentWorkstationAppointments_RestoreDefault>
+              <btn_frmDocumentWorkstationAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocumentWorkstationAppointments_TraceRecord>
+              <btn_frmDocumentWorkstationAppointments_Export value="true" resource="btnExport"></btn_frmDocumentWorkstationAppointments_Export>
+          </rbbnPageDocumnentWorkstationAppointments>
+        </DM203>
+        <DM204 value="true" resource="frmMain_DM204">
+          <rbbnPageDocumnentEmployeeAppointments value="true" resource="rbbnPageDocumentEmployeeAppointments">
+              <btn_frmDocumentWorkstationGroupAppointments_New value="true" resource="btnNew"></btn_frmDocumentWorkstationGroupAppointments_New>
+              <btn_frmDocumentWorkstationGroupAppointments_Edit value="true" resource="btnEdit"></btn_frmDocumentWorkstationGroupAppointments_Edit>
+              <btn_frmDocumentWorkstationGroupAppointments_Review value="true" resource="btnReview"></btn_frmDocumentWorkstationGroupAppointments_Review>
+              <btn_frmDocumentWorkstationGroupAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocumentWorkstationGroupAppointments_SoftDelete>
+              <btn_frmDocumentWorkstationGroupAppointments_Copy value="true" resource="btnCopy"></btn_frmDocumentWorkstationGroupAppointments_Copy>
+              <btn_frmDocumentWorkstationGroupAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocumentWorkstationGroupAppointments_RestoreDefault>
+              <btn_frmDocumentWorkstationGroupAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocumentWorkstationGroupAppointments_TraceRecord>
+              <btn_frmDocumentWorkstationGroupAppointments_Export value="true" resource="btnExport"></btn_frmDocumentWorkstationGroupAppointments_Export>
+          </rbbnPageDocumnentEmployeeAppointments>
+        </DM204>
+        <DM205 value="true" resource="frmMain_DM205">
+          <rbbnPageDocumnentEmployeeAppointments value="true" resource="rbbnPageDocumentEmployeeAppointments">
+              <btn_frmDocumentEmployeeAppointments_New value="true" resource="btnNew"></btn_frmDocumentEmployeeAppointments_New>
+              <btn_frmDocumentEmployeeAppointments_Edit value="true" resource="btnEdit"></btn_frmDocumentEmployeeAppointments_Edit>
+              <btn_frmDocumentEmployeeAppointments_Review value="true" resource="btnReview"></btn_frmDocumentEmployeeAppointments_Review>
+              <btn_frmDocumentEmployeeAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocumentEmployeeAppointments_SoftDelete>
+              <btn_frmDocumentEmployeeAppointments_Copy value="true" resource="btnCopy"></btn_frmDocumentEmployeeAppointments_Copy>
+              <btn_frmDocumentEmployeeAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocumentEmployeeAppointments_RestoreDefault>
+              <btn_frmDocumentEmployeeAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocumentEmployeeAppointments_TraceRecord>
+              <btn_frmDocumentEmployeeAppointments_Export value="true" resource="btnExport"></btn_frmDocumentEmployeeAppointments_Export>
+          </rbbnPageDocumnentEmployeeAppointments>
+        </DM205>
+        <DM206 value="true" resource="frmMain_DM206">
+          <rbbnPageDocumnentProductOrderApps value="true" resource="rbbnPageDocumentProductOrderApps">
+              <btn_frmDocumentProductOrderAppointments_New value="true" resource="btnNew"></btn_frmDocumentProductOrderAppointments_New>
+              <btn_frmDocumentProductOrderAppointments_Edit value="true" resource="btnEdit"></btn_frmDocumentProductOrderAppointments_Edit>
+              <btn_frmDocumentProductOrderAppointments_Review value="true" resource="btnReview"></btn_frmDocumentProductOrderAppointments_Review>
+              <btn_frmDocumentProductOrderAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocumentProductOrderAppointments_SoftDelete>
+              <btn_frmDocumentProductOrderAppointments_Copy value="true" resource="btnCopy"></btn_frmDocumentProductOrderAppointments_Copy>
+              <btn_frmDocumentProductOrderAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocumentProductOrderAppointments_RestoreDefault>
+              <btn_frmDocumentProductOrderAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocumentProductOrderAppointments_TraceRecord>
+              <btn_frmDocumentProductOrderAppointments_Export value="true" resource="btnExport"></btn_frmDocumentProductOrderAppointments_Export>
+          </rbbnPageDocumnentProductOrderApps>
+        </DM206>
+        <DM207 value="true" resource="frmMain_DM207">
+          <rbbnPageDocumnentMaterialApps value="true" resource="rbbnPageDocumentMaterialAppointments">
+              <btn_frmDocumentMaterialAppointments_New value="true" resource="btnNew"></btn_frmDocumentMaterialAppointments_New>
+              <btn_frmDocumentMaterialAppointments_Edit value="true" resource="btnEdit"></btn_frmDocumentMaterialAppointments_Edit>
+              <btn_frmDocumentMaterialAppointments_Review value="true" resource="btnReview"></btn_frmDocumentMaterialAppointments_Review>
+              <btn_frmDocumentMaterialAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocumentMaterialAppointments_SoftDelete>
+              <btn_frmDocumentMaterialAppointments_Copy value="true" resource="btnCopy"></btn_frmDocumentMaterialAppointments_Copy>
+              <btn_frmDocumentMaterialAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocumentMaterialAppointments_RestoreDefault>
+              <btn_frmDocumentMaterialAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocumentMaterialAppointments_TraceRecord>
+              <btn_frmDocumentMaterialAppointments_Export value="true" resource="btnExport"></btn_frmDocumentMaterialAppointments_Export>
+          </rbbnPageDocumnentMaterialApps>
+        </DM207>
+        <DM208 value="true" resource="frmMain_DM208">
+          <rbbnPageDocumnentCertificateAppointments value="true" resource="rbbnPageDocumentCertificateAppointments">
+              <btn_frmDocumentCertificateAppointments_New value="true" resource="btnNew"></btn_frmDocumentCertificateAppointments_New>
+              <btn_frmDocumentCertificateAppointments_Edit value="true" resource="btnEdit"></btn_frmDocumentCertificateAppointments_Edit>
+              <btn_frmDocumentCertificateAppointments_Review value="true" resource="btnReview"></btn_frmDocumentCertificateAppointments_Review>
+              <btn_frmDocumentCertificateAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmDocumentCertificateAppointments_SoftDelete>
+              <btn_frmDocumentCertificateAppointments_Copy value="true" resource="btnCopy"></btn_frmDocumentCertificateAppointments_Copy>
+              <btn_frmDocumentCertificateAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmDocumentCertificateAppointments_RestoreDefault>
+              <btn_frmDocumentCertificateAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmDocumentCertificateAppointments_TraceRecord>
+              <btn_frmDocumentCertificateAppointments_Export value="true" resource="btnExport"></btn_frmDocumentCertificateAppointments_Export>
+          </rbbnPageDocumnentCertificateAppointments>
+        </DM208>
+        <DM209 value="true" resource="frmMain_DM209">
+          <rbbnPageDocumentProjectAppointments value="true" resource="rbbnPageDocumentProjectAppointments">
+            <btn_DocumentProjectAppointments_New value="true" resource="btnNew"></btn_DocumentProjectAppointments_New>
+            <rbn_DocumentProjectAppointments_Edit value="true" resource="btnEdit"></rbn_DocumentProjectAppointments_Edit>
+            <btn_DocumentProjectAppointments_Review value="true" resource="btnReview"></btn_DocumentProjectAppointments_Review>
+            <btn_DocumentProjectAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_DocumentProjectAppointments_SoftDelete>
+            <btn_DocumentProjectAppointments_Copy value="true" resource="btnCopy"></btn_DocumentProjectAppointments_Copy>
+            <btn_DocumentProjectAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_DocumentProjectAppointments_TraceRecord>
+            <btn_DocumentProjectAppointments_Export value="true" resource="btnExport"></btn_DocumentProjectAppointments_Export>
+          </rbbnPageDocumentProjectAppointments>
+        </DM209>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <DM301 value="true" resource="frmMain_DM301"></DM301>
+        <DM302 value="true" resource="frmMain_DM302"></DM302>
+        <DM303 value="true" resource="frmMain_DM303"></DM303>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpDM>
+
+    <grpPP value="true" resource="grpPP">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <PP101 value="true" resource="frmMain_PP101">
+          <ribbonPageShifts value="true" resource="ribbonPageShifts">
+              <btn_frmShifts_New value="true" resource="btnNew"></btn_frmShifts_New>
+              <btn_frmShifts_Edit value="true" resource="btnEdit"></btn_frmShifts_Edit>
+              <btn_frmShifts_Review value="true" resource="btnReview"></btn_frmShifts_Review>
+              <btn_frmShifts_SoftDelete value="true" resource="btnSoftDelete"></btn_frmShifts_SoftDelete>
+              <btn_frmShifts_Copy value="true" resource="btnCopy"></btn_frmShifts_Copy>
+              <btn_frmShifts_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmShifts_RestoreDefault>
+              <btn_frmShifts_TraceRecord value="true" resource="btnTraceRecord"></btn_frmShifts_TraceRecord>
+              <btn_frmShifts_Export value="true" resource="btnExport"></btn_frmShifts_Export>
+          </ribbonPageShifts>
+          <ribbonPageShiftsTRansactions value="true" resource="ribbonPageShiftsTRansactions">
+              <btn_frmShifts_WorkingInfo value="true" resource="btnWorkingInfo"></btn_frmShifts_WorkingInfo>
+          </ribbonPageShiftsTRansactions>
+        </PP101>
+        <PP102 value="true" resource="frmMain_PP102">
+          <rbbnPageHasitates value="true" resource="rbbnPageHasitates">
+              <btn_frmHasitates_New value="true" resource="btnNew"></btn_frmHasitates_New>
+              <btn_frmHasitates_Edit value="true" resource="btnEdit"></btn_frmHasitates_Edit>
+              <btn_frmHasitates_Review value="true" resource="btnReview"></btn_frmHasitates_Review>
+              <btn_frmHasitates_SoftDelete value="true" resource="btnSoftDelete"></btn_frmHasitates_SoftDelete>
+              <btn_frmHasitates_Copy value="true" resource="btnCopy"></btn_frmHasitates_Copy>
+              <btn_frmHasitates_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmHasitates_RestoreDefault>
+              <btn_frmHasitates_TraceRecord value="true" resource="btnTraceRecord"></btn_frmHasitates_TraceRecord>
+              <btn_frmHasitates_Export value="true" resource="btnExport"></btn_frmHasitates_Export>
+          </rbbnPageHasitates>
+        </PP102>
+        <PP103 value="true" resource="frmMain_PP103">
+          <rbbnPageCertificates value="true" resource="rbbnPageCertificates">
+              <btn_frmCertificates_New value="true" resource="btnNew"></btn_frmCertificates_New>
+              <btn_frmCertificates_Edit value="true" resource="btnEdit"></btn_frmCertificates_Edit>
+              <btn_frmCertificates_Review value="true" resource="btnReview"></btn_frmCertificates_Review>
+              <btn_frmCertificates_SoftDelete value="true" resource="btnSoftDelete"></btn_frmCertificates_SoftDelete>
+              <btn_frmCertificates_Copy value="true" resource="btnCopy"></btn_frmCertificates_Copy>
+              <btn_frmCertificates_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmCertificates_RestoreDefault>
+              <btn_frmCertificates_TraceRecord value="true" resource="btnTraceRecord"></btn_frmCertificates_TraceRecord>
+              <btn_frmCertificates_Document value="true" resource="btnDocument"></btn_frmCertificates_Document>
+              <btn_frmCertificates_Export value="true" resource="btnExport"></btn_frmCertificates_Export>
+          </rbbnPageCertificates>
+        </PP103>
+        <PP104 value="true" resource="frmMain_PP104">
+          <rbbnPageBOMs value="true" resource="rbbnPageBOMs">
+              <btn_frmBoms_New value="true" resource="btnNew"></btn_frmBoms_New>
+              <btn_frmBoms_Edit value="true" resource="btnEdit"></btn_frmBoms_Edit>
+              <btn_frmBoms_Review value="true" resource="btnReview"></btn_frmBoms_Review>
+              <btn_frmBoms_SoftDelete value="true" resource="btnSoftDelete"></btn_frmBoms_SoftDelete>
+              <btn_frmBoms_Copy value="true" resource="btnCopy"></btn_frmBoms_Copy>
+              <btn_frmBoms_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmBoms_RestoreDefault>
+              <btn_frmBoms_TraceRecord value="true" resource="btnTraceRecord"></btn_frmBoms_TraceRecord>
+              <btn_frmBoms_Document value="true" resource="btnDocument"></btn_frmBoms_Document>
+              <btn_frmBoms_Export value="true" resource="btnExport"></btn_frmBoms_Export>
+          </rbbnPageBOMs>
+          <rbbnPageEngineeringProces value="true" resource="rbbnPageEngineeringProces">
+            <btn_frmBoms_ProductTree value="true" resource="btnProductTree"></btn_frmBoms_ProductTree>
+            <btn_frmBoms_UpperBOM value="true" resource="btnUpperBOM"></btn_frmBoms_UpperBOM>
+            <btn_frmBoms_OperationStep value="true" resource="btnOperationStep"></btn_frmBoms_OperationStep>
+          </rbbnPageEngineeringProces>
+        </PP104>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <PP201 value="true" resource="frmMain_PP201">
+          <rbbnPageProjects value="true" resource="rbbnPageProjects">
+              <btn_frmProjects_New value="true" resource="btnNew"></btn_frmProjects_New>
+              <btn_frmProjects_Edit value="true" resource="btnEdit"></btn_frmProjects_Edit>
+              <btn_frmProjects_Review value="true" resource="btnReview"></btn_frmProjects_Review>
+              <btn_frmProjects_SoftDelete value="true" resource="btnSoftDelete"></btn_frmProjects_SoftDelete>
+              <btn_frmProjects_Copy value="true" resource="btnCopy"></btn_frmProjects_Copy>
+              <btn_frmProjects_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmProjects_RestoreDefault>
+              <btn_frmProjects_TraceRecord value="true" resource="btnTraceRecord"></btn_frmProjects_TraceRecord>
+              <btn_frmProjects_Document value="true" resource="btnDocument"></btn_frmProjects_Document>
+              <btn_frmProjects_ProductOrder value="true" resource="btnProductOrder"></btn_frmProjects_ProductOrder>
+              <btn_frmProjects_MRPRM value="true" resource="btnMRPRM"></btn_frmProjects_MRPRM>
+              <btn_frmProjects_MRPSM value="true" resource="btnMRPSM"></btn_frmProjects_MRPSM>
+              <btn_frmProjects_Export value="true" resource="btnExport"></btn_frmProjects_Export>
+          </rbbnPageProjects>
+        </PP201>
+        <PP202 value="true" resource="frmMain_PP202">
+          <rbbnPageProductOrders value="true" resource="rbbnPageProductOrders">
+              <btn_frmProductOrders_New value="true" resource="btnClose"></btn_frmProductOrders_New>
+              <btn_frmProductOrders_Edit value="true" resource="btnEdit"></btn_frmProductOrders_Edit>
+              <btn_frmProductOrders_Review value="true" resource="btnReview"></btn_frmProductOrders_Review>
+              <btn_frmProductOrders_SoftDelete value="true" resource="btnSoftDelete"></btn_frmProductOrders_SoftDelete>
+              <btn_frmProductOrders_Copy value="true" resource="btnCopy"></btn_frmProductOrders_Copy>
+              <btn_frmProductOrders_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmProductOrders_RestoreDefault>
+              <btn_frmProductOrders_TraceRecord value="true" resource="btnTraceRecord"></btn_frmProductOrders_TraceRecord>
+              <btn_frmProductOrders_Status value="true" resource="btnStatus"></btn_frmProductOrders_Status>
+              <btn_frmProductOrders_Report value="true" resource="btnReport"></btn_frmProductOrders_Report>
+              <btn_frmProductOrders_StatusReport value="true" resource="btnStatusReport"></btn_frmProductOrders_StatusReport>
+              <btn_frmProductOrders_AllList value="true" resource="btnAllList"></btn_frmProductOrders_AllList>
+              <btn_frmProductOrders_Gantt value="true" resource="btnGantt"></btn_frmProductOrders_Gantt>
+              <btn_frmProductOrders_Document value="true" resource="btnDocument"></btn_frmProductOrders_Document>
+              <btn_frmProductOrders_SerialNumber value="true" resource="btnSerialNumber"></btn_frmProductOrders_SerialNumber>
+              <btn_frmProductOrders_WorkerMaterialBOMs value="true" resource="btnWorkerMaterialBOMs"></btn_frmProductOrders_WorkerMaterialBOMs>
+              <btn_frmProductOrders_Export value="true" resource="btnExport"></btn_frmProductOrders_Export>
+          </rbbnPageProductOrders>
+        </PP202>
+        <PP203 value="true" resource="frmMain_PP203">
+        </PP203>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <PP301 value="true" resource="frmMain_PP301"></PP301>
+        <PP302 value="true" resource="frmMain_PP302"></PP302>
+        <PP302 value="true" resource="frmMain_PP302"></PP302>
+        <PP304 value="true" resource="frmMain_PP304"></PP304>
+        <PP305 value="true" resource="frmMain_PP305"></PP305>
+        <PP306 value="true" resource="frmMain_PP306"></PP306>
+        <PP307 value="true" resource="frmMain_PP307"></PP307>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup">
+        <PP401 value="true" resource="frmMain_PP401">
+          <rbbnPageSpeCodes value="true" resource="rbbnPageSpeCodes">
+              <btn_frmSpeCodes_New value="true" resource="btnNew"></btn_frmSpeCodes_New>
+              <btn_frmSpeCodes_Edit value="true" resource="btnEdit"></btn_frmSpeCodes_Edit>
+              <btn_frmSpeCodes_Review value="true" resource="btnReview"></btn_frmSpeCodes_Review>
+              <btn_frmSpeCodes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSpeCodes_SoftDelete>
+              <btn_frmSpeCodes_Copy value="true" resource="btnCopy"></btn_frmSpeCodes_Copy>
+              <btn_frmSpeCodes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSpeCodes_RestoreDefault>
+              <btn_frmSpeCodes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSpeCodes_TraceRecord>
+              <btn_frmSpeCodes_Export value="true" resource="btnExport"></btn_frmSpeCodes_Export>
+          </rbbnPageSpeCodes>
+        </PP401>
+        <PP402 value="true" resource="frmMain_PP402">
+          <rbbnPageSpeCodes value="true" resource="rbbnPageSpeCodes">
+              <btn_frmSpeCodes_New value="true" resource="btnNew"></btn_frmSpeCodes_New>
+              <btn_frmSpeCodes_Edit value="true" resource="btnEdit"></btn_frmSpeCodes_Edit>
+              <btn_frmSpeCodes_Review value="true" resource="btnReview"></btn_frmSpeCodes_Review>
+              <btn_frmSpeCodes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSpeCodes_SoftDelete>
+              <btn_frmSpeCodes_Copy value="true" resource="btnCopy"></btn_frmSpeCodes_Copy>
+              <btn_frmSpeCodes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSpeCodes_RestoreDefault>
+              <btn_frmSpeCodes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSpeCodes_TraceRecord>
+              <btn_frmSpeCodes_Export value="true" resource="btnExport"></btn_frmSpeCodes_Export>
+          </rbbnPageSpeCodes>
+        </PP402>
+        <PP403 value="true" resource="frmMain_PP403">
+          <rbbnPageSpeCodes value="true" resource="rbbnPageSpeCodes">
+              <btn_frmSpeCodes_New value="true" resource="btnNew"></btn_frmSpeCodes_New>
+              <btn_frmSpeCodes_Edit value="true" resource="btnEdit"></btn_frmSpeCodes_Edit>
+              <btn_frmSpeCodes_Review value="true" resource="btnReview"></btn_frmSpeCodes_Review>
+              <btn_frmSpeCodes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSpeCodes_SoftDelete>
+              <btn_frmSpeCodes_Copy value="true" resource="btnCopy"></btn_frmSpeCodes_Copy>
+              <btn_frmSpeCodes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSpeCodes_RestoreDefault>
+              <btn_frmSpeCodes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSpeCodes_TraceRecord>
+              <btn_frmSpeCodes_Export value="true" resource="btnExport"></btn_frmSpeCodes_Export>
+          </rbbnPageSpeCodes>
+        </PP403>
+      </NodeSetup>
+    </grpPP>
+
+    <grpDS value="true" resource="grpDS">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <DS101 value="true" resource="frmMain_DS101"></DS101>
+        <DS102 value="true" resource="frmMain_DS102"></DS102>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess"></NodeProcess>
+      <NodeReport value="true" resource="NodeReport"></NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpDS>
+
+    <grpQM value="true" resource="grpQM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <QM101 value="true" resource="frmMain_QM101">
+          <rbbnPageCriterionSets value="true" resource="rbbnPageCriterionSets">
+              <btn_frmCriterionSets_New value="true" resource="btnNew"></btn_frmCriterionSets_New>
+              <btn_frmCriterionSets_Edit value="true" resource="btnEdit"></btn_frmCriterionSets_Edit>
+              <btn_frmCriterionSets_Review value="true" resource="btnReview"></btn_frmCriterionSets_Review>
+              <btn_frmCriterionSets_SoftDelete value="true" resource="btnSoftDelete"></btn_frmCriterionSets_SoftDelete>
+              <btn_frmCriterionSets_Copy value="true" resource="btnCopy"></btn_frmCriterionSets_Copy>
+              <btn_frmCriterionSets_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmCriterionSets_RestoreDefault>
+              <btn_frmCriterionSets_TraceRecord value="true" resource="btnTraceRecord"></btn_frmCriterionSets_TraceRecord>
+              <btn_frmCriterionSets_UseCards value="true" resource="btnUseCards"></btn_frmCriterionSets_UseCards>
+              <btn_frmCriterionSets_Export value="true" resource="btnExport"></btn_frmCriterionSets_Export>
+          </rbbnPageCriterionSets>
+        </QM101>
+        <QM102 value="true" resource="frmMain_QM102">
+          <rbbnPageImproprieties value="true" resource="rbbnPageImproprieties">
+              <btn_frmImproprieties_New value="true" resource="btnNew"></btn_frmImproprieties_New>
+              <btn_frmImproprieties_Edit value="true" resource="btnEdit"></btn_frmImproprieties_Edit>
+              <btn_frmImproprieties_Review value="true" resource="btnReview"></btn_frmImproprieties_Review>
+              <btn_frmImproprieties_SoftDelete value="true" resource="btnSoftDelete"></btn_frmImproprieties_SoftDelete>
+              <btn_frmImproprieties_Copy value="true" resource="btnCopy"></btn_frmImproprieties_Copy>
+              <btn_frmImproprieties_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmImproprieties_RestoreDefault>
+              <btn_frmImproprieties_TraceRecord value="true" resource="btnTraceRecord"></btn_frmImproprieties_TraceRecord>
+              <btn_frmImproprieties_Export value="true" resource="btnExport"></btn_frmImproprieties_Export>
+          </rbbnPageImproprieties>
+        </QM102>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <QM201 value="true" resource="frmMain_QM201">
+          <rbbnPageMaterialFiches  value="true" resource="rbbnPageMaterialFiches">
+              <btn_frmMaterialFiches_New value="true" resource="btnNew"></btn_frmMaterialFiches_New>
+              <btn_frmMaterialFiches_Edit value="true" resource="btnEdit"></btn_frmMaterialFiches_Edit>
+              <btn_frmMaterialFiches_Review value="true" resource="btnReview"></btn_frmMaterialFiches_Review>
+              <btn_frmMaterialFiches_SoftDelet value="true" resource="btnSoftDelete"></btn_frmMaterialFiches_SoftDelet>
+              <btn_frmMaterialFiches_Copy value="true" resource="btnCopy"></btn_frmMaterialFiches_Copy>
+              <btn_frmMaterialFiches_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmMaterialFiches_RestoreDefault>
+              <btn_frmMaterialFiches_TraceRecord value="true" resource="btnTraceRecord"></btn_frmMaterialFiches_TraceRecord>
+              <btn_frmMaterialFiches_Document value="true" resource="btnDocument"></btn_frmMaterialFiches_Document>
+              <btn_frmMaterialFiches_Barcode value="true" resource="btnBarcode"></btn_frmMaterialFiches_Barcode>
+              <btn_frmMaterialFiches_Print value="true" resource="btnPrint"></btn_frmMaterialFiches_Print>
+              <btn_frmMaterialFiches_Export value="true" resource="btnExport"></btn_frmMaterialFiches_Export>
+           </rbbnPageMaterialFiches>
+        </QM201>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <QM301 value="true" resource="frmMain_QM301"></QM301>
+        <QM302 value="true" resource="frmMain_QM302"></QM302>
+        <QM303 value="true" resource="frmMain_QM303"></QM303>
+        <QM304 value="true" resource="frmMain_QM304"></QM304>
+        <QM305 value="true" resource="frmMain_QM305"></QM305>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup">
+        <QM401 value="true" resource="frmMain_QM401">
+          <rbbnPageSpeCodes value="true" resource="rbbnPageSpeCodes">
+              <btn_frmSpeCodes_New value="true" resource="btnNew"></btn_frmSpeCodes_New>
+              <btn_frmSpeCodes_Edit value="true" resource="btnEdit"></btn_frmSpeCodes_Edit>
+              <btn_frmSpeCodes_Review value="true" resource="btnReview"></btn_frmSpeCodes_Review>
+              <btn_frmSpeCodes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSpeCodes_SoftDelete>
+              <btn_frmSpeCodes_Copy value="true" resource="btnCopy"></btn_frmSpeCodes_Copy>
+              <btn_frmSpeCodes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSpeCodes_RestoreDefault>
+              <btn_frmSpeCodes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSpeCodes_TraceRecord>
+              <btn_frmSpeCodes_Export value="true" resource="btnExport"></btn_frmSpeCodes_Export>
+          </rbbnPageSpeCodes>
+        </QM401>
+        <QM402 value="true" resource="frmMain_QM402">
+          <rbbnPageImpropertyTypes value="true" resource="rbbnPageImpropertyTypes">
+              <btn_frmImproprieties_New value="true" resource="btnNew"></btn_frmImproprieties_New>
+              <btn_frmImproprieties_Edit value="true" resource="btnEdit"></btn_frmImproprieties_Edit>
+              <btn_frmImproprieties_Review value="true" resource="btnReview"></btn_frmImproprieties_Review>
+              <btn_frmImproprieties_SoftDelete value="true" resource="btnSoftDelete"></btn_frmImproprieties_SoftDelete>
+              <btn_frmImproprieties_Copy value="true" resource="btnCopy"></btn_frmImproprieties_Copy>
+              <btn_frmImproprieties_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmImproprieties_RestoreDefault>
+              <btn_frmImproprieties_TraceRecord value="true" resource="btnTraceRecord"></btn_frmImproprieties_TraceRecord>
+              <btn_frmImproprieties_Export value="true" resource="btnExport"></btn_frmImproprieties_Export>
+          </rbbnPageImpropertyTypes>
+        </QM402>
+      </NodeSetup>
+    </grpQM>
+
+    <grpASM value="true" resource="grpASM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <ASM101 value="true" resource="frmMain_ASM101"></ASM101>
+        <ASM102 value="true" resource="frmMain_ASM102"></ASM102>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess"></NodeProcess>
+      <NodeReport value="true" resource="NodeReport"></NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpASM>
+
+    <grpCM value="true" resource="grpCM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <CM101 value="true" resource="frmMain_CM101"></CM101>
+        <CM102 value="true" resource="frmMain_CM102"></CM102>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess"></NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <CM301 value="true" resource="frmMain_CM301"></CM301>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpCM>
+
+    <grpRM value="true" resource="grpRM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <RM101 value="true" resource="frmMain_RM101">
+          <rbbnPageWorkstationGroups value="true" resource="rbbnPageWorkstationGroups">
+              <btn_frmWorkstationGroups_New value="true" resource="btnNew"></btn_frmWorkstationGroups_New>
+              <btn_frmWorkstationGroups_Edit value="true" resource="btnEdit"></btn_frmWorkstationGroups_Edit>
+              <btn_frmWorkstationGroups_Review value="true" resource="btnReview"></btn_frmWorkstationGroups_Review>
+              <btn_frmWorkstationGroups_SoftDelete value="true" resource="btnSoftDelete"></btn_frmWorkstationGroups_SoftDelete>
+              <btn_frmWorkstationGroups_Copy value="true" resource="btnCopy"></btn_frmWorkstationGroups_Copy>
+              <btn_frmWorkstationGroups_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmWorkstationGroups_RestoreDefault>
+              <btn_frmWorkstationGroups_TraceRecord value="true" resource="btnTraceRecord"></btn_frmWorkstationGroups_TraceRecord>
+              <btn_frmWorkstationGroups_Workstation value="true" resource="btnWorkstation"></btn_frmWorkstationGroups_Workstation>
+              <btn_frmWorkstationGroups_Employee value="true" resource="btnEmployee"></btn_frmWorkstationGroups_Employee>
+              <btn_frmWorkstationGroups_WorkingCalender value="true" resource="btnWorkingCalender"></btn_frmWorkstationGroups_WorkingCalender>
+              <btn_frmWorkstationGroups_Document value="true" resource="btnDocument"></btn_frmWorkstationGroups_Document>
+              <btn_frmWorkstationGroups_ShiftApp value="true" resource="btnShiftApp"></btn_frmWorkstationGroups_ShiftApp>
+              <btn_frmWorkstationGroups_Export value="true" resource="btnExport"></btn_frmWorkstationGroups_Export>
+          </rbbnPageWorkstationGroups>
+        </RM101>
+        <RM102 value="true" resource="frmMain_RM102">
+          <rbbnPageWorkstations value="true" resource="rbbnPageWorkstations">
+              <btn_frmWorkstations_New value="true" resource="btnNew"></btn_frmWorkstations_New>
+              <btn_frmWorkstations_Edit value="true" resource="btnEdit"></btn_frmWorkstations_Edit>
+              <btn_frmWorkstations_Review value="true" resource="btnReview"></btn_frmWorkstations_Review>
+              <btn_frmWorkstations_SoftDelete value="true" resource="btnSoftDelete"></btn_frmWorkstations_SoftDelete>
+              <btn_frmWorkstations_Copy value="true" resource="btnCopy"></btn_frmWorkstations_Copy>
+              <btn_frmWorkstations_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmWorkstations_RestoreDefault>
+              <btn_frmWorkstations_TraceRecord value="true" resource="btnTraceRecord"></btn_frmWorkstations_TraceRecord>
+              <btn_frmWorkstations_Barcode value="true" resource="btnBarcode"></btn_frmWorkstations_Barcode>
+              <btn_frmWorkstations_WorkingCalendar value="true" resource="btnWorkingCalendar"></btn_frmWorkstations_WorkingCalendar>
+              <btn_frmWorkstations_Document value="true" resource="btnDocument"></btn_frmWorkstations_Document>
+              <btn_frmWorkstations_Employee value="true" resource="btnEmployee"></btn_frmWorkstations_Employee>
+              <btn_frmWorkstations_Export value="true" resource="btnExport"></btn_frmWorkstations_Export>
+          </rbbnPageWorkstations>
+        </RM102>
+        <RM103 value="true" resource="frmMain_RM103">
+          <rbbnPageEmployees value="true" resource="rbbnPageEmployees">
+              <btn_frmEmployees_New value="true" resource="btnNew"></btn_frmEmployees_New>
+              <btn_frmEmployees_Edit value="true" resource="btnEdit"></btn_frmEmployees_Edit>
+              <btn_frmEmployees_Review value="true" resource="btnReview"></btn_frmEmployees_Review>
+              <btn_frmEmployees_SoftDelete value="true" resource="btnSoftDelete"></btn_frmEmployees_SoftDelete>
+              <btn_frmEmployees_Copy value="true" resource="btnCopy"></btn_frmEmployees_Copy>
+              <btn_frmEmployees_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmEmployees_RestoreDefault>
+              <btn_frmEmployees_TraceRecord value="true" resource="btnTraceRecord"></btn_frmEmployees_TraceRecord>
+              <btn_frmEmployees_Barcode value="true" resource="btnBarcode"></btn_frmEmployees_Barcode>
+              <btn_frmEmployees_CertificateAppointment value="true" resource="btnCertificateAppointment"></btn_frmEmployees_CertificateAppointment>
+              <btn_frmEmployees_Shift value="true" resource="btnShift"></btn_frmEmployees_Shift>
+              <btn_frmEmployees_Document value="true" resource="btnDocument"></btn_frmEmployees_Document>
+              <btn_frmEmployees_Export value="true" resource="btnExport"></btn_frmEmployees_Export>
+          </rbbnPageEmployees>
+        </RM103>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <RM201 value="true" resource="frmMain_RM201">
+          <rbbnPagePeriodicMaintenances value="true" resource="rbbnPagePeriodicMaintenances">
+              <btn_frmPeriodicMaintenances_New value="true" resource="btnNew"></btn_frmPeriodicMaintenances_New>
+              <btn_frmPeriodicMaintenances_Edit value="true" resource="btnEdit"></btn_frmPeriodicMaintenances_Edit>
+              <btn_frmPeriodicMaintenances_Review value="true" resource="btnReview"></btn_frmPeriodicMaintenances_Review>
+              <btn_frmPeriodicMaintenances_SoftDelete value="true" resource="btnSoftDelete"></btn_frmPeriodicMaintenances_SoftDelete>
+              <btn_frmPeriodicMaintenances_Copy value="true" resource="btnCopy"></btn_frmPeriodicMaintenances_Copy>
+              <btn_frmPeriodicMaintenances_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmPeriodicMaintenances_RestoreDefault>
+              <btn_frmPeriodicMaintenances_TraceRecord value="true" resource="btnTraceRecord"></btn_frmPeriodicMaintenances_TraceRecord>
+              <btn_frmPeriodicMaintenances_Export value="true" resource="btnExport"></btn_frmPeriodicMaintenances_Export>
+          </rbbnPagePeriodicMaintenances>
+        </RM201>
+        <RM202 value="true" resource="frmMain_RM202">
+          <rbbnPageWorkstationGroupEmployeeAppointments value="true" resource="rbbnPageWorkstationGroupEmployeeAppointments">
+              <btn_frmWorkstationGroupEmployeeAppointments_New value="true" resource="btnNew"></btn_frmWorkstationGroupEmployeeAppointments_New>
+              <btn_frmWorkstationGroupEmployeeAppointments_Edit value="true" resource="btnEdit"></btn_frmWorkstationGroupEmployeeAppointments_Edit>
+              <btn_frmWorkstationGroupEmployeeAppointments_Review value="true" resource="btnReview"></btn_frmWorkstationGroupEmployeeAppointments_Review>
+              <btn_frmWorkstationGroupEmployeeAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmWorkstationGroupEmployeeAppointments_SoftDelete>
+              <btn_frmWorkstationGroupEmployeeAppointments_Copy value="true" resource="btnCopy"></btn_frmWorkstationGroupEmployeeAppointments_Copy>
+              <btn_frmWorkstationGroupEmployeeAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmWorkstationGroupEmployeeAppointments_RestoreDefault>
+              <btn_frmWorkstationGroupEmployeeAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmWorkstationGroupEmployeeAppointments_TraceRecord>
+              <btn_frmWorkstationGroupEmployeeAppointments_Export value="true" resource="btnExport"></btn_frmWorkstationGroupEmployeeAppointments_Export>
+          </rbbnPageWorkstationGroupEmployeeAppointments>
+        </RM202>
+        <RM203 value="true" resource="frmMain_RM203">
+          <rbbnPageWorkstationGroupShiftAppointments value="true" resource="rbbnPageWorkstationGroupShiftAppointments">
+              <btn_frmWorkstationGroupShiftAppointments_New value="true" resource="btnNew"></btn_frmWorkstationGroupShiftAppointments_New>
+              <btn_frmWorkstationGroupShiftAppointments_Edit value="true" resource="btnEdit"></btn_frmWorkstationGroupShiftAppointments_Edit>
+              <btn_frmWorkstationGroupShiftAppointments_Review value="true" resource="btnReview"></btn_frmWorkstationGroupShiftAppointments_Review>
+              <btn_frmWorkstationGroupShiftAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmWorkstationGroupShiftAppointments_SoftDelete>
+              <btn_frmWorkstationGroupShiftAppointments_Copy value="true" resource="btnCopy"></btn_frmWorkstationGroupShiftAppointments_Copy>
+              <btn_frmWorkstationGroupShiftAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmWorkstationGroupShiftAppointments_RestoreDefault>
+              <btn_frmWorkstationGroupShiftAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmWorkstationGroupShiftAppointments_TraceRecord>
+              <btn_frmWorkstationGroupShiftAppointments_Export value="true" resource="btnExport"></btn_frmWorkstationGroupShiftAppointments_Export>
+          </rbbnPageWorkstationGroupShiftAppointments>
+        </RM203>
+        <RM204 value="true" resource="frmMain_RM204">
+          <rbbnPageWorkstationGroupWorkstationAppointments value="true" resource="rbbnPageWorkstationGroupWorkstationAppointments">
+              <btn_frmWorkstationGroupWorkstationAppointments_New value="true" resource="btnNew"></btn_frmWorkstationGroupWorkstationAppointments_New>
+              <btn_frmWorkstationGroupWorkstationAppointments_Edit value="true" resource="btnEdit"></btn_frmWorkstationGroupWorkstationAppointments_Edit>
+              <btn_frmWorkstationGroupWorkstationAppointments_Review value="true" resource="btnReview"></btn_frmWorkstationGroupWorkstationAppointments_Review>
+              <btn_frmWorkstationGroupWorkstationAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmWorkstationGroupWorkstationAppointments_SoftDelete>
+              <btn_frmWorkstationGroupWorkstationAppointments_Copy value="true" resource="btnCopy"></btn_frmWorkstationGroupWorkstationAppointments_Copy>
+              <btn_frmWorkstationGroupWorkstationAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmWorkstationGroupWorkstationAppointments_RestoreDefault>
+              <btn_frmWorkstationGroupWorkstationAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmWorkstationGroupWorkstationAppointments_TraceRecord>
+              <btn_frmWorkstationGroupWorkstationAppointments_Export value="true" resource="btnExport"></btn_frmWorkstationGroupWorkstationAppointments_Export>
+          </rbbnPageWorkstationGroupWorkstationAppointments>
+        </RM204>
+        <RM205 value="true" resource="frmMain_RM205">
+          <rbbnPageEmployeeCertificateApps value="true" resource="rbbnPageEmployeeCertificateApps">
+              <btn_frmEmployeeCertificateAppointments_New value="true" resource="btnNew"></btn_frmEmployeeCertificateAppointments_New>
+              <btn_frmEmployeeCertificateAppointments_Edit value="true" resource="btnEdit"></btn_frmEmployeeCertificateAppointments_Edit>
+              <btn_frmEmployeeCertificateAppointments_Review value="true" resource="btnReview"></btn_frmEmployeeCertificateAppointments_Review>
+              <btn_frmEmployeeCertificateAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmEmployeeCertificateAppointments_SoftDelete>
+              <btn_frmEmployeeCertificateAppointments_Copy value="true" resource="btnCopy"></btn_frmEmployeeCertificateAppointments_Copy>
+              <btn_frmEmployeeCertificateAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmEmployeeCertificateAppointments_RestoreDefault>
+              <btn_frmEmployeeCertificateAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmEmployeeCertificateAppointments_TraceRecord>
+              <btn_frmEmployeeCertificateAppointments_Export value="true" resource="btnExport"></btn_frmEmployeeCertificateAppointments_Export>
+          </rbbnPageEmployeeCertificateApps>
+        </RM205>
+        <RM206 value="true" resource="frmMain_RM206">
+          <rbbnPageEmployeeShiftAppointments value="true" resource="rbbnPageEmployeeShiftAppointments">
+              <btn_frmEmployeeShiftAppointments_New value="true" resource="btnNew"></btn_frmEmployeeShiftAppointments_New>
+              <btn_frmEmployeeShiftAppointments_Edit value="true" resource="btnEdit"></btn_frmEmployeeShiftAppointments_Edit>
+              <btn_frmEmployeeShiftAppointments_Review value="true" resource="btnReview"></btn_frmEmployeeShiftAppointments_Review>
+              <btn_frmEmployeeShiftAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmEmployeeShiftAppointments_SoftDelete>
+              <btn_frmEmployeeShiftAppointments_Copy value="true" resource="btnCopy"></btn_frmEmployeeShiftAppointments_Copy>
+              <btn_frmEmployeeShiftAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmEmployeeShiftAppointments_RestoreDefault>
+              <btn_frmEmployeeShiftAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmEmployeeShiftAppointments_TraceRecord>
+              <btn_frmEmployeeShiftAppointments_Export value="true" resource="btnExport"></btn_frmEmployeeShiftAppointments_Export>
+          </rbbnPageEmployeeShiftAppointments>
+        </RM206>
+        <RM207 value="true" resource="frmMain_RM207">
+          <rbbnPageAppointmentProcess value="true" resource="rbbnPageAppointmentProcess">
+              <btn_frmEmployeeWorkstationAppointments_New value="true" resource="btnNew"></btn_frmEmployeeWorkstationAppointments_New>
+              <btn_frmEmployeeWorkstationAppointments_Edit value="true" resource="btnEdit"></btn_frmEmployeeWorkstationAppointments_Edit>
+              <btn_frmEmployeeWorkstationAppointments_Review value="true" resource="btnReview"></btn_frmEmployeeWorkstationAppointments_Review>
+              <btn_frmEmployeeWorkstationAppointments_SoftDelete value="true" resource="btnSoftDelete"></btn_frmEmployeeWorkstationAppointments_SoftDelete>
+              <btn_frmEmployeeWorkstationAppointments_Copy value="true" resource="btnCopy"></btn_frmEmployeeWorkstationAppointments_Copy>
+              <btn_frmEmployeeWorkstationAppointments_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmEmployeeWorkstationAppointments_RestoreDefault>
+              <btn_frmEmployeeWorkstationAppointments_TraceRecord value="true" resource="btnTraceRecord"></btn_frmEmployeeWorkstationAppointments_TraceRecord>
+              <btn_frmEmployeeWorkstationAppointments_Export value="true" resource="btnExport"></btn_frmEmployeeWorkstationAppointments_Export>
+          </rbbnPageAppointmentProcess>
+        </RM207>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <RM301 value="true" resource="frmMain_RM301"></RM301>
+        <RM302 value="true" resource="frmMain_RM302"></RM302>
+        <RM303 value="true" resource="frmMain_RM303"></RM303>
+        <RM304 value="true" resource="frmMain_RM304"></RM304>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup">
+        <RM401 value="true" resource="frmMain_RM401">
+          <rbbnPageLocations value="true" resource="rbbnPageLocations">
+              <btn_frmLocations_New value="true" resource="btnNew"></btn_frmLocations_New>
+              <btn_frmLocations_Edit value="true" resource="btnEdit"></btn_frmLocations_Edit>
+              <btn_frmLocations_Review value="true" resource="btnReview"></btn_frmLocations_Review>
+              <btn_frmLocations_SoftDelete value="true" resource="btnSoftDelete"></btn_frmLocations_SoftDelete>
+              <btn_frmLocations_Copy value="true" resource="btnCopy"></btn_frmLocations_Copy>
+              <btn_frmLocations_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmLocations_RestoreDefault>
+              <btn_frmLocations_TraceRecord value="true" resource="btnTraceRecord"></btn_frmLocations_TraceRecord>
+              <btn_frmLocations_Export value="true" resource="btnExport"></btn_frmLocations_Export>
+          </rbbnPageLocations>
+        </RM401>
+      </NodeSetup>
+    </grpRM>
+
+    <grpPM value="true" resource="grpPM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <PM101 value="true" resource="frmMain_PM101"></PM101>
+        <PM102 value="true" resource="frmMain_PM102"></PM102>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess"></NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <PM301 value="true" resource="frmMain_PM301"></PM301>
+        <PM302 value="true" resource="frmMain_PM302"></PM302>
+        <PM303 value="true" resource="frmMain_PM303"></PM303>
+        <PM304 value="true" resource="frmMain_PM304"></PM304>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpPM>
+
+    <grpSCM value="true" resource="grpSCM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <SCM101 value="true" resource="frmMain_SCM101">
+          <rbbnPageSuppliers value="true" resource="rbbnPageSuppliers">
+              <btn_frmSupplyChain_New value="true" resource="btnNew"></btn_frmSupplyChain_New>
+              <btn_frmSupplyChain_Edit value="true" resource="btnEdit"></btn_frmSupplyChain_Edit>
+              <btn_frmSupplyChain_Review value="true" resource="btnReview"></btn_frmSupplyChain_Review>
+              <btn_frmSupplyChain_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSupplyChain_SoftDelete>
+              <btn_frmSupplyChain_Copy value="true" resource="btnCopy"></btn_frmSupplyChain_Copy>
+              <btn_frmSupplyChain_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSupplyChain_RestoreDefault>
+              <btn_frmSupplyChain_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSupplyChain_TraceRecord>
+              <btn_frmSupplyChain_Export value="true" resource="btnExport"></btn_frmSupplyChain_Export>
+          </rbbnPageSuppliers>
+        </SCM101>
+        <SCM102 value="true" resource="frmMain_SCM102">
+          <rbbnPageSupplyCriterias value="true" resource="rbbnPageSupplyCriterias">
+              <btn_frmSupplyCriterias_New value="true" resource="btnNew"></btn_frmSupplyCriterias_New>
+              <btn_frmSupplyCriterias_Edit value="true" resource="btnEdit"></btn_frmSupplyCriterias_Edit>
+              <btn_frmSupplyCriterias_Review value="true" resource="btnReview"></btn_frmSupplyCriterias_Review>
+              <btn_frmSupplyCriterias_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSupplyCriterias_SoftDelete>
+              <btn_frmSupplyCriterias_Copy value="true" resource="btnCopy"></btn_frmSupplyCriterias_Copy>
+              <btn_frmSupplyCriterias_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSupplyCriterias_RestoreDefault>
+              <btn_frmSupplyCriterias_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSupplyCriterias_TraceRecord>
+              <btn_frmSupplyCriterias_CriteriaLine value="true" resource="btnCriteriaLine"></btn_frmSupplyCriterias_CriteriaLine>
+              <btn_frmSupplyCriterias_Export value="true" resource="btnExport"></btn_frmSupplyCriterias_Export>
+          </rbbnPageSupplyCriterias>
+        </SCM102>
+        <SCM103 value="true" resource="frmMain_SCM103">
+          <rbbnPageSupplierCriteriaSets value="true" resource="rbbnPageSupplierCriteriaSets">
+              <btn_frmSupplierCriteriaSets_New value="true" resource="btnNew"></btn_frmSupplierCriteriaSets_New>
+              <btn_frmSupplierCriteriaSets_Edit value="true" resource="btnEdit"></btn_frmSupplierCriteriaSets_Edit>
+              <btn_frmSupplierCriteriaSets_Review value="true" resource="btnReview"></btn_frmSupplierCriteriaSets_Review>
+              <btn_frmSupplierCriteriaSets_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSupplierCriteriaSets_SoftDelete>
+              <btn_frmSupplierCriteriaSets_Copy value="true" resource="btnCopy"></btn_frmSupplierCriteriaSets_Copy>
+              <btn_frmSupplierCriteriaSets_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSupplierCriteriaSets_RestoreDefault>
+              <btn_frmSupplierCriteriaSets_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSupplierCriteriaSets_TraceRecord>
+              <btn_frmSupplierCriteriaSets_Export value="true" resource="btnExport"></btn_frmSupplierCriteriaSets_Export>
+          </rbbnPageSupplierCriteriaSets>
+        </SCM103>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <SCM201 value="true" resource="frmMain_SCM201">
+          <ribbonPageSupplierPoints value="true" resource="ribbonPageSupplierPoints">
+              <btn_frmSupplierPoints_New value="true" resource="btnNew"></btn_frmSupplierPoints_New>
+              <btn_frmSupplierPoints_Edit value="true" resource="btnEdit"></btn_frmSupplierPoints_Edit>
+              <btn_frmSupplierPoints_Review value="true" resource="btnReview"></btn_frmSupplierPoints_Review>
+              <btn_frmSupplierPoints_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSupplierPoints_SoftDelete>
+              <btn_frmSupplierPoints_Copy value="true" resource="btnCopy"></btn_frmSupplierPoints_Copy>
+              <btn_frmSupplierPoints_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSupplierPoints_RestoreDefault>
+              <btn_frmSupplierPoints_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSupplierPoints_TraceRecord>
+              <btn_frmSupplierPoints_Export value="true" resource="btnExport"></btn_frmSupplierPoints_Export>
+          </ribbonPageSupplierPoints>
+        </SCM201>
+        <SCM202 value="true" resource="frmMain_SCM202">
+          <ribbonPageSupplierCriteriaSetCriteriaApps value="true" resource="ribbonPageSupplierCriteriaSetCriteriaApps">
+              <btn_frmSupplierCriteriaSetCriteriaApps_New value="true" resource="btnNew"></btn_frmSupplierCriteriaSetCriteriaApps_New>
+              <btn_frmSupplierCriteriaSetCriteriaApps_Edit value="true" resource="btnEdit"></btn_frmSupplierCriteriaSetCriteriaApps_Edit>
+              <btn_frmSupplierCriteriaSetCriteriaApps_Review value="true" resource="btnReview"></btn_frmSupplierCriteriaSetCriteriaApps_Review>
+              <btn_frmSupplierCriteriaSetCriteriaApps_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSupplierCriteriaSetCriteriaApps_SoftDelete>
+              <btn_frmSupplierCriteriaSetCriteriaApps_Copy value="true" resource="btnCopy"></btn_frmSupplierCriteriaSetCriteriaApps_Copy>
+              <btn_frmSupplierCriteriaSetCriteriaApps_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSupplierCriteriaSetCriteriaApps_RestoreDefault>
+              <btn_frmSupplierCriteriaSetCriteriaApps_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSupplierCriteriaSetCriteriaApps_TraceRecord>
+              <btn_frmSupplierCriteriaSetCriteriaApps_Export value="true" resource="btnExport"></btn_frmSupplierCriteriaSetCriteriaApps_Export>
+          </ribbonPageSupplierCriteriaSetCriteriaApps>
+        </SCM202>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <SCM301 value="true" resource="frmMain_SCM301"></SCM301>
+        <SCM302 value="true" resource="frmMain_SCM302"></SCM302>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup">
+        <SCM401 value="true" resource="frmMain_SCM401">
+          <ribbonPageSupplierCriteriaLines value="true" resource="ribbonPageSupplierCriteriaLines">
+              <btn_frmSupplierCriteriaLines_New value="true" resource="btnNew"></btn_frmSupplierCriteriaLines_New>
+              <btn_frmSupplierCriteriaLines_Edit value="true" resource="btnEdit"></btn_frmSupplierCriteriaLines_Edit>
+              <btn_frmSupplierCriteriaLines_Review value="true" resource="btnReview"></btn_frmSupplierCriteriaLines_Review>
+              <btn_frmSupplierCriteriaLines_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSupplierCriteriaLines_SoftDelete>
+              <btn_frmSupplierCriteriaLines_Copy value="true" resource="btnCopy"></btn_frmSupplierCriteriaLines_Copy>
+              <btn_frmSupplierCriteriaLines_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSupplierCriteriaLines_RestoreDefault>
+              <btn_frmSupplierCriteriaLines_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSupplierCriteriaLines_TraceRecord>
+              <btn_frmSupplierCriteriaLines_Export value="true" resource="btnExport"></btn_frmSupplierCriteriaLines_Export>
+          </ribbonPageSupplierCriteriaLines>
+        </SCM401>
+        <SCM402 value="true" resource="frmMain_SCM402">
+          <rbbnPageSpeCodes value="true" resource="rbbnPageSpeCodes">
+              <btn_frmSpeCodes_New value="true" resource="btnNew"></btn_frmSpeCodes_New>
+              <btn_frmSpeCodes_Edit value="true" resource="btnEdit"></btn_frmSpeCodes_Edit>
+              <btn_frmSpeCodes_Review value="true" resource="btnReview"></btn_frmSpeCodes_Review>
+              <btn_frmSpeCodes_SoftDelete value="true" resource="btnSoftDelete"></btn_frmSpeCodes_SoftDelete>
+              <btn_frmSpeCodes_Copy value="true" resource="btnCopy"></btn_frmSpeCodes_Copy>
+              <btn_frmSpeCodes_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmSpeCodes_RestoreDefault>
+              <btn_frmSpeCodes_TraceRecord value="true" resource="btnTraceRecord"></btn_frmSpeCodes_TraceRecord>
+              <btn_frmSpeCodes_Export value="true" resource="btnExport"></btn_frmSpeCodes_Export>
+          </rbbnPageSpeCodes>
+        </SCM402>
+      </NodeSetup>
+    </grpSCM>
+
+    <grpCST value="true" resource="grpCST">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <CST101 value="true" resource="frmMain_CST101"></CST101>
+        <CST102 value="true" resource="frmMain_CST102"></CST102>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess"></NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <CST301 value="true" resource="frmMain_CST301"></CST301>
+        <CST302 value="true" resource="frmMain_CST302"></CST302>
+        <CST303 value="true" resource="frmMain_CST303"></CST303>
+        <CST304 value="true" resource="frmMain_CST304"></CST304>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpCST>
+
+    <grpSM value="true" resource="grpSM">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <SM101 value="true" resource="frmMain_SM101"></SM101>
+        <SM102 value="true" resource="frmMain_SM102"></SM102>
+        <SM103 value="true" resource="frmMain_SM103"></SM103>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <SM201 value="true" resource="frmMain_SM201"></SM201>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <SM301 value="true" resource="frmMain_SM301"></SM301>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpSM>
+
+    <grpDP value="true" resource="grpDP">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <DP101 value="true" resource="frmMain_DP101"></DP101>
+        <DP102 value="true" resource="frmMain_DP102"></DP102>
+        <DP103 value="true" resource="frmMain_DP103"></DP103>
+        <DP104 value="true" resource="frmMain_DP104"></DP104>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess"></NodeProcess>
+      <NodeReport value="true" resource="NodeReport">
+        <DP301 value="true" resource="frmMain_DP301"></DP301>
+      </NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpDP>
+
+    <grpBI value="true" resource="grpBI">
+      <NodeMainRecord value="true" resource="NodeMainRecord"></NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess"></NodeProcess>
+      <NodeReport value="true" resource="NodeReport"></NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpBI>
+
+    <grpBA value="true" resource="grpBA">
+      <NodeMainRecord value="true" resource="NodeMainRecord"></NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <BA201 value="true" resource="frmMain_BA201"></BA201>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport"></NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpBA>
+
+    <grpSYS value="true" resource="grpSYS">
+      <NodeMainRecord value="true" resource="NodeMainRecord">
+        <SYS101 value="true" resource="frmMain_SYS101">
+          <ribbonPageRoles value="true" resource="ribbonPageRoles">
+              <btn_frmRoles_New value="true" resource="btnNew"></btn_frmRoles_New>
+              <btn_frmRoles_Edit value="true" resource="btnEdit"></btn_frmRoles_Edit>
+              <btn_frmRoles_Review value="true" resource="btnReview"></btn_frmRoles_Review>
+              <btn_frmRoles_Delete value="true" resource="btnSoftDelete"></btn_frmRoles_Delete>
+              <btn_frmRoles_Copy value="true" resource="btnCopy"></btn_frmRoles_Copy>
+              <btn_frmRoles_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmRoles_RestoreDefault>
+              <btn_frmRoles_TraceRecord value="true" resource="btnTraceRecord"></btn_frmRoles_TraceRecord>
+              <btn_frmRoles_Export value="true" resource="btnExport"></btn_frmRoles_Export>
+              <btn_frmRoles_Document value="true" resource="btnDocument"></btn_frmRoles_Document>
+          </ribbonPageRoles>
+        </SYS101>
+        <SYS102 value="true" resource="frmMain_SYS102">
+          <ribbonPageUsers value="true" resource="ribbonPageUsers">
+              <btn_frmUsers_New value="true" resource="btnNew"></btn_frmUsers_New>
+              <btn_frmUsers_Edit value="true" resource="btnEdit"></btn_frmUsers_Edit>
+              <btn_frmUsers_Delete value="true" resource="btnSoftDelete"></btn_frmUsers_Delete>
+              <btn_frmUsers_Review value="true" resource="btnReview"></btn_frmUsers_Review>
+              <btn_frmUsers_Copy value="true" resource="btnCopy"></btn_frmUsers_Copy>
+              <btn_frmUsers_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmUsers_RestoreDefault>
+              <btn_frmUsers_TraceRecord value="true" resource="btnTraceRecord"></btn_frmUsers_TraceRecord>
+              <btn_frmUsers_ChangePassword value="true" resource="btnChangePassword"></btn_frmUsers_ChangePassword>
+              <btn_frmUsers_Export value="true" resource="btnExport"></btn_frmUsers_Export>
+          </ribbonPageUsers>
+        </SYS102>
+        <SYS103 value="true" resource="frmMain_SYS103">
+          <rbbnPageWorkareaList value="true" resource="rbbnPageWorkareaList">
+              <btn_frmWorkareaList_Add value="true" resource="btnAdd"></btn_frmWorkareaList_Add>
+              <btn_frmWorkareaList_Change value="true" resource="btnChange"></btn_frmWorkareaList_Change>
+              <btn_frmWorkareaList_SoftDelete value="true" resource="btnSoftDelete"></btn_frmWorkareaList_SoftDelete>
+          </rbbnPageWorkareaList>
+        </SYS103>
+        <SYS104 value="true" resource="frmMain_SYS104">
+          <ribbonPageTerminals value="true" resource="ribbonPageTerminals">
+              <btn_frmTerminals_New value="true" resource="btnNew"></btn_frmTerminals_New>
+              <btn_frmTerminals_Edit value="true" resource="btnEdit"></btn_frmTerminals_Edit>
+              <btn_frmTerminals_Review value="true" resource="btnReview"></btn_frmTerminals_Review>
+              <btn_frmTerminals_Delete value="true" resource="btnSoftDelete"></btn_frmTerminals_Delete>
+              <btn_frmTerminals_Copy value="true" resource="btnCopy"></btn_frmTerminals_Copy>
+              <btn_frmTerminals_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmTerminals_RestoreDefault>
+              <btn_frmTerminals_TraceRecord value="true" resource="btnTraceRecord"></btn_frmTerminals_TraceRecord>
+              <btn_frmTerminals_Export value="true" resource="btnExport"></btn_frmTerminals_Export>
+          </ribbonPageTerminals>
+        </SYS104>
+      </NodeMainRecord>
+      <NodeProcess value="true" resource="NodeProcess">
+        <SYS201 value="true" resource="frmMain_SYS201">
+          <ribbonPageUserAuthorizations value="true" resource="ribbonPageUserAuthorizations">
+              <btn_frmUserAuthorization_New value="true" resource="btnNew"></btn_frmUserAuthorization_New>
+              <btn_frmUserAuthorization_Edit value="true" resource="btnEdit"></btn_frmUserAuthorization_Edit>
+              <btn_frmUserAuthorization_Review value="true" resource="btnReview"></btn_frmUserAuthorization_Review>
+              <btn_frmUserAuthorization_Delete value="true" resource="btnSoftDelete"></btn_frmUserAuthorization_Delete>
+              <btn_frmUserAuthorization_Copy value="true" resource="btnCopy"></btn_frmUserAuthorization_Copy>
+              <btn_frmUserAuthorization_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmUserAuthorization_RestoreDefault>
+              <btn_frmUserAuthorization_TraceRecord value="true" resource="btnTraceRecord"></btn_frmUserAuthorization_TraceRecord>
+              <btn_frmUserAuthorization_Export value="true" resource="btnExport"></btn_frmUserAuthorization_Export>
+          </ribbonPageUserAuthorizations>
+        </SYS201>
+        <SYS202 value="true" resource="frmMain_SYS202">
+              <ribbonPageLayoutDesigns value="true" resource="ribbonPageLayoutDesigns">
+                  <btn_frmLayouts_New value="true" resource="btnNew"></btn_frmLayouts_New>
+                  <btn_frmLayouts_Edit value="true" resource="btnEdit"></btn_frmLayouts_Edit>
+                  <btn_frmLayouts_Delete value="true" resource="btnSoftDelete"></btn_frmLayouts_Delete>
+                  <btn_frmLayouts_Review value="true" resource="btnReview"></btn_frmLayouts_Review>
+                  <btn_frmLayouts_Copy value="true" resource="btnCopy"></btn_frmLayouts_Copy>
+                  <btn_frmLayouts_RestoreDefault value="true" resource="btnRestoreDefault"></btn_frmLayouts_RestoreDefault>
+                  <btn_frmLayouts_TraceRecord value="true" resource="btnTraceRecord"></btn_frmLayouts_TraceRecord>
+                  <btn_frmLayouts_Export value="true" resource="btnExport"></btn_frmLayouts_Export>
+              </ribbonPageLayoutDesigns>
+        </SYS202>
+        <SYS203 value="true" resource="frmMain_SYS203">
+              <ribbonPageLockedRecords value="true" resource="ribbonPageLockedRecords">
+                  <btn_frmLockedRecords_Review value="true" resource="btnReview"></btn_frmLockedRecords_Review>
+              </ribbonPageLockedRecords>
+        </SYS203>
+        <SYS204 value="true" resource="frmMain_SYS204">
+              <ribbonPageLogRecords value="true" resource="ribbonPageLogRecords">
+                  <btn_frmLogRecords_Review value="true" resource="btnReview"></btn_frmLogRecords_Review>
+              </ribbonPageLogRecords>
+        </SYS204>
+        <SYS205 value="true" resource="frmMain_SYS205">
+              <ribbonPageDeletedRecord value="true" resource="ribbonPageDeletedRecord">
+                  <btn_frmDeletedRecords_Review value="true" resource="btnReview"></btn_frmDeletedRecords_Review>
+                  <btn_frmDeletedRecord_Export value="true" resource="btnExport"></btn_frmDeletedRecord_Export>
+              </ribbonPageDeletedRecord>
+        </SYS205>
+        <SYS206 value="true" resource="frmMain_SYS206">
+              <ribbonPageLicences value="true" resource="ribbonPageLicences">
+                  <btn_frmLicence_Review value="true" resource="btnReview"></btn_frmLicence_Review>
+              </ribbonPageLicences>
+        </SYS206>
+      </NodeProcess>
+      <NodeReport value="true" resource="NodeReport"></NodeReport>
+      <NodeSetup value="true" resource="NodeSetup"></NodeSetup>
+    </grpSYS>
+
+</Authorizations>

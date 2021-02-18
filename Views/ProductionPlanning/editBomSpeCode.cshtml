@@ -1,0 +1,129 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.SpeCode
+
+@{
+    ViewBag.Title = "editBomSpeCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+
+                        <div class="box-body">
+                        </div>
+                        <div class="form-horizontal">
+                            <h3>Reçete Özel Kod Tanımı</h3>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.SpecialCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.SpecialCode, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.SpecialCode, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.SpeCodeType, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EnumDropDownListFor(model => model.SpeCodeType, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.SpeCodeType, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-8">
+                                        @Html.EnumDropDownListFor(model => model.Status, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+                            <center> <h3>Yazı Stili Bilgileri</h3></center>
+                            <hr />
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FontName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.FontName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.FontName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FontSize, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.FontSize, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.FontSize, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FontColor, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.FontColor, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.FontColor, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FontBold, htmlAttributes: new { @class = "control-label col-md-9" })
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+                                            @Html.EditorFor(model => model.FontBold)
+                                            @Html.ValidationMessageFor(model => model.FontBold, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FontItalic, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+                                            @Html.EditorFor(model => model.FontItalic)
+                                            @Html.ValidationMessageFor(model => model.FontItalic, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-8">
+                                    <center>
+                                        <input type="submit" value="Kaydet" class="btn btn-app btn btn-primary" />
+                                        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                                            <i class="fa fa-times"></i> Vazgeç
+                                        </a>
+                                    </center>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>   <!-- /.row -->
+    </section>
+
+
+}

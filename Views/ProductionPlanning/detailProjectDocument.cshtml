@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "detailProjectDocument";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<DocumentProjectAppointment>
+
+<section class="content-header">
+
+
+    <div class="box-body">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+        <a class="btn btn-app "> <span class=" fa fa-share-square"></span>Aktarım</a>
+    </div>
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Malzeme Dökümanları
+
+                    </h2>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Döküman No</th>
+                                <th>Döküman Açıklaması</th>
+                                <th>Proje</th>
+                                <th>Aile No</th>
+                                <th>Sayfa</th>
+                                <th>Sayfa Sayısı</th>
+                                <th>Revizyon</th>
+                                <th>Geçerlilik</th>
+                                <th>Durum</th>
+                                <th>Departman Kapsamı</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (DocumentProjectAppointment document in Model)
+                            {
+
+                                <tr>@document.Document.DocumentNo</tr>
+                                <tr>@document.Document.Description</tr>
+                                <tr>@document.Document.Project</tr>
+                                <tr>@document.Document.FamilyNo</tr>
+                                <tr>@document.Document.Page</tr>
+                                <tr>@document.Document.PageCount</tr>
+                                <tr>@document.Document.Rev</tr>
+                                <tr>@document.Document.Availability</tr>
+                                <tr>@document.Document.Status</tr>
+                                <tr>@document.Document.DepartmentScope</tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+

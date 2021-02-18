@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "materialPriceAppointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<MaterialPriceAppointment>
+<section class="content-header">
+    <div class="box-body">
+       
+        <a href="http://virames.cloud/ProductManagement/newmaterialPriceAppointment" class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i>Aktarım
+        </a>
+        
+
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h2>Malzeme Fiyat Tanımları</h2>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Malzeme</th>
+                                <th>Fiyat</th>
+                                <th>Para Birimi</th>
+                                <th>Bitiş Tarihi</th>
+                                <th>Başlangıç Tarihi</th>
+                                <th>Fiyat Türü</th>
+                                <th>Malzeme Fiyat Ataması Durumu</th>
+                                <th>Öncelik</th>
+                                <td>İşlem</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (MaterialPriceAppointment materialPriceAppointment in Model)
+                            {
+
+                            <tr>
+                                <td>@materialPriceAppointment.Material</td>
+                                <td>@materialPriceAppointment.Price</td>
+                                <td>@materialPriceAppointment.CurrencyDefinition</td>
+                                <td>@materialPriceAppointment.EndDate</td>
+                                <td>@materialPriceAppointment.StartDate</td>
+                                <td>@materialPriceAppointment.PriceType</td>
+                                <td>@materialPriceAppointment.Status</td>
+                                <td>@materialPriceAppointment.Priority</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailMaterialPriceAppointment", "ProductManagement", new { id = materialPriceAppointment.ID })"><span class="fa fa-eye"> Görüntüle </span> </a><br />
+                                            <a href="@Url.Action("editMaterialPriceAppointment", "ProductManagement", new { id = materialPriceAppointment.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+
+                                            @*<a href="@Url.Action("detailMaterialFiche", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-receipt"> Reçete Listesi </span> <br />
+                                            @*<a href="@Url.Action("detailCriteriaSet", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-tasks"> Kriter Setleri </span> <br />
+                                            @*<a href="@Url.Action("detailDocumentManagement", "ProductManagement", new { id = material.ID })"></a>*@<span class="fa fa-sitemap"> Döküman Yönetimi </span> <br />
+                                            @*<a href="@Url.Action("deleteFicheMaterial", "ProductManagement", new { id = materialfiche.ID })"><span class="fa fa-trash"> Sil </span></a> <br />*@
+
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            }
+                        </tbody>
+                       
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+

@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "purchaseOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<PurchaseOrder>
+
+<section class="content-header">
+
+    <div class="box-body">
+        <a class="btn btn-app btn btn-primary" href="~/ProductManagement/materialDefinitions"> <span class=" fa fa-backward"></span>Geri</a>
+
+    </div>
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Dökümana Atanan Kayıtlar
+
+                    </h2>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <h2>Satınalma Siparişleri</h2>
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Numara</th>
+                                <th>Başlama Tarihi</th>
+                                <th>Bitiş Tarihi</th>
+                                <th>Cari Hesap</th>
+                                <th>Proje</th>
+                                <th>Sözleşme</th>
+                                <th>Durum</th>
+                                <th>Toplam Masraf</th>
+                                <th>Toplam Masraf (KDV Dahil)</th>
+                                <th>Toplam İskonto</th>
+                                <th>Ürün Fiyatı Toplamı</th>
+                                <th>Toplam Malzeme Fiyatı (KDV Dahil)</th>
+                                <th>Toplam </th>
+                                <th>Toplam (KDV Dahil)</th>
+                                <th>Toplam KDV</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (PurchaseOrder material in Model)
+                            {
+
+                                <tr>
+                                    <td>@material.Number</td>
+                                    <td>@material.StartDate</td>
+                                    <td>@material.EndDate</td>
+                                    <td>@material.Account</td>
+                                    <td>@material.Project</td>
+                                    <td>@material.PurchaseContract</td>
+                                    <td>@material.ApprovalInformation</td>
+
+                                    <td>@material.TotalExpense</td>
+                                    <td>@material.TotalExpenseWithVAT</td>
+                                    <td>@material.TotalDiscount</td>
+                                    <td>@material.TotalMaterialPrice</td>
+                                    <td>@material.TotalMaterialPriceWithVAT</td>
+                                    <td>@material.Balance</td>
+                                    <td>@material.BalanceWithVAT</td>
+                                    <td>@material.TotalVAT</td>
+
+
+                                </tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+

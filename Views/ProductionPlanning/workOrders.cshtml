@@ -1,0 +1,161 @@
+﻿
+@{
+    ViewBag.Title = "workOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Workorder>
+
+
+<section class="content-header">
+    <h1>
+        İş Emirleri
+
+    </h1>
+
+    <div class="box-body ">
+        <div class="btn-group">
+
+
+        <button type="button" class="btn btn-primary ">
+           <span class=" fa fa-file"></span> Yeni
+        </button>
+
+        </div>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-edit"></span> Düzenle
+        </button>
+
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-eye"></span> Görüntüle
+        </button>
+
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-flag"></span> İş Emri Durumu
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-file-o"></span> İlgili Malzeme Fişleri
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-object-group"></span> İlişkili Seri/Parti No'ları
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-barcode"></span> Barkod Yazdır
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-print"></span> İş Emri Formu
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-caret-right"></span> Routing
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-sitemap"></span> Döküman Yönetimi
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-share-square"></span> Aktarım
+        </button>
+    </div>
+
+
+    <ol class="breadcrumb">
+        <li class="active">İş Emirleri</li>
+    </ol>
+
+
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Numara</th>
+                                <th>Üretim Emri</th>
+                                <th>İş Emri Durumu</th>
+                                <th>Tamamlama</th>
+                                <th>İş İstasyonu</th>
+                                <th>Malzeme</th>
+                                <th>Miktar</th>
+                                <th>Depo</th>
+                                <th>Reçete</th>
+                                <th>Proje</th>
+                                <th>İş Emri Kayıt Türü</th>
+                                <th>Planlama</th>
+                                <th>Seviye Bilgisi</th>
+                                <th>Üretimden Karşılama</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Workorder workOrder in Model)
+                            {
+
+                            <tr>
+                                <td>@workOrder.Number</td>
+                                <td>@workOrder.ProductOrder</td>
+                                <td>@workOrder.WorkOrderStatus</td>
+                                <td>% @workOrder.Completion</td>
+                                <td>@workOrder.Workstation</td>
+                                <td>@workOrder.Material</td>
+                                <td>@workOrder.Amount</td>
+                                <td>@workOrder.Warehouse</td>
+                                <td>@workOrder.BOM</td>
+                                <td>@workOrder.Project</td>
+                                <td>@workOrder.WorkorderCreateType</td>
+                                <td>@workOrder.Planning</td>
+                                <td>@workOrder.LevelInformation</td>
+                                <td>@workOrder.WorkOrderFromOfProduction</td>
+                            </tr>
+
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Numara</th>
+                                <th>Üretim Emri</th>
+                                <th>İş Emri Durumu</th>
+                                <th>Tamamlama</th>
+                                <th>İş İstasyonu</th>
+                                <th>Malzeme</th>
+                                <th>Miktar</th>
+                                <th>Depo</th>
+                                <th>Reçete</th>
+                                <th>Proje</th>
+                                <th>İş Emri Kayıt Türü</th>
+                                <th>Planlama</th>
+                                <th>Seviye Bilgisi</th>
+                                <th>Üretimden Karşılama</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+
+
+

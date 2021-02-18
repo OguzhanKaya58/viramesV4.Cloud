@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "detailMaterialFiche";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<BOM>
+
+<a class="btn btn-app btn btn-primary" onclick="goBack()">
+    <i class="fa fa-arrow-left"></i> Geri
+</a>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        Ürün Reçete Tanımları
+
+                    </h2>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Reçete Kodu</th>
+                                <th>Reçete Tanımı</th>
+                                <th>Malzeme</th>
+                                <th>Reçete Kaynağı</th>
+                                <th>İş İstasyonu</th>
+                                <th>İş İstasyonu Havuzu</th>
+                                <th>Kapasite Tahsis Oranı</th>
+                                <th>Formül Tercihi</th>
+                                <th>Std Time</th>
+                                <th>Std Time Rework</th>
+                                <th>Öncelik</th>
+                                <th>Durum</th>
+                                <th>Depo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (BOM material in Model)
+                            {
+
+                                <tr>
+                                    <td>@material.Code</td>
+                                    <td>@material.Definition</td>
+                                    <td>@material.Material</td>
+                                    <td>@material.BOMSourceType</td>
+                                    <td>@material.Workstation</td>
+                                    <td>@material.WorkstationGroup</td>
+                                    <td>@material.CapacityAllocationRate</td>
+                                    <td>@material.FormulaPreference</td>
+                                    <td>@material.STDTime</td>
+                                    <td>@material.STDTimeRework</td>
+                                    <td>@material.Priority</td>
+                                    <td>@material.Status</td>
+                                    <td>@material.Warehouse</td>
+
+                                </tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+

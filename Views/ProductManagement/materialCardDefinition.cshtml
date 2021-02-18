@@ -1,0 +1,97 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Material>
+@{
+    ViewBag.Title = "materialCardDefinition";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+    <h1>
+        Malzeme Kartı Tanımı
+
+    </h1>
+</section>
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+
+                    <div class="form-group">
+
+                        <label>Malzeme Kodu :</label><input type="text" class="form-control" name="materialCode" id="materialCode" />
+                        <label>Malzeme Tanımı :</label><input type="text" class="form-control" name="materialDefinition" id="materialDefinition" />
+                        <label>Malzeme Sınıfı :</label><input type="text" class="form-control" name="materialClass" id="materialClass" />
+                        <label>Malzeme Türü :</label><input type="text" class="form-control" name="materialType" id="materialType" /><br />
+                        <input type="checkbox" name="dil" value="salable" /><label>Satılabilir</label>
+                        <input type="checkbox" name="dil" value="purchasable"><label>Satın Alınabilir</label> <br /><br />
+                        <label>Malzeme Özelliği :</label><input type="text" class="form-control" name="materialProperty" id="materialProperty" />
+                    </div> <br />
+
+                    <section id="tabs" class="project-tab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <nav>
+                                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Detay Bilgileri</a>
+                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Birim Seti Bilgileri</a>
+                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Parametreler</a>
+                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Alternatif Malzemeler</a>
+                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Vergi Bilgileri</a>
+                                    </div>
+                                </nav>
+                                </div>
+                            </div>
+                    </div>
+                     </section>
+
+
+
+
+
+
+                            </div><br />
+
+                            <div class="form-group">
+
+                                <label>Özel Kod :</label><input type="text" class="form-control" name="SpeCode" id="SpeCode" /><br>
+                                <label>Malzeme Durumu :</label><input type="text" class="form-control" name="materialStatus" id="materialStatus" /><br>
+                                <label>Satın Alma Grup Kodu :</label> <input type="text" name="groupCode" class="form-control" id="groupCode" /><br>
+                                <input type="checkbox" name="dil" value="salable"><label>Sanal</label>
+                                <input type="checkbox" name="dil" value="purchasable"><label>Paketlenmiş Ürün</label><br /><br>
+                                <label for="materialProperty">Paketlenecek Alt Malzeme :</label><br>
+                                <input type="text" class="form-control" name="packageMaterial" id="packagematerial" /><br>
+                                <label>Malzeme ERP Referansı :</label><input type="text" name="materialERP" class="form-control" id="materialERP" /><br>
+
+                            </div>
+
+
+
+
+
+
+                            </nav>
+                            <button type="button" class="btn btn-primary">
+                                <span class=" fa fa-save"></span> Kaydet
+                            </button>
+
+
+
+                        </div>
+                    </div>
+                    <!-- /.box -->
+                </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

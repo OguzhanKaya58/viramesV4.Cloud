@@ -1,0 +1,75 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Document>
+@{
+    ViewBag.Title = "documentWorkstationAppointmentAssigned";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h3>İş İstasyonu Tanımları</h3>
+    <div class="box-body ">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">İş İstasyonuna Atanmış Döküman Yönetimleri</h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Döküman No</th>
+                                <th>Döküman Açıklama</th>
+                                <th>Proje</th>
+                                <th>Aile No</th>
+                                <th>Sayfa</th>
+                                <th>Sayfa Sayısı</th>
+                                <th>Revizyon</th>
+                                <th>Geçerlilik</th>
+                                <th>Durum</th>
+                                <th>Departman Kapsamı</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Document document in Model)
+                            {
+                                <tr>
+                                    <td>@document.DocumentNo</td>
+                                    <td>@document.Description</td>
+                                    <td>@document.Project</td>
+                                    <td>@document.FamilyNo</td>
+                                    <td>@document.Page</td>
+                                    <td>@document.PageCount</td>
+                                    <td>@document.Rev</td>
+                                    <td>@document.Availability</td>
+                                    <td>@document.Status</td>
+                                    <td>@document.DepartmentScope</td>
+                                    <td>
+                                        <div class="dropdown btn-group dropleft">
+                                            <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                                Seç
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a href="@Url.Action("DetailDocument", "DocumentManagement", new { id = document.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                                <a href="@Url.Action("EditDocument", "DocumentManagement", new { id = document.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

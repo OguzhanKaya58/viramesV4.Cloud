@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "qualityControlFiche";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<MaterialFiche>
+
+
+<section class="content-header">
+    <h1>
+        Kalite Kontrol Fişleri
+
+    </h1>
+
+    <div class="box-body ">
+        <div class="btn-group">
+
+
+            <button type="button" class="btn btn-primary ">
+                <span class=" fa fa-file"></span> Yeni
+            </button>
+
+        </div>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-edit"></span> Düzenle
+        </button>
+
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-eye"></span> Görüntüle
+        </button>
+
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-print"></span> Kopyala
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-sitemap"></span> Döküman Yönetimi
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-barcode"></span> Barkod Yazdır
+        </button>
+        <button type="button" class="btn btn-primary ">
+            <span class=" fa fa-print"></span> Yazdır
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span class=" fa fa-share-square"></span> Aktarım
+        </button>
+        <button type="button" class="btn btn-danger">
+            <span class=" fa fa-trash"></span> Sil
+        </button>
+    </div>
+
+
+    <ol class="breadcrumb">
+        <li class="active">Kalite Kontrol Fişleri</li>
+    </ol>
+
+
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Numarası</th>
+                                <th>Tarih</th>
+                                <th>Türü</th>
+                                <th>Depo</th>
+                                <th>Depo Girdi</th>
+                                <th>Personel</th>
+                                <th>İş Emri</th>
+                                <th>Cari Hesap</th>
+                                <th>Özel Kod</th>
+                                <th>Barkod Durum</th>
+                                <th>Onay Durumu</th>
+                                <th>Malzeme Fiş Durumu</th>
+                                <th>Satın Alma Siparişi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (MaterialFiche qualityConrolFiche in Model)
+                            {
+
+                            <tr>
+                                <td>@qualityConrolFiche.Number</td>
+                                <td>@qualityConrolFiche.Date</td>
+                                <td>@qualityConrolFiche.Type</td>
+                                <td>@qualityConrolFiche.Warehouse</td>
+                                <td>@qualityConrolFiche.InputWarehouse</td>
+                                <td>@qualityConrolFiche.Employee</td>
+                                <td>@qualityConrolFiche.Workorder</td>
+                                <td>@qualityConrolFiche.Account</td>
+                                <td>@qualityConrolFiche.SpeCode</td>
+                                <td>@qualityConrolFiche.BarcodeStatus</td>
+                                <td>@qualityConrolFiche.FicheApprove</td>
+                                <td>@qualityConrolFiche.MaterialFicheStatus</td>
+                                <td>@qualityConrolFiche.PurchaseOrder</td>
+                            </tr>
+
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Numarası</th>
+                                <th>Tarih</th>
+                                <th>Türü</th>
+                                <th>Depo</th>
+                                <th>Depo Girdi</th>
+                                <th>Personel</th>
+                                <th>İş Emri</th>
+                                <th>Cari Hesap</th>
+                                <th>Özel Kod</th>
+                                <th>Barkod Durum</th>
+                                <th>Onay Durumu</th>
+                                <th>Malzeme Fiş Durumu</th>
+                                <th>Satın Alma Siparişi</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+
+
+
+

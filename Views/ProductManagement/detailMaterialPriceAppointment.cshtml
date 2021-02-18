@@ -1,0 +1,132 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.MaterialPriceAppointment
+
+@{
+    ViewBag.Title = "detailMaterialPriceAppointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+    <h3>Malzeme Fiyat Tanımı</h3>
+    <div class="box-body ">
+        <a class="btn btn-app btn btn-primary" onclick="goBack()">
+            <i class="fa fa-arrow-left"></i> Geri
+        </a>
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+
+                    <div class="box-body">
+                    </div>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Material.Code)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Material.Code)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Currency)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Currency)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Price)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Price)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Priority)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Priority)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Status)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Status)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.PriceType)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.PriceType)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.StartDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.StartDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.EndDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.EndDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.CreatedBy)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.CreatedBy)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.CreatedDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.CreatedDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ModifiedBy)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ModifiedBy)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ModifiedDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ModifiedDate)
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+   
+    <!-- /.col -->
+    <!-- /.row -->
+</section>

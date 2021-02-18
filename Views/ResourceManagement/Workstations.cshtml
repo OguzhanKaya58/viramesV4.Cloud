@@ -1,0 +1,131 @@
+﻿@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Workstation>
+@{
+    ViewBag.Title = "Workstation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="content-header">
+    <h3>İş İstasyonu Tanımları</h3>
+    <div class="box-body">
+        <a class="btn btn-app">
+            <i class="fa fa-calendar"></i> Çalışma Takvimi
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square" data-toggle="modal" data-target="#ModalButton"></i> Aktarım
+        </a>
+        <div class="modal fade" id="ModalButton" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3>Dışa Aktar</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Text File (.txt)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Excel File (.xlsx)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio1">Html File (.txt)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                            <label class="form-check-label" for="inlineRadio2">PDF File (.pdf)</label>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Aktar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>İş İstasyonu Kodu</th>
+                                <th>İş İstasyonu Tanımı</th>
+                                <th>Durum</th>
+                                <th>Konum</th>
+                                <th>Tarih Periyodik Bakımı</th>
+                                <th>Periyodik Bakım Sayısı</th>
+                                <th>Gerçekleşen Son P.Bakım Tarihi</th>
+                                <th>Mevcut P.Bakım Sayacı</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Workstation workstation in Model)
+                            {
+                                <tr>
+                                    <td>@workstation.Code</td>
+                                    <td>@workstation.Definition</td>
+                                    <td>@workstation.Status</td>
+                                    <td>@workstation.Location</td>
+                                    <td>
+                                        @if (workstation.DatePeriodicMaintenance == true)
+                                        {
+                                            <input type="checkbox" checked />
+                                        }
+                                        @if (workstation.DatePeriodicMaintenance == false)
+                                        {
+                                            <input type="checkbox" />
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (workstation.CountPeriodicMaintenance == true)
+                                        {
+                                            <input type="checkbox" checked />
+                                        }
+                                        @if (workstation.CountPeriodicMaintenance == false)
+                                        {
+                                            <input type="checkbox" />
+                                        }
+                                    </td>
+                                    <td>@workstation.LastPeriodicMaintenanceDate</td>
+                                    <td>@workstation.CurrentPeriodicMaintanceCount</td>
+                                    <td>
+                                        <div class="dropdown btn-group dropleft">
+                                            <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                                Seç
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a href="@Url.Action("DetailWorkstations", "ResourceManagement", new { id = workstation.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                                <a href="@Url.Action("EditWorkstations", "ResourceManagement", new { id = workstation.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                                <a href="@Url.Action("DeleteWorkstations", "ResourceManagement", new { id = workstation.ID })"><span class="fa fa-trash"> Sil </span></a> <br />
+                                                <a href="@Url.Action("WorkstationWorkstationAppointmentAssigned", "ResourceManagement", new { id = workstation.ID })"><span class="fa fa-barcode"> Barkod Yazdır </span></a> <br />
+                                                <a href="@Url.Action("EmployeeWorkstationAppointmentAssigneds", "ResourceManagement", new { id = workstation.ID })"><span class="fa fa-users"> Personeller </span></a> <br />
+                                                <a href="@Url.Action("DocumentWorkstationAppointmentAssigneds", "ResourceManagement", new { id = workstation.ID })"><span class="fa fa-sitemap"> D.Yönetimi </span></a> <br />
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

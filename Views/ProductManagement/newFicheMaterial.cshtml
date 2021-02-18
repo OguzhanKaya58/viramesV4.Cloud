@@ -1,0 +1,126 @@
+﻿@model viramesV4.Object.BusinessLogicLayer.Master.MaterialFiche
+
+@{
+    ViewBag.Title = "newFicheMaterial";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+        <h3>Malzeme Fişi Tanımları</h3>
+        <div class="box-body ">
+            <a class="btn btn-app btn btn-primary" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Geri
+            </a>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        
+                        <div class="box-body">
+                        </div>
+                        <div class="form-horizontal">
+                         
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EnumDropDownListFor(model => model.Type, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Number, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Number, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Warehouse, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.Warehouse, (IEnumerable<SelectListItem>)ViewBag.Warehouse, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.Warehouse, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SpeCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.SpeCode, (IEnumerable<SelectListItem>)ViewBag.SpeCode, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.SpeCode, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ERPReference, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.ERPReference, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ERPReference, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FicheApprove, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.FicheApprove, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.FicheApprove, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Workorder.WorkOrderStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Workorder.WorkOrderStatus, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Workorder.WorkOrderStatus, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Employee, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.Employee, (IEnumerable<SelectListItem>)ViewBag.Employee, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.Employee, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Project, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-8">
+                                    @Html.DropDownListFor(model => model.Project, (IEnumerable<SelectListItem>)ViewBag.Project, new { @class = "form-control chosen-select" })
+                                    @Html.ValidationMessageFor(model => model.Project, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-9">
+                                <center> <input type="submit" value="Kaydet" class="btn btn-app btn btn-primary" /></center>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+}
+                        
+

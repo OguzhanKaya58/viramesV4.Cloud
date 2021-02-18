@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "holiday";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using viramesV4.Object.BusinessLogicLayer.Master
+@model IList<Holiday>
+
+
+<section class="content-header">
+    <h1>
+        Tatil Tanımları
+
+    </h1>
+    <div class="box-body">
+        <a href="http://virames.cloud/ProductionPlanning/newHoliday" class="btn btn-app btn btn-primary">
+            <i class="fa fa-file"></i> Yeni
+        </a>
+        <a class="btn btn-app">
+            <i class="fa fa-share-square"></i>Aktarım
+        </a>
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tam Gün</th>
+                                <th>Tatil Kodu</th>
+                                <th>Tarih</th>
+                                <th>Başlangıç Saati</th>
+                                <th>İşlem</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Holiday holiday in Model)
+                            {
+                             <tr>
+                                <td>@holiday.FullDay</td>
+                                <td>@holiday.Code</td>
+                                <td>@holiday.Date.ToString("dd.M.yyyy")</td>
+                                <td>@holiday.Hour.ToString(@"hh\:mm\:ss")</td>
+                                <td>
+                                    <div class="dropdown btn-group dropleft">
+                                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Seç
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="@Url.Action("detailHoliday", "ProductionPlanning", new { id = holiday.ID })"><span class="fa fa-eye"> Görüntüle </span></a> <br />
+                                            <a href="@Url.Action("editHoliday", "ProductionPlanning", new { id = holiday.ID })"><span class="fa fa-edit"> Düzenle </span></a> <br />
+                                            <a href="@Url.Action("deleteHoliday", "ProductionPlanning", new { id = holiday.ID })"><span class="fa fa-trash"> Sil </span></a> <br />
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            }
+                        </tbody>
+                      
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
